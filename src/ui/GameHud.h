@@ -14,8 +14,8 @@ public slots:
     void updateLevel(int level);
 
 private:
-    QLabel *scoreLabel;
-    QLabel *levelLabel;
+    QLabel *m_scoreLabel;
+    QLabel *m_levelLabel;
 };
 
 #endif

@@ -1,26 +1,59 @@
 #include "Player.h"
-#include <QDebug>
+#include <QPainter>
 
 Player::Player(QObject* parent) : Entity(parent) {
-    // 加载主角图片 (请确保路径正确，或者先用颜色块代替测试)
-    setPixmap(QPixmap(":/assets/player.png")); // 如果没有图片，会显示空白，需注意
-    if (pixmap().isNull()) {
-        qDebug() << "Error: Player image not found!";
-        // 创建一个默认的绿色方块代替图片，防止看不见
-        QPixmap defaultPix(40, 40);
-        defaultPix.fill(Qt::green);
-        setPixmap(defaultPix);
+    // 尝试加载图片
+    QPixmap pix(":/assets/player.png");
+    if (!pix.isNull()) {
+        setPixmap(pix);
+        setTransformOriginPoint(pix.width()/2, pix.height()/2); // 中心旋转
+        setOffset(-pix.width()/2, -pix.height()/2); // 中心对齐
+    } else {
+        // 如果没图片，设置一个虚拟的边界矩形，否则碰撞检测会失效
+        // 假设鱼的大小是 60x40
     }
     
-    m_speed = 4.0; // 玩家速度稍快
+    m_speed = 5.0; 
     setSizeScale(1.0);
-    
-    // 居中原点，方便旋转和碰撞
-    setTransformOriginPoint(boundingRect().center());
+}
+
+// 【美化】重写 paint，如果没图，手绘一条金鱼
+void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+    if (pixmap().isNull()) {
+        painter->save();
+        painter->setRenderHint(QPainter::Antialiasing);
+
+        // 画鱼身 (橙色)
+        painter->setBrush(QColor(255, 165, 0)); 
+        painter->setPen(Qt::NoPen);
+        painter->drawEllipse(QPoint(0,0), 30, 20);
+
+        // 画尾巴
+        QPolygonF tail;
+        tail << QPointF(-25, 0) << QPointF(-45, -15) << QPointF(-45, 15);
+        painter->drawPolygon(tail);
+
+        // 画眼睛
+        painter->setBrush(Qt::black);
+        painter->drawEllipse(QPoint(15, -5), 3, 3);
+
+        painter->restore();
+    } else {
+        QGraphicsPixmapItem::paint(painter, option, widget);
+    }
+}
+
+// 必须重写 boundingRect 否则没图时碰撞检测失效
+QRectF Player::boundingRect() const {
+    if (pixmap().isNull()) {
+        return QRectF(-45, -20, 80, 40); // 手绘鱼的大小
+    }
+    return QGraphicsPixmapItem::boundingRect();
 }
 
 void Player::grow(qreal amount) {
     m_scale += amount;
+    if (m_scale > 5.0) m_scale = 5.0; // 限制最大体积
     setSizeScale(m_scale);
 }
 
@@ -28,13 +61,13 @@ void Player::updateMoveDirection(qreal dx, qreal dy) {
     m_dx = dx;
     m_dy = dy;
 
-    // 简单的视觉翻转：向左游时翻转图片
+    // 翻转逻辑
     if (dx < 0) {
-        QTransform transform;
-        transform.scale(-1, 1); // 水平翻转
-        // 需要修正位置偏移，或者简单地使用 setScale(-m_scale, m_scale) 但这会影响 logic scale
-        // 这里为了简单，只做 scale 的负值处理
-        setTransform(QTransform().scale(-1, 1).translate(-boundingRect().width(), 0));
+        // 向左游：如果原图朝右，需要翻转
+        // 注意：setScale(-1, 1) 会影响子控件，这里只改 Transform
+        QTransform t;
+        t.scale(-1, 1); 
+        setTransform(t);
     } else if (dx > 0) {
         setTransform(QTransform());
     }

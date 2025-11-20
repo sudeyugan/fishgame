@@ -7,37 +7,35 @@
 class Entity : public QObject, public QGraphicsPixmapItem {
     Q_OBJECT
 public:
-    // 定义实体类型常量，用于安全的类型转换
     enum { Type = UserType + 1 };
     enum EntityType { TYPE_PLAYER, TYPE_ENEMY, TYPE_ITEM };
 
     explicit Entity(QObject* parent = nullptr);
     
-    // 必须重写 type() 以便 qgraphicsitem_cast 工作
     int type() const override { return Type; }
-    
-    // 纯虚函数，子类必须告知自己是什么类型
     virtual EntityType getEntityType() const = 0;
 
-    // --- 属性设置 ---
+    // 属性控制
     void setSpeed(qreal speed);
     qreal getSpeed() const;
 
     void setSizeScale(qreal scale);
     qreal getSizeScale() const;
 
-    // --- 移动逻辑 ---
-    // 设置移动向量 (dx, dy)
+    // 移动控制
     void setVelocity(qreal dx, qreal dy);
     
-    // QGraphicsItem 的核心更新函数
+    // 核心逻辑更新
     virtual void advance(int phase) override;
+
+    // 【新增】重写绘图函数，实现"无图自动手绘"
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
 protected:
     qreal m_speed;
     qreal m_scale;
-    qreal m_dx; // X轴速度分量
-    qreal m_dy; // Y轴速度分量
+    qreal m_dx;
+    qreal m_dy;
 };
 
 #endif // ENTITY_H

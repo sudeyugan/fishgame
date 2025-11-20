@@ -5,35 +5,34 @@
 #include <QStackedWidget>
 #include <QGraphicsView>
 
-// 前置声明，减少头文件依赖
-class StartScreen;
+// 前向声明，避免循环引用
 class MainScene;
 class GameHud;
+class StartScreen;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
-
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
 
 protected:
-    // 监听全局按键（如ESC暂停）
-    void keyPressEvent(QKeyEvent *event) override;
+    // 重写 resizeEvent 以便让 HUD 自适应窗口大小
+    void resizeEvent(QResizeEvent *event) override;
 
 private slots:
-    void onStartGameClicked(); // 点击开始游戏
-    void onBackToTitle();      // 从暂停/结束返回标题
-    void onGamePaused(bool paused); // 处理暂停信号
+    void startGame();         // 切换到游戏界面
+    void handleGameOver(bool win); // 处理游戏结束
 
 private:
-    QStackedWidget *m_stackedWidget;
-    
+    void initUI();
+
+    QWidget *m_centralWidget;
+    QStackedWidget *m_stack;  // 用于在 菜单/游戏 之间切换
+
     StartScreen *m_startScreen;
     QGraphicsView *m_gameView;
-    MainScene *m_gameScene;
-    GameHud *m_gameHud;
-
-    void initUI();
+    MainScene *m_scene;
+    GameHud *m_hud;
 };
 
 #endif // MAINWINDOW_H

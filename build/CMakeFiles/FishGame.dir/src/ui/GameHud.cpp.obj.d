@@ -363,6 +363,5 @@ CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
- E:/fish/src/core/GameEngine.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QFont \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h

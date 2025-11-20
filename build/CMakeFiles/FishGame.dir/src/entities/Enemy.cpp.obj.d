@@ -1,7 +1,8 @@
 CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj: \
- E:\fish\src\entities\Enemy.cpp \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ E:\fish\src\entities\Enemy.cpp E:\fish\src\entities\Enemy.h \
+ E:\fish\src\entities\Entity.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qglobal.h \
@@ -307,44 +308,51 @@ CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qpoint.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qrect.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qmargins.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qsize.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qbrush.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qcolor.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qrgb.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qrgba64.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qimage.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpaintdevice.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpolygon.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qregion.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qline.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpixmap.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qsharedpointer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qsharedpointer_impl.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h E:\fish\src\entities\Enemy.h \
- E:\fish\src\entities\Entity.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qvariant.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtextstream.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstringconverter_base.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcontiguouscache.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qsharedpointer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qsharedpointer_impl.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata_impl.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qhash.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qvarlengtharray.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qrect.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmargins.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qsize.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qpoint.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpolygon.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qregion.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qline.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpixmap.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpaintdevice.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qcolor.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qrgb.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qrgba64.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qimage.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
- E:/fish/src/core/Constants.h
+ E:\fish\src\entities\Player.h E:/Qt/6.5.3/mingw_64/include/QtCore/QtMath \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QRandomGenerator \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qrandom.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/random \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/pmmintrin.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/emmintrin.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/xmmintrin.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mmintrin.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.tcc \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QVector2D \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h

@@ -2,7 +2,8 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QLabel>
-#include <QMessageBox>
+#include <QPainter>
+#include <QLinearGradient>
 
 StartScreen::StartScreen(QWidget *parent) : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -10,38 +11,60 @@ StartScreen::StartScreen(QWidget *parent) : QWidget(parent) {
     layout->setSpacing(20);
 
     // 1. 游戏标题
-    QLabel *titleLabel = new QLabel("深海大作战\nFish Game 2025", this);
-    titleLabel->setAlignment(Qt::AlignCenter);
-    titleLabel->setStyleSheet("font-size: 48px; font-weight: bold; color: #2c3e50;");
-    
-    // 2. 按钮组
-    QPushButton *btnStart = new QPushButton("开始游戏", this);
-    QPushButton *btnHelp = new QPushButton("游戏帮助", this);
-    QPushButton *btnQuit = new QPushButton("退出游戏", this);
+    QLabel *title = new QLabel("Deep Sea Evolution");
+    title->setStyleSheet(
+        "QLabel { "
+        "   font-family: 'Arial Black'; "
+        "   font-size: 64px; "
+        "   color: #E0FFFF; "
+        "   background: transparent; "
+        "   padding: 20px; "
+        "}"
+    );
+    layout->addWidget(title);
 
-    // 设置按钮固定大小
-    QSize btnSize(200, 50);
-    btnStart->setFixedSize(btnSize);
-    btnHelp->setFixedSize(btnSize);
-    btnQuit->setFixedSize(btnSize);
+    // 2. 通用按钮样式
+    QString btnStyle = R"(
+        QPushButton {
+            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4facfe, stop:1 #00f2fe);
+            border: 2px solid #ffffff;
+            border-radius: 25px;
+            color: white;
+            font-size: 24px;
+            padding: 15px 50px;
+            min-width: 200px;
+        }
+        QPushButton:hover {
+            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #66a6ff, stop:1 #89f7fe);
+            margin-top: 2px; 
+        }
+        QPushButton:pressed {
+            background-color: #00c6fb;
+            border-color: #dddddd;
+        }
+    )";
 
-    // 3. 添加到布局
-    layout->addWidget(titleLabel);
-    layout->addSpacing(30);
-    layout->addWidget(btnStart);
-    layout->addWidget(btnHelp);
-    layout->addWidget(btnQuit);
+    // 3. 开始按钮
+    m_startBtn = new QPushButton("Start Game");
+    m_startBtn->setStyleSheet(btnStyle);
+    m_startBtn->setCursor(Qt::PointingHandCursor);
+    connect(m_startBtn, &QPushButton::clicked, this, &StartScreen::startGameClicked);
+    layout->addWidget(m_startBtn);
 
-    // 4. 连接信号槽
-    connect(btnStart, &QPushButton::clicked, this, &StartScreen::startClicked);
-    connect(btnQuit, &QPushButton::clicked, this, &StartScreen::quitClicked);
-    
-    // 帮助弹窗直接在这里处理
-    connect(btnHelp, &QPushButton::clicked, [this](){
-        QMessageBox::information(this, "游戏玩法", 
-            "1. 使用 WASD 或 方向键 控制主角移动。\n"
-            "2. 吃掉比你小的鱼变大，躲避比你大的鱼。\n"
-            "3. 达到目标分数即可通关！\n"
-            "4. 按 ESC 键暂停游戏。");
-    });
+    // 4. 退出按钮
+    m_quitBtn = new QPushButton("Exit");
+    m_quitBtn->setStyleSheet(btnStyle);
+    m_quitBtn->setCursor(Qt::PointingHandCursor);
+    connect(m_quitBtn, &QPushButton::clicked, this, &StartScreen::quitGameClicked); // 需在头文件加信号或直接关窗
+    layout->addWidget(m_quitBtn);
+}
+
+// 重写 paintEvent 画一个漂亮的海洋背景
+void StartScreen::paintEvent(QPaintEvent *event) {
+    QPainter painter(this);
+    // 线性渐变：深蓝到浅蓝
+    QLinearGradient gradient(0, 0, 0, height());
+    gradient.setColorAt(0.0, QColor(0, 10, 50));   // 深海
+    gradient.setColorAt(1.0, QColor(0, 100, 150)); // 浅海
+    painter.fillRect(rect(), gradient);
 }

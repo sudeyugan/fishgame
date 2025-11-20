@@ -303,8 +303,8 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtmochelpers.h \
- E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Entity.cpp \
- E:/fish/src/entities/Entity.h \
+ E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Enemy.cpp \
+ E:/fish/src/entities/Enemy.h E:/fish/src/entities/Entity.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -346,6 +346,10 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qrgba64.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qimage.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
+ E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Entity.cpp \
+ E:/fish/src/entities/Entity.h \
+ E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Player.cpp \
+ E:/fish/src/entities/Player.h \
  E:\fish\build\FishGame_autogen\EKW6RVOTGB/moc_MainScene.cpp \
  E:/fish/src/scenes/MainScene.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
@@ -357,8 +361,7 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtimer.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qbasictimer.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSet \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h E:/fish/src/entities/Player.h \
- E:/fish/src/entities/Entity.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QKeyEvent \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcoreevent.h \

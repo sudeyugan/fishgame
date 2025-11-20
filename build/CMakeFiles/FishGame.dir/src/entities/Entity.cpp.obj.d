@@ -340,4 +340,9 @@ CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qimage.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qbrush.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h

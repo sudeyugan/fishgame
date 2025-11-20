@@ -342,29 +342,5 @@ CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/QKeyEvent \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qcoreevent.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qpointer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qeventpoint.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qvector2d.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpointingdevice.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qinputdevice.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qscreen.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QRect \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qrect.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QSize \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qsize.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF \
- E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qkeysequence.h \
- E:/fish/src/core/Constants.h E:/Qt/6.5.3/mingw_64/include/QtGui/QBrush \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qbrush.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h

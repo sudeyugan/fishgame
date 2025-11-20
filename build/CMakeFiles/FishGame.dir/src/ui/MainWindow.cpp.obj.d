@@ -380,13 +380,7 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtimer.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qbasictimer.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSet \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h E:/fish/src/entities/Player.h \
- E:/fish/src/entities/Entity.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QKeyEvent \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcoreevent.h \
@@ -400,6 +394,7 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QRect \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qrect.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSize \
@@ -408,4 +403,5 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
- E:/fish/src/core/GameEngine.h E:/fish/src/core/Constants.h
+ E:/fish/src/core/GameEngine.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QObject E:/fish/src/core/Constants.h

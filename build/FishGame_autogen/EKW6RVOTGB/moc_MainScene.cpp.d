@@ -133,7 +133,6 @@ E:/fish/build/FishGame_autogen/EKW6RVOTGB/moc_MainScene.cpp: E:/fish/src/scenes/
   E:/Qt/6.5.3/mingw_64/include/QtGui/qinputdevice.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qkeysequence.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpaintdevice.h \
-  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpixmap.h \
@@ -151,9 +150,7 @@ E:/fish/build/FishGame_autogen/EKW6RVOTGB/moc_MainScene.cpp: E:/fish/src/scenes/
   E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -355,6 +352,4 @@ E:/fish/build/FishGame_autogen/EKW6RVOTGB/moc_MainScene.cpp: E:/fish/src/scenes/
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h \
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
-  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  E:/fish/src/entities/Entity.h \
-  E:/fish/src/entities/Player.h
+  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
