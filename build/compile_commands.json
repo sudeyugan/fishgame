@@ -1,0 +1,92 @@
+[
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\FishGame_autogen\\mocs_compilation.cpp.obj -c E:\\fish\\build\\FishGame_autogen\\mocs_compilation.cpp",
+  "file": "E:/fish/build/FishGame_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\main.cpp.obj -c E:\\fish\\src\\main.cpp",
+  "file": "E:/fish/src/main.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/main.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\core\\GameEngine.cpp.obj -c E:\\fish\\src\\core\\GameEngine.cpp",
+  "file": "E:/fish/src/core/GameEngine.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\entities\\Entity.cpp.obj -c E:\\fish\\src\\entities\\Entity.cpp",
+  "file": "E:/fish/src/entities/Entity.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\entities\\Player.cpp.obj -c E:\\fish\\src\\entities\\Player.cpp",
+  "file": "E:/fish/src/entities/Player.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\entities\\Enemy.cpp.obj -c E:\\fish\\src\\entities\\Enemy.cpp",
+  "file": "E:/fish/src/entities/Enemy.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\scenes\\MainScene.cpp.obj -c E:\\fish\\src\\scenes\\MainScene.cpp",
+  "file": "E:/fish/src/scenes/MainScene.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\scenes\\LevelManager.cpp.obj -c E:\\fish\\src\\scenes\\LevelManager.cpp",
+  "file": "E:/fish/src/scenes/LevelManager.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/scenes/LevelManager.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\ui\\MainWindow.cpp.obj -c E:\\fish\\src\\ui\\MainWindow.cpp",
+  "file": "E:/fish/src/ui/MainWindow.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\ui\\StartScreen.cpp.obj -c E:\\fish\\src\\ui\\StartScreen.cpp",
+  "file": "E:/fish/src/ui/StartScreen.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\ui\\GameHud.cpp.obj -c E:\\fish\\src\\ui\\GameHud.cpp",
+  "file": "E:/fish/src/ui/GameHud.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\ui\\PauseDialog.cpp.obj -c E:\\fish\\src\\ui\\PauseDialog.cpp",
+  "file": "E:/fish/src/ui/PauseDialog.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\ui\\LevelInfoDialog.cpp.obj -c E:\\fish\\src\\ui\\LevelInfoDialog.cpp",
+  "file": "E:/fish/src/ui/LevelInfoDialog.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\src\\utils\\AudioManager.cpp.obj -c E:\\fish\\src\\utils\\AudioManager.cpp",
+  "file": "E:/fish/src/utils/AudioManager.cpp",
+  "output": "CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj"
+},
+{
+  "directory": "E:/fish/build",
+  "command": "E:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FishGame.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FishGame.dir\\FishGame_autogen\\UVLADIE3JM\\qrc_resources.cpp.obj -c E:\\fish\\build\\FishGame_autogen\\UVLADIE3JM\\qrc_resources.cpp",
+  "file": "E:/fish/build/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp",
+  "output": "CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj"
+}
+]

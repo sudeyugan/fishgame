@@ -1,4 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        </qresource>
+        <file>assets/sounds/bgm.mp3</file>
+        <file>assets/sounds/eat.mp3</file>
+        <file>assets/sounds/win.mp3</file>
+        <file>assets/sounds/lose.wav</file>
+    </qresource>
 </RCC>

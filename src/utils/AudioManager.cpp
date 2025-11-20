@@ -1,11 +1,35 @@
 #include "AudioManager.h"
-// 如果没有音频文件，这些函数留空即可防止报错
+#include <QUrl>
+#include <QDebug>
+
+// 静态成员变量需要在这里定义（虽然简单的静态方法可以不用，但建议如下实现）
+
 void AudioManager::playBGM() { 
-    // QSoundEffect *bgm = new QSoundEffect; 
-    // bgm->setSource(QUrl::fromLocalFile(":/assets/sounds/bgm.wav"));
-    // bgm->setLoopCount(QSoundEffect::Infinite);
-    // bgm->play();
+    // 既然安装了 Multimedia，请取消注释并确保路径正确
+    static QSoundEffect *bgm = new QSoundEffect(); 
+    // 注意：确保 resources.qrc 里真的有这个文件，否则不会响
+    bgm->setSource(QUrl("qrc:/assets/sounds/bgmmp3v")); 
+    bgm->setLoopCount(QSoundEffect::Infinite);
+    bgm->setVolume(0.5f);
+    bgm->play();
 }
-void AudioManager::playEatSound() { /* 播放吃东西音效 */ }
-void AudioManager::playWinSound() { /* 播放胜利音效 */ }
-void AudioManager::playLoseSound() { /* 播放失败音效 */ }
+
+void AudioManager::playEatSound() { 
+    static QSoundEffect *eat = new QSoundEffect();
+    eat->setSource(QUrl("qrc:/assets/sounds/eat.mp3"));
+    eat->play();
+}
+
+void AudioManager::playWinSound() {
+    // 示例实现
+    static QSoundEffect *win = new QSoundEffect();
+    win->setSource(QUrl("qrc:/assets/sounds/win.mp3"));
+    win->play();
+}
+
+void AudioManager::playLoseSound() {
+    // 示例实现
+    static QSoundEffect *lose = new QSoundEffect();
+    lose->setSource(QUrl("qrc:/assets/sounds/lose.wav"));
+    lose->play();
+}

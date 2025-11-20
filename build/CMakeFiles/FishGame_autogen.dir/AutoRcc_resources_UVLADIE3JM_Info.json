@@ -1,0 +1,28 @@
+{
+	"BUILD_DIR" : "E:/fish/build/FishGame_autogen",
+	"CMAKE_BINARY_DIR" : "E:/fish/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "E:/fish/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "E:/fish",
+	"CMAKE_SOURCE_DIR" : "E:/fish",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "MinGW Makefiles",
+	"INCLUDE_DIR" : "E:/fish/build/FishGame_autogen/include",
+	"INPUTS" : 
+	[
+		"E:/fish/src/assets/sounds/win.mp3",
+		"E:/fish/src/assets/sounds/eat.mp3",
+		"E:/fish/src/assets/sounds/lose.wav",
+		"E:/fish/src/assets/sounds/bgm.mp3"
+	],
+	"LOCK_FILE" : "E:/fish/build/CMakeFiles/FishGame_autogen.dir/AutoRcc_resources_UVLADIE3JM_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "UVLADIE3JM",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "E:/Qt/6.5.3/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "E:/fish/build/CMakeFiles/FishGame_autogen.dir/AutoRcc_resources_UVLADIE3JM_Used.txt",
+	"SOURCE" : "E:/fish/src/resources.qrc",
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

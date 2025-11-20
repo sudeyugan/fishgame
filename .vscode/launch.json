@@ -17,7 +17,8 @@
                 }
             ],
             "externalConsole": false,
-            "miDebuggerPath": "E:/Qt/Tools/mingw1120_64/bin/gdb.exe"
+            "miDebuggerPath": "E:/Qt/Tools/mingw1120_64/bin/gdb.exe",
+            "visualizerFile": "c:\\Users\\苏\\AppData\\Roaming\\Code\\User\\workspaceStorage\\1af7689d74e40d8a924c02c285b11b19\\tonka3000.qtvsctools\\qt.natvis.xml"
         }
     ]
 }

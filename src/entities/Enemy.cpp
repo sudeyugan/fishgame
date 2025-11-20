@@ -1,3 +1,4 @@
+#include <QGraphicsScene> 
 #include "Enemy.h"
 #include "Constants.h"
 
