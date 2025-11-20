@@ -4,34 +4,42 @@
 #include <QGraphicsScene>
 #include <QTimer>
 #include <QSet>
-#include "../entities/Player.h"
+#include <QKeyEvent>
+
+class Player;
 
 class MainScene : public QGraphicsScene {
     Q_OBJECT
 public:
     explicit MainScene(QObject* parent = nullptr);
-    
-    void startGame();
-    void pauseGame();
-    bool isPaused() const { return m_isPaused; }
+    ~MainScene();
+
+    void startGame(); // 开始/重启游戏
+    void pauseGame(); // 暂停
 
 protected:
-    void timerEvent(QTimerEvent *event) override;
+    // 键盘事件
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
 
+private slots:
+    void updateGame(); // 游戏主循环 (60FPS)
+    void spawnEnemy(); // 生成敌人
+
 private:
-    Player *m_player;
-    QTimer *m_gameTimer;
-    QTimer *m_spawnTimer;
-    QSet<int> m_pressedKeys;
+    Player* m_player;
+    QTimer* m_gameTimer;
+    QTimer* m_spawnTimer;
+    
+    // 记录当前按下的键，实现多键无冲突移动
+    QSet<int> m_keysPressed; 
     bool m_isPaused;
 
-    void spawnEnemy();
-    void checkCollisions();
-    void checkLevelClear(); // 检查是否通关
+    void initLevel();
+    void handleInput();     // 处理玩家移动
+    void checkCollisions(); // 碰撞检测
+    void updateCamera();    // 镜头跟随
     void gameOver();
-    void updateGame();      // 游戏主循环
 };
 
 #endif // MAINSCENE_H

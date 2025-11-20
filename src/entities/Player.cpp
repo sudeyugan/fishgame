@@ -1,39 +1,41 @@
 #include "Player.h"
-#include "Constants.h"
-#include <QBrush>
+#include <QDebug>
 
-Player::Player() {
-    // 玩家默认显示为绿色
-    QPixmap pix(50, 50);
-    pix.fill(Qt::green);
-    setPixmap(pix);
+Player::Player(QObject* parent) : Entity(parent) {
+    // 加载主角图片 (请确保路径正确，或者先用颜色块代替测试)
+    setPixmap(QPixmap(":/assets/player.png")); // 如果没有图片，会显示空白，需注意
+    if (pixmap().isNull()) {
+        qDebug() << "Error: Player image not found!";
+        // 创建一个默认的绿色方块代替图片，防止看不见
+        QPixmap defaultPix(40, 40);
+        defaultPix.fill(Qt::green);
+        setPixmap(defaultPix);
+    }
     
-    m_speed = 5.0;
-    setZValue(10); // 保证玩家在最上层
+    m_speed = 4.0; // 玩家速度稍快
+    setSizeScale(1.0);
+    
+    // 居中原点，方便旋转和碰撞
+    setTransformOriginPoint(boundingRect().center());
 }
 
-void Player::grow() {
-    m_scale += 0.1;
-    setScale(m_scale);
+void Player::grow(qreal amount) {
+    m_scale += amount;
+    setSizeScale(m_scale);
 }
 
-void Player::handleInput(const QSet<int>& keys) {
-    qreal dx = 0;
-    qreal dy = 0;
+void Player::updateMoveDirection(qreal dx, qreal dy) {
+    m_dx = dx;
+    m_dy = dy;
 
-    if (keys.contains(Qt::Key_W) || keys.contains(Qt::Key_Up)) dy = -m_speed;
-    if (keys.contains(Qt::Key_S) || keys.contains(Qt::Key_Down)) dy = m_speed;
-    if (keys.contains(Qt::Key_A) || keys.contains(Qt::Key_Left)) dx = -m_speed;
-    if (keys.contains(Qt::Key_D) || keys.contains(Qt::Key_Right)) dx = m_speed;
-
-    moveBy(dx, dy);
-}
-
-void Player::advance(int phase) {
-    if (!phase) return;
-    // 边界检测
-    if (x() < 0) setX(0);
-    if (y() < 0) setY(0);
-    if (x() > Config::WINDOW_WIDTH - 50) setX(Config::WINDOW_WIDTH - 50);
-    if (y() > Config::WINDOW_HEIGHT - 50) setY(Config::WINDOW_HEIGHT - 50);
+    // 简单的视觉翻转：向左游时翻转图片
+    if (dx < 0) {
+        QTransform transform;
+        transform.scale(-1, 1); // 水平翻转
+        // 需要修正位置偏移，或者简单地使用 setScale(-m_scale, m_scale) 但这会影响 logic scale
+        // 这里为了简单，只做 scale 的负值处理
+        setTransform(QTransform().scale(-1, 1).translate(-boundingRect().width(), 0));
+    } else if (dx > 0) {
+        setTransform(QTransform());
+    }
 }

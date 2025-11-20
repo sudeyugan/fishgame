@@ -2,19 +2,20 @@
 #define PLAYER_H
 
 #include "Entity.h"
-#include <QKeyEvent>
 
 class Player : public Entity {
+    Q_OBJECT
 public:
-    Player();
-    int type() const override { return TYPE_PLAYER; }
-    
-    // 处理键盘事件
-    void handleInput(const QSet<int>& keys);
-    void grow(); // 吃到鱼变大
+    explicit Player(QObject* parent = nullptr);
 
-protected:
-    void advance(int phase) override;
+    // 实现基类虚函数
+    EntityType getEntityType() const override { return TYPE_PLAYER; }
+
+    // 玩家特有功能：吃鱼变大
+    void grow(qreal amount);
+    
+    // 处理输入向量
+    void updateMoveDirection(qreal dx, qreal dy);
 };
 
-#endif
+#endif // PLAYER_H
