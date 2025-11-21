@@ -63,8 +63,8 @@ StartScreen::StartScreen(QWidget *parent) : QWidget(parent) {
 void StartScreen::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
 
-    // 加载背景图片 (请确保 resources.qrc 中包含了 assets/start.jpg)
-    QPixmap bg(":/assets/start.jpg");
+    // 加载背景图片 (请确保 resources.qrc 中包含了 assets/images/start.jpg)
+    QPixmap bg(":/assets/images/start.jpg");
 
     if (!bg.isNull()) {
         // drawPixmap(目标矩形, 图片) 会自动缩放图片以填充整个窗口

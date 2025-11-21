@@ -27,7 +27,7 @@ MainScene::MainScene(QObject* parent)
 void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
     // 【修改】这里加载 background.jpg
     // 建议：为了性能，可以将 pixmap 设为成员变量，在构造函数中加载一次，不要在这里重复加载
-    static QPixmap bg(":/assets/background.jpg"); 
+    static QPixmap bg(":/assets/images/background.jpg");
 
     if (!bg.isNull()) {
         // 将背景图绘制在整个场景区域 (sceneRect) 上

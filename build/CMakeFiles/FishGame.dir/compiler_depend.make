@@ -4875,12 +4875,10 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: E:/fish/src/utils/AudioM
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
-  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
-  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
@@ -6091,8 +6089,6 @@ E:/Qt/6.5.3/mingw_64/include/QtCore/qstringlist.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qstringmatcher.h:
 
-E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h:
-
 E:/Qt/6.5.3/mingw_64/include/QtCore/qstringtokenizer.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qstringview.h:
@@ -6541,6 +6537,8 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_construct.h:
 
+E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
+
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_heap.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator.h:
@@ -6875,8 +6873,6 @@ E:/fish/src/ui/PauseDialog.cpp:
 
 E:/fish/src/utils/AudioManager.cpp:
 
-E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect:
-
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake:
@@ -6916,8 +6912,6 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
-
-E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
 

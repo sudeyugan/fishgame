@@ -15,11 +15,11 @@ Enemy::Enemy(Player* target, QObject* parent)
     // 2. 根据大小决定图片 (体积越大 -> 图片编号越大)
     QString imagePath;
     if (randScale < 1.0) {
-        imagePath = ":/assets/enemyfish1.png"; // 小鱼
+        imagePath = ":/assets/images/enemyfish1.png"; // 小鱼
     } else if (randScale < 1.8) {
-        imagePath = ":/assets/enemyfish2.png"; // 中鱼
+        imagePath = ":/assets/images/enemyfish2.png"; // 中鱼
     } else {
-        imagePath = ":/assets/enemyfish3.png"; // 大鱼
+        imagePath = ":/assets/images/enemyfish3.png"; // 大鱼
     }
 
     // 3. 加载图片
