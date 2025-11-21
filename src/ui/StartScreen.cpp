@@ -62,19 +62,14 @@ StartScreen::StartScreen(QWidget *parent) : QWidget(parent) {
 // 重写 paintEvent 使用图片背景
 void StartScreen::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
-
-    // 加载背景图片 (请确保 resources.qrc 中包含了 assets/images/start.jpg)
     QPixmap bg(":/assets/images/start.jpg");
 
     if (!bg.isNull()) {
-        // drawPixmap(目标矩形, 图片) 会自动缩放图片以填充整个窗口
-        // 如果希望保持比例，可以先计算比例，但通常背景图是拉伸填充
-        painter.drawPixmap(rect(), bg);
+        // 【关键修复】使用 scaled() 将图片缩放到当前窗口大小
+        // Qt::KeepAspectRatioByExpanding 保证填满窗口且不变形（可能会裁剪）
+        // Qt::IgnoreAspectRatio 如果你想强制拉伸填满（可能会变形）
+        painter.drawPixmap(rect(), bg.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     } else {
-        // 如果图片加载失败（比如路径不对），保留原来的渐变色作为后备方案
-        QLinearGradient gradient(0, 0, 0, height());
-        gradient.setColorAt(0.0, QColor(0, 10, 50));   // 深海
-        gradient.setColorAt(1.0, QColor(0, 100, 150)); // 浅海
-        painter.fillRect(rect(), gradient);
+        painter.fillRect(rect(), QColor(0, 20, 60));
     }
 }

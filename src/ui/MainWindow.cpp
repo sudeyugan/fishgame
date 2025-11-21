@@ -1,6 +1,7 @@
 #include "MainWindow.h"
 #include "StartScreen.h"
 #include "GameHud.h"
+#include "PauseDialog.h"
 #include "../scenes/MainScene.h"
 #include "../utils/AudioManager.h"
 #include "../core/GameEngine.h" // 确保包含 GameEngine
@@ -56,6 +57,8 @@ void MainWindow::initUI() {
     m_scene = new MainScene(this);
     m_gameView->setScene(m_scene);
 
+
+
     // --- HUD ---
     m_hud = new GameHud(m_gameView);
     m_hud->setGeometry(0, 0, width(), 100);
@@ -65,6 +68,25 @@ void MainWindow::initUI() {
     connect(&GameEngine::instance(), &GameEngine::scoreChanged, m_hud, &GameHud::updateScore);
     connect(&GameEngine::instance(), &GameEngine::levelChanged, m_hud, &GameHud::updateLevel); // 确保连接 Level
     connect(&GameEngine::instance(), &GameEngine::gameOver, this, &MainWindow::handleGameOver);
+
+    connect(m_scene, &MainScene::gamePaused, this, [this](bool isPaused){
+        if (isPaused) {
+            PauseDialog dialog(this);
+            
+            // 连接弹窗的“继续游戏”信号 -> 再次调用 pauseGame 来恢复游戏
+            connect(&dialog, &PauseDialog::resumeGame, m_scene, &MainScene::pauseGame);
+            
+            // 连接弹窗的“返回标题”信号
+            connect(&dialog, &PauseDialog::quitToTitle, this, [this](){
+                // 先恢复游戏状态（防止计时器状态错乱），然后结束
+                m_scene->pauseGame(); 
+                handleGameOver(false); // 复用游戏结束逻辑返回标题
+            });
+
+            // 显示模态对话框
+            dialog.exec();
+        }
+    });
 }
 
 void MainWindow::startGame() {

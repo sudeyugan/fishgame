@@ -166,5 +166,6 @@ void MainScene::pauseGame() {
         m_gameTimer->start();
         m_spawnTimer->start();
     }
-    // 可以添加暂停信号发射
+    
+    emit gamePaused(m_isPaused);
 }

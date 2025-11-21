@@ -15,6 +15,12 @@ public:
     
     void startGame();
 
+public slots:
+    void pauseGame();
+
+signals:
+    void gamePaused(bool isPaused);
+    
 protected:
     // 键盘事件
     void keyPressEvent(QKeyEvent *event) override;
@@ -40,7 +46,6 @@ private:
     void checkCollisions();
     void updateCamera();
     void gameOver();
-    void pauseGame();
 };
 
 #endif // MAINSCENE_H
