@@ -3,7 +3,7 @@
 
 Player::Player(QObject* parent) : Entity(parent) {
     // 尝试加载图片
-    QPixmap pix(":/assets/player.png");
+    QPixmap pix(":/assets/fish1.png");
     if (!pix.isNull()) {
         setPixmap(pix);
         setTransformOriginPoint(pix.width()/2, pix.height()/2); // 中心旋转

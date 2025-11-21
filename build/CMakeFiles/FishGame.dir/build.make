@@ -77,6 +77,12 @@ FishGame_autogen/timestamp: CMakeFiles/FishGame.dir/compiler_depend.ts
 
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/resources.qrc
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: CMakeFiles/FishGame_autogen.dir/AutoRcc_resources_UVLADIE3JM_Info.json
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/enemyfish2.png
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/start.jpg
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/enemyfish1.png
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/enemyfish3.png
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/fish1.png
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/background.jpg
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/sounds/win.mp3
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/sounds/eat.mp3
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/sounds/lose.wav

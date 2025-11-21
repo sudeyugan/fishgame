@@ -4777,7 +4777,6 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj
 
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj
  E:/fish/src/utils/AudioManager.cpp
- E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject
  E:/Qt/6.5.3/mingw_64/include/QtCore/QString
  E:/Qt/6.5.3/mingw_64/include/QtCore/QUrl
@@ -4891,10 +4890,12 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h

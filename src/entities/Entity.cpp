@@ -25,31 +25,34 @@ void Entity::setVelocity(qreal dx, qreal dy) {
 void Entity::advance(int phase) {
     if (!phase) return;
 
-    // 1. 移动
+    // 1. 移动修复
+    // 错误写法: setPos(mapToParent(m_dx, m_dy)); 
+    // 正确写法: 直接在当前坐标(x, y)上加上位移量(m_dx, m_dy)
+    // 假设 m_dx, m_dy 是基于屏幕的世界坐标系速度 (例如按左键就是 x-5)
     if (m_dx != 0 || m_dy != 0) {
-        setPos(mapToParent(m_dx, m_dy));
+        setPos(x() + m_dx, y() + m_dy);
     }
 
-    // 2. 【核心修复】边界限制 (Clamping)
-    // 无论速度多快，都不能飞出 sceneRect
+    // 2. 边界限制 (保持不变，但这部分逻辑是好的)
     if (scene()) {
         QRectF bounds = scene()->sceneRect();
         QPointF curr = pos();
-        qreal x = curr.x();
-        qreal y = curr.y();
+        qreal px = curr.x();
+        qreal py = curr.y();
         bool modified = false;
 
-        // 预留一点 buffer (比如半个身位)，防止贴边卡死
-        qreal buffer = 10.0; 
+        // 建议：这里的 buffer 最好考虑物体实际宽度的一半，而不是写死 10.0
+        // qreal buffer = boundingRect().width() * scale() / 2.0; 
+        qreal buffer = 20.0; // 暂时稍微加大一点
 
-        if (x < bounds.left() + buffer) { x = bounds.left() + buffer; modified = true; }
-        else if (x > bounds.right() - buffer) { x = bounds.right() - buffer; modified = true; }
+        if (px < bounds.left() + buffer) { px = bounds.left() + buffer; modified = true; }
+        else if (px > bounds.right() - buffer) { px = bounds.right() - buffer; modified = true; }
 
-        if (y < bounds.top() + buffer) { y = bounds.top() + buffer; modified = true; }
-        else if (y > bounds.bottom() - buffer) { y = bounds.bottom() - buffer; modified = true; }
+        if (py < bounds.top() + buffer) { py = bounds.top() + buffer; modified = true; }
+        else if (py > bounds.bottom() - buffer) { py = bounds.bottom() - buffer; modified = true; }
 
         if (modified) {
-            setPos(x, y);
+            setPos(px, py);
         }
     }
 }

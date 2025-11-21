@@ -7,24 +7,39 @@
 Enemy::Enemy(Player* target, QObject* parent)
     : Entity(parent), m_target(target), m_directionTimer(0) {
     
-    // 设置默认图片或红色方块
-    QPixmap p(":/assets/enemy.png");
+    // 1. 先随机生成大小 (0.5倍 到 2.5倍)
+    qreal minScale = 0.5;
+    qreal maxScale = 2.5;
+    qreal randScale = minScale + QRandomGenerator::global()->generateDouble() * (maxScale - minScale);
+
+    // 2. 根据大小决定图片 (体积越大 -> 图片编号越大)
+    QString imagePath;
+    if (randScale < 1.0) {
+        imagePath = ":/assets/enemyfish1.png"; // 小鱼
+    } else if (randScale < 1.8) {
+        imagePath = ":/assets/enemyfish2.png"; // 中鱼
+    } else {
+        imagePath = ":/assets/enemyfish3.png"; // 大鱼
+    }
+
+    // 3. 加载图片
+    QPixmap p(imagePath);
     if (p.isNull()) {
+        // 如果找不到图，用红色方块代替
         p = QPixmap(40, 40);
         p.fill(Qt::red);
     }
     setPixmap(p);
     setTransformOriginPoint(boundingRect().center());
 
-    // 随机大小 (0.5倍 到 2.0倍)
-    qreal minScale = 0.5;
-    qreal maxScale = 2.0;
-    qreal randScale = minScale + QRandomGenerator::global()->generateDouble() * (maxScale - minScale);
+    // 4. 应用大小
     setSizeScale(randScale);
-    // 随机速度
-    qreal minSpeed = 1.5;
-    qreal maxSpeed = 3.5;
-    m_speed = minSpeed + QRandomGenerator::global()->generateDouble() * (maxSpeed - minSpeed);
+
+    // 5. 随机速度 (通常大鱼游得慢，小鱼游得快，这里做一个简单的反比设定)
+    // 基础速度 2.0，体积越大速度越慢
+    m_speed = 4.0 / randScale; 
+    // 限制一下最小速度，防止大鱼不动
+    if (m_speed < 1.0) m_speed = 1.0;
 }
 
 void Enemy::advance(int phase) {

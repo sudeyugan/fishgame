@@ -25,11 +25,21 @@ MainScene::MainScene(QObject* parent)
 
 // 【美化】绘制背景 - 海底网格效果
 void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
-    // 1. 填充深海渐变
-    QLinearGradient gradient(sceneRect().topLeft(), sceneRect().bottomLeft());
-    gradient.setColorAt(0, QColor(0, 105, 148));   // 上层浅蓝
-    gradient.setColorAt(1, QColor(0, 20, 40));     // 深海黑蓝
-    painter->fillRect(rect, gradient);
+    // 【修改】这里加载 background.jpg
+    // 建议：为了性能，可以将 pixmap 设为成员变量，在构造函数中加载一次，不要在这里重复加载
+    static QPixmap bg(":/assets/background.jpg"); 
+
+    if (!bg.isNull()) {
+        // 将背景图绘制在整个场景区域 (sceneRect) 上
+        // 注意：这里使用 sceneRect() 而不是 rect，确保背景固定在地图上，而不是跟随镜头移动
+        painter->drawPixmap(sceneRect(), bg, bg.rect());
+    } else {
+        // 备用：深海渐变
+        QLinearGradient gradient(sceneRect().topLeft(), sceneRect().bottomLeft());
+        gradient.setColorAt(0, QColor(0, 100, 200));
+        gradient.setColorAt(1, QColor(0, 0, 50));
+        painter->fillRect(rect, gradient);
+    }
 
     // 2. 绘制装饰性网格
     painter->setPen(QColor(255, 255, 255, 20)); // 极淡的白色
@@ -51,7 +61,7 @@ void MainScene::startGame() {
     
     initLevel();
     
-    m_isPaused = false;
+    m_isPaused = false;     
     m_gameTimer->start(16); 
     m_spawnTimer->start(1500); 
 }

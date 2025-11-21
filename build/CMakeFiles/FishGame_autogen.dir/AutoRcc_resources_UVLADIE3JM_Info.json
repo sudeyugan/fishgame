@@ -9,6 +9,12 @@
 	"INCLUDE_DIR" : "E:/fish/build/FishGame_autogen/include",
 	"INPUTS" : 
 	[
+		"E:/fish/src/assets/images/enemyfish2.png",
+		"E:/fish/src/assets/images/start.jpg",
+		"E:/fish/src/assets/images/enemyfish1.png",
+		"E:/fish/src/assets/images/enemyfish3.png",
+		"E:/fish/src/assets/images/fish1.png",
+		"E:/fish/src/assets/images/background.jpg",
 		"E:/fish/src/assets/sounds/win.mp3",
 		"E:/fish/src/assets/sounds/eat.mp3",
 		"E:/fish/src/assets/sounds/lose.wav",

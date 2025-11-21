@@ -59,12 +59,22 @@ StartScreen::StartScreen(QWidget *parent) : QWidget(parent) {
     layout->addWidget(m_quitBtn);
 }
 
-// 重写 paintEvent 画一个漂亮的海洋背景
+// 重写 paintEvent 使用图片背景
 void StartScreen::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
-    // 线性渐变：深蓝到浅蓝
-    QLinearGradient gradient(0, 0, 0, height());
-    gradient.setColorAt(0.0, QColor(0, 10, 50));   // 深海
-    gradient.setColorAt(1.0, QColor(0, 100, 150)); // 浅海
-    painter.fillRect(rect(), gradient);
+
+    // 加载背景图片 (请确保 resources.qrc 中包含了 assets/start.jpg)
+    QPixmap bg(":/assets/start.jpg");
+
+    if (!bg.isNull()) {
+        // drawPixmap(目标矩形, 图片) 会自动缩放图片以填充整个窗口
+        // 如果希望保持比例，可以先计算比例，但通常背景图是拉伸填充
+        painter.drawPixmap(rect(), bg);
+    } else {
+        // 如果图片加载失败（比如路径不对），保留原来的渐变色作为后备方案
+        QLinearGradient gradient(0, 0, 0, height());
+        gradient.setColorAt(0.0, QColor(0, 10, 50));   // 深海
+        gradient.setColorAt(1.0, QColor(0, 100, 150)); // 浅海
+        painter.fillRect(rect(), gradient);
+    }
 }

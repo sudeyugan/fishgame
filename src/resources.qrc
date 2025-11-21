@@ -4,5 +4,11 @@
         <file>assets/sounds/eat.mp3</file>
         <file>assets/sounds/win.mp3</file>
         <file>assets/sounds/lose.wav</file>
+        <file>assets/images/background.jpg</file> 
+        <file>assets/images/start.jpg</file>
+        <file>assets/images/fish1.png</file>
+        <file>assets/images/enemyfish1.png</file>
+        <file>assets/images/enemyfish2.png</file>
+        <file>assets/images/enemyfish3.png</file>
     </qresource>
 </RCC>
