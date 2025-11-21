@@ -8,6 +8,7 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSet
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSize
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QString
  E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer
  E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h
@@ -62,6 +63,7 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmargins.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmetacontainer.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmetatype.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/qminmax.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/qnamespace.h
@@ -164,14 +166,25 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QStackedWidget
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h
@@ -180,6 +193,7 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qscrollarea.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qstackedwidget.h

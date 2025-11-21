@@ -345,4 +345,9 @@ CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbrush.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qfontinfo.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qfontmetrics.h

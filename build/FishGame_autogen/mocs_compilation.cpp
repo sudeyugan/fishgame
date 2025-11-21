@@ -9,3 +9,4 @@
 #include "YPKJ5OE7LN/moc_MainWindow.cpp"
 #include "YPKJ5OE7LN/moc_PauseDialog.cpp"
 #include "YPKJ5OE7LN/moc_StartScreen.cpp"
+#include "VSCBVMNR7M/moc_AudioManager.cpp"

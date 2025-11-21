@@ -1,8 +1,9 @@
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:\fish\src\utils\AudioManager.cpp E:\fish\src\utils\AudioManager.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qchar.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobjectdefs.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qnamespace.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qglobal.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -136,48 +137,24 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtresource.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qttranslation.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qversiontagging.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_function.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward/binders.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/unordered_map \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qtmetamacros.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobjectdefs_impl.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/new_allocator.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/memoryfwd.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/alloc_traits.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/alloc_traits.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/algorithmfwd.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_heap.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tempbuf.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qstringview.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qbytearray.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qrefcount.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qnamespace.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qtmetamacros.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qarraydata.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qpair.h \
- E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/string.h \
- E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qarraydatapointer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qarraydataops.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qcontainertools_impl.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qxptype_traits.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstring \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iterator \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_raw_storage_iter.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/align.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bit \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unique_ptr.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_function.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward/binders.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stringfwd.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/postypes.h \
@@ -188,18 +165,9 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/swprintf.inl \
  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stream_iterator.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/streambuf_iterator.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/streambuf \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/localefwd.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/clocale \
- E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/locale.h \
- E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/stdio.h \
- E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cctype \
- E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/ctype.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ios_base.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_base.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/atomicity.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
@@ -217,6 +185,54 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/pthread_compat.h \
  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/pthread_unistd.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/concurrence.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_atomic.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward/auto_ptr.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_memory_defs.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qchar.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/unordered_map \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/erase_if.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/algorithmfwd.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_heap.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstringview.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qbytearray.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qrefcount.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qarraydata.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qpair.h \
+ E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/string.h \
+ E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qarraydatapointer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qarraydataops.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qcontainertools_impl.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qxptype_traits.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstring \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iterator \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stream_iterator.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/streambuf_iterator.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/streambuf \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/localefwd.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/clocale \
+ E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/locale.h \
+ E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/stdio.h \
+ E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cctype \
+ E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/ctype.h \
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ios_base.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_classes.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/char_traits.h \
@@ -235,19 +251,6 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdexcept \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/streambuf.tcc \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_raw_storage_iter.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/align.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bit \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unique_ptr.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_base.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/concurrence.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_atomic.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward/auto_ptr.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_memory_defs.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_algorithm_defs.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -263,34 +266,27 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qutf8stringview.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstringtokenizer.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstringbuilder.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtgui-config.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiexports.h \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qmetatype.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qcompare.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qdatastream.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qscopedpointer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevicebase.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qfloat16.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qhashfunctions.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numeric \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_numeric.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_numeric_defs.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qiterator.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qbytearraylist.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstringlist.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstringmatcher.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qscopedpointer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmetatype.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qcompare.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qdatastream.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevicebase.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qfloat16.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qiterable.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmetacontainer.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcontainerinfo.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtaggedpointer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qobjectdefs.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qobjectdefs_impl.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qscopeguard.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
@@ -299,21 +295,26 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qiterator.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qbytearraylist.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qstringlist.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qstringmatcher.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qobject_impl.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qbindingstorage.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QUrl \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtgui-config.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiexports.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qvariant.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qtextstream.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstringconverter_base.h \
@@ -326,4 +327,11 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qhash.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qvarlengtharray.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QUrl \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h

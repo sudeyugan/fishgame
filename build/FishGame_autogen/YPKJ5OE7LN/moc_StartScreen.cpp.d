@@ -133,7 +133,10 @@ E:/fish/build/FishGame_autogen/YPKJ5OE7LN/moc_StartScreen.cpp: E:/fish/src/ui/St
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \

@@ -394,8 +394,8 @@ CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QRandomGenerator \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qrandom.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/random \
@@ -405,4 +405,8 @@ CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/emmintrin.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/xmmintrin.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mmintrin.h \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.tcc
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.tcc \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QtMath \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h

@@ -365,14 +365,15 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:\fish\src\ui\StartScreen.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
  E:\fish\src\ui\GameHud.h E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h E:\fish\src\ui\PauseDialog.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
  E:/fish/src/scenes/MainScene.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
@@ -403,5 +404,24 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
+ E:/fish/src/utils/AudioManager.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
  E:/fish/src/core/GameEngine.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QObject E:/fish/src/core/Constants.h
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h

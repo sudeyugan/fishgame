@@ -1,35 +1,62 @@
 #include "AudioManager.h"
 #include <QUrl>
-#include <QDebug>
+// #include <QSoundEffect> // 暂时不用，改用 QMediaPlayer 以获得更好的 MP3 兼容性
 
-// 静态成员变量需要在这里定义（虽然简单的静态方法可以不用，但建议如下实现）
-
-void AudioManager::playBGM() { 
-    // 既然安装了 Multimedia，请取消注释并确保路径正确
-    static QSoundEffect *bgm = new QSoundEffect(); 
-    // 注意：确保 resources.qrc 里真的有这个文件，否则不会响
-    bgm->setSource(QUrl("qrc:/assets/sounds/bgmmp3v")); 
-    bgm->setLoopCount(QSoundEffect::Infinite);
-    bgm->setVolume(0.5f);
-    bgm->play();
+AudioManager& AudioManager::instance() {
+    static AudioManager _instance;
+    return _instance;
 }
 
-void AudioManager::playEatSound() { 
-    static QSoundEffect *eat = new QSoundEffect();
-    eat->setSource(QUrl("qrc:/assets/sounds/eat.mp3"));
-    eat->play();
+AudioManager::AudioManager(QObject *parent) : QObject(parent) {
+    // 初始化背景音乐播放器
+    m_bgmPlayer = new QMediaPlayer(this);
+    m_bgmOutput = new QAudioOutput(this);
+    m_bgmPlayer->setAudioOutput(m_bgmOutput);
+    m_bgmOutput->setVolume(0.3); // 设置默认音量
+}
+
+AudioManager::~AudioManager() {
+}
+
+void AudioManager::playBGM(const QString& name) {
+    // 假设资源路径是 :/assets/sounds/bgm.mp3
+    QString path = QString("qrc:/assets/sounds/%1.mp3").arg(name);
+    
+    m_bgmPlayer->setSource(QUrl(path));
+    m_bgmPlayer->setLoops(QMediaPlayer::Infinite); // 循环播放
+    m_bgmPlayer->play();
+}
+
+// 辅助函数：创建一个临时的播放器播放一次性音效
+void playOneShot(const QString& path, float volume) {
+    auto* player = new QMediaPlayer;
+    auto* output = new QAudioOutput;
+    player->setAudioOutput(output);
+    
+    player->setSource(QUrl(path));
+    output->setVolume(volume);
+    
+    // 播放结束或出错时自动清理内存
+    QObject::connect(player, &QMediaPlayer::mediaStatusChanged, [player, output](QMediaPlayer::MediaStatus status){
+        if (status == QMediaPlayer::EndOfMedia || status == QMediaPlayer::InvalidMedia) {
+            player->deleteLater();
+            output->deleteLater();
+        }
+    });
+    
+    player->play();
+}
+
+void AudioManager::playEatSound() {
+    // 使用 QMediaPlayer 替代 QSoundEffect 以避免 MP3 解码警告
+    playOneShot("qrc:/assets/sounds/eat.mp3", 0.8);
 }
 
 void AudioManager::playWinSound() {
-    // 示例实现
-    static QSoundEffect *win = new QSoundEffect();
-    win->setSource(QUrl("qrc:/assets/sounds/win.mp3"));
-    win->play();
+    playOneShot("qrc:/assets/sounds/win.mp3", 1.0);
 }
 
 void AudioManager::playLoseSound() {
-    // 示例实现
-    static QSoundEffect *lose = new QSoundEffect();
-    lose->setSource(QUrl("qrc:/assets/sounds/lose.wav"));
-    lose->play();
+    // 注意：这里是 wav 文件
+    playOneShot("qrc:/assets/sounds/lose.wav", 1.0);
 }

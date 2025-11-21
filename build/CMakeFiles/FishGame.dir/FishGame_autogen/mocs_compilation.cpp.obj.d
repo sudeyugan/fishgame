@@ -426,4 +426,21 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_PauseDialog.cpp \
  E:/fish/src/ui/PauseDialog.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_StartScreen.cpp \
- E:/fish/src/ui/StartScreen.h
+ E:/fish/src/ui/StartScreen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+ E:\fish\build\FishGame_autogen\VSCBVMNR7M/moc_AudioManager.cpp \
+ E:/fish/src/utils/AudioManager.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h

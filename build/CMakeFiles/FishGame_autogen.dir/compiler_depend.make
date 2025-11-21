@@ -7,6 +7,7 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QSet \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QSize \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer \
   E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -61,6 +62,7 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmargins.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmetacontainer.h \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmetatype.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qminmax.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qnamespace.h \
@@ -163,14 +165,25 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QStackedWidget \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
@@ -179,6 +192,7 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qscrollarea.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qstackedwidget.h \
@@ -718,6 +732,8 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cm
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer:
 
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h:
+
 E:/Qt/6.5.3/mingw_64/include/QtCore/QObject:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qhash.h:
@@ -740,15 +756,21 @@ E:/Qt/6.5.3/mingw_64/include/QtCore/qvariant.h:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
 
+E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake:
+
+E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF:
+
+E:/Qt/6.5.3/mingw_64/include/QtCore/QString:
+
+E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array:
+
+E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.h:
+
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginAdditionalTargetInfo.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h:
-
-E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake:
-
-E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF:
 
 E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog:
 
@@ -836,6 +858,8 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cerrno:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qfloat16.h:
 
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h:
+
 E:/Qt/6.5.3/mingw_64/include/QtCore/qbytearrayview.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h:
@@ -845,8 +869,6 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake:
 E:/Qt/6.5.3/mingw_64/include/QtCore/qforeach.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qchar.h:
-
-E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_classes.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qcontainerfwd.h:
 
@@ -906,6 +928,8 @@ E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Compiler/Clan
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qdatastream.h:
 
+E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h:
+
 E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits:
@@ -926,9 +950,11 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qmalloc.h:
 
-E:/Qt/6.5.3/mingw_64/include/QtCore/qobjectdefs_impl.h:
-
 E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h:
+
+E:/Qt/6.5.3/mingw_64/include/QtCore/qobjectdefs_impl.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qmargins.h:
 
@@ -1176,6 +1202,8 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
 
 E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel:
 
+E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton:
+
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/predefined_ops.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtGui/qkeysequence.h:
@@ -1256,6 +1284,24 @@ E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake:
 
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer:
+
+E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
+
+E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCompilerCommon.cmake:
+
+E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h:
+
 E:/fish/src/ui/StartScreen.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/debug.h:
@@ -1282,6 +1328,8 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetIn
 
 E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget:
 
+E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h:
+
 E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake:
@@ -1303,6 +1351,12 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/assert.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h:
+
+E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar:
+
+E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h:
+
+E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h:
 
 E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeParseImplicitIncludeInfo.cmake:
 
@@ -1391,8 +1445,6 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
-
-E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
 
@@ -1485,12 +1537,6 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/atomic:
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake:
-
-E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
-
-E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCompilerCommon.cmake:
-
-E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
 
@@ -1594,11 +1640,11 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/numer
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
 
-E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake:
+E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/FindPackageMessage.cmake:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream_insert.h:
 
-E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/FindPackageMessage.cmake:
+E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake:
 
 E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
 
@@ -1642,9 +1688,9 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allo
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets-relwithdebinfo.cmake:
 
-E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets.cmake:
-
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable.h:
+
+E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake:
 
@@ -1806,10 +1852,6 @@ E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Platform/Wind
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h:
 
-E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array:
-
-E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.h:
-
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_ptr.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bit:
@@ -1836,15 +1878,13 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exce
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functional_hash.h:
 
-E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar:
-
-E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h:
-
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ios_base.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc:
+
+E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_classes.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_classes.tcc:
 
@@ -1857,6 +1897,8 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/move
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/nested_exception.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h:
+
+E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ptr_traits.h:
 
