@@ -10,6 +10,8 @@ public:
     
     EntityType getEntityType() const override { return TYPE_PLAYER; }
 
+    void advance(int phase) override;
+    
     void grow(qreal amount);
     void updateMoveDirection(qreal dx, qreal dy);
 

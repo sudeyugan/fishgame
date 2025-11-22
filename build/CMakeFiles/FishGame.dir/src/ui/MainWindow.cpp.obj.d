@@ -365,29 +365,12 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:\fish\src\ui\StartScreen.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
- E:\fish\src\ui\GameHud.h E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h E:\fish\src\ui\PauseDialog.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
- E:/fish/src/scenes/MainScene.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qtimer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qbasictimer.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QSet \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/QKeyEvent \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QMouseEvent \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcoreevent.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qpointer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qeventpoint.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qvector2d.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h \
@@ -406,6 +389,18 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
+ E:\fish\src\ui\GameHud.h E:\fish\src\ui\PauseDialog.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
+ E:/fish/src/scenes/MainScene.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qtimer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qbasictimer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QSet \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QKeyEvent \
  E:/fish/src/utils/AudioManager.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
@@ -420,7 +415,8 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
- E:/fish/src/core/GameEngine.h \
+ E:/fish/src/core/GameEngine.h E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \

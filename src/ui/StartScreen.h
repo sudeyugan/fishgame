@@ -2,7 +2,7 @@
 #define STARTSCREEN_H
 
 #include <QWidget>
-#include <QPushButton>
+#include <QMouseEvent> // 引入鼠标事件头文件
 
 class StartScreen : public QWidget {
     Q_OBJECT
@@ -10,16 +10,14 @@ public:
     explicit StartScreen(QWidget *parent = nullptr);
 
 protected:
-    // 重写绘图事件，绘制海洋渐变背景
     void paintEvent(QPaintEvent *event) override;
+    
+    // [新增] 重写鼠标按下事件
+    void mousePressEvent(QMouseEvent *event) override;
 
 signals:
-    void startGameClicked(); // 点击开始时发出
-    void quitGameClicked();  // 点击退出时发出
-
-private:
-    QPushButton *m_startBtn;
-    QPushButton *m_quitBtn;
+    void startGameClicked();
+    void quitGameClicked();
 };
 
 #endif // STARTSCREEN_H

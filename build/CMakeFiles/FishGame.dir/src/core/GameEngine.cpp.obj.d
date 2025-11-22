@@ -299,4 +299,8 @@ CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qbindingstorage.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
- E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime
+ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata_impl.h

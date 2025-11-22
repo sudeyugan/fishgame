@@ -349,19 +349,9 @@ CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QHBoxLayout \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/QFont \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QPainterPath \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h

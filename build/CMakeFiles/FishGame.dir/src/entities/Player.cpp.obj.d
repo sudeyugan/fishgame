@@ -342,11 +342,12 @@ CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
+ E:/fish/src/core/GameEngine.h E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbrush.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qfontinfo.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qfontmetrics.h
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h

@@ -2,20 +2,22 @@
 #define GAMEHUD_H
 
 #include <QWidget>
-#include <QLabel>
 
 class GameHud : public QWidget {
     Q_OBJECT
 public:
-    GameHud(QWidget *parent = nullptr);
+    explicit GameHud(QWidget *parent = nullptr);
 
 public slots:
     void updateScore(int score);
     void updateLevel(int level);
 
+protected:
+    void paintEvent(QPaintEvent *event) override;
+
 private:
-    QLabel *m_scoreLabel;
-    QLabel *m_levelLabel;
+    int m_score;
+    int m_level;
 };
 
-#endif
+#endif // GAMEHUD_H

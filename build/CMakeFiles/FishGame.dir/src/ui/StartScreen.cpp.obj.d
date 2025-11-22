@@ -349,16 +349,30 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QMouseEvent \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qcoreevent.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qpointer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qeventpoint.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qvector2d.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpointingdevice.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qinputdevice.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qscreen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QRect \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qrect.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QSize \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qsize.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \

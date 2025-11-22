@@ -1,5 +1,6 @@
 E:/fish/build/FishGame_autogen/PRMOGMWJPH/moc_GameEngine.cpp: E:/fish/src/core/GameEngine.h \
   E:/fish/build/FishGame_autogen/moc_predefs.h \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
   E:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
@@ -42,6 +43,7 @@ E:/fish/build/FishGame_autogen/PRMOGMWJPH/moc_GameEngine.cpp: E:/fish/src/core/G
   E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qlogging.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmalloc.h \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmetacontainer.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qmetatype.h \
@@ -58,6 +60,8 @@ E:/fish/build/FishGame_autogen/PRMOGMWJPH/moc_GameEngine.cpp: E:/fish/src/core/G
   E:/Qt/6.5.3/mingw_64/include/QtCore/qrefcount.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qscopedpointer.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qscopeguard.h \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata.h \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata_impl.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qstringalgorithms.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qstringbuilder.h \

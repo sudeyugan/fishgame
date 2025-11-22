@@ -2,6 +2,7 @@
 #define GAMEENGINE_H
 
 #include <QObject>
+#include <QMap>
 
 class GameEngine : public QObject {
     Q_OBJECT
@@ -18,6 +19,7 @@ public:
     int getCurrentLevel() const { return m_currentLevel; }
     void nextLevel();
 
+    QMap<int, bool>& keys() { return m_keys; }
 signals:
     void scoreChanged(int newScore);
     void levelChanged(int newLevel);
@@ -29,6 +31,7 @@ private:
     int m_score;
     int m_currentLevel;
     bool m_isPaused;
+    QMap<int, bool> m_keys;
 };
 
 #endif

@@ -3,6 +3,7 @@
 
 E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtCore/QList
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QMap
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject
  E:/Qt/6.5.3/mingw_64/include/QtCore/QRect
  E:/Qt/6.5.3/mingw_64/include/QtCore/QSet
@@ -127,6 +128,7 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtCore/qversiontagging.h
  E:/Qt/6.5.3/mingw_64/include/QtCore/qxptype_traits.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/QKeyEvent
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QMouseEvent
  E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform
  E:/Qt/6.5.3/mingw_64/include/QtGui/qaction.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h
@@ -147,7 +149,6 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpalette.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixmap.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpointingdevice.h
@@ -156,7 +157,6 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtGui/qrgb.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qrgba64.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qscreen.h
- E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtgui-config.h
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiexports.h
@@ -179,21 +179,16 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QStackedWidget
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qscrollarea.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qstackedwidget.h

@@ -365,4 +365,10 @@ CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsDropShadowEffect \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicseffect.h

@@ -8,12 +8,10 @@
 #include <QtMath>
 #include <QDebug>
 
-// 注意：这里没有 class MainScene 定义，只有函数实现
-
 MainScene::MainScene(QObject* parent)
     : QGraphicsScene(parent), m_player(nullptr), m_isPaused(false) {
 
-    // 1. 设置超大地图 (2400x1800)
+    // 设置超大地图 (2400x1800)
     setSceneRect(0, 0, 2400, 1800);
     
     m_gameTimer = new QTimer(this);
@@ -27,15 +25,17 @@ void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
     static QPixmap bg(":/assets/images/background.jpg");
 
     if (bg.isNull()) {
-        qDebug() << "背景图片加载失败！请检查路径";
+        painter->fillRect(rect, Qt::blue); // 图片加载失败时的兜底
         return;
     }
+    // 优化：只绘制当前视野区域的背景，提高性能（可选）
     painter->drawPixmap(sceneRect(), bg, bg.rect());
 }
 
 void MainScene::startGame() {
     clear(); 
-    m_keysPressed.clear();
+    // 清除 GameEngine 中的旧按键状态
+    GameEngine::instance().keys().clear();
     
     initLevel();
     
@@ -54,11 +54,13 @@ void MainScene::initLevel() {
 void MainScene::updateGame() {
     if (m_isPaused || !m_player) return;
 
-    handleInput();
-    advance();       // 所有物体移动
+    // 注意：这里不需要调用 handleInput() 了，
+    // 因为 Player::advance() 内部会直接读取 GameEngine::keys()
+    
+    advance(); // 触发所有物体的移动逻辑 (包括 Player 和 Enemy)
     checkCollisions();
     
-    // 【核心功能】镜头跟随
+    // 镜头跟随
     if (!views().isEmpty()) {
         views().first()->centerOn(m_player);
     }
@@ -66,8 +68,6 @@ void MainScene::updateGame() {
 
 void MainScene::spawnEnemy() {
     if (!m_player) return;
-
-    // 限制全图最大敌人数
     if (items().size() > 50) return;
 
     Enemy* enemy = new Enemy(m_player);
@@ -83,16 +83,7 @@ void MainScene::spawnEnemy() {
 }
 
 void MainScene::handleInput() {
-    if (!m_player) return;
-    qreal vx = 0, vy = 0;
-    qreal speed = m_player->getSpeed();
-
-    if (m_keysPressed.contains(Qt::Key_W)) vy = -speed;
-    if (m_keysPressed.contains(Qt::Key_S)) vy = speed;
-    if (m_keysPressed.contains(Qt::Key_A)) vx = -speed;
-    if (m_keysPressed.contains(Qt::Key_D)) vx = speed;
-
-    m_player->updateMoveDirection(vx, vy);
+    // 此函数已废弃，逻辑移至 Player::advance
 }
 
 void MainScene::checkCollisions() {
@@ -117,16 +108,19 @@ void MainScene::checkCollisions() {
     }
 }
 
+// 【关键修改】将按键事件同步到 GameEngine
 void MainScene::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Escape) {
         pauseGame();
     } else {
-        m_keysPressed.insert(event->key());
+        // 更新全局按键状态，供 Player 使用
+        GameEngine::instance().keys()[event->key()] = true;
     }
 }
 
 void MainScene::keyReleaseEvent(QKeyEvent *event) {
-    m_keysPressed.remove(event->key());
+    // 按键释放
+    GameEngine::instance().keys()[event->key()] = false;
 }
 
 void MainScene::gameOver() {
@@ -144,6 +138,5 @@ void MainScene::pauseGame() {
         m_gameTimer->start();
         m_spawnTimer->start();
     }
-    
     emit gamePaused(m_isPaused);
 }

@@ -67,21 +67,24 @@ void MainWindow::initUI() {
     connect(&GameEngine::instance(), &GameEngine::levelChanged, m_hud, &GameHud::updateLevel); // 确保连接 Level
     connect(&GameEngine::instance(), &GameEngine::gameOver, this, &MainWindow::handleGameOver);
 
-    connect(m_scene, &MainScene::gamePaused, this, [this](bool isPaused){
+connect(m_scene, &MainScene::gamePaused, this, [this](bool isPaused){
         if (isPaused) {
             PauseDialog dialog(this);
             
-            // 连接弹窗的“继续游戏”信号 -> 再次调用 pauseGame 来恢复游戏
+            // 情况1：点击"继续游戏"按钮 -> 触发 resumeGame -> 调用 pauseGame 解除暂停
             connect(&dialog, &PauseDialog::resumeGame, m_scene, &MainScene::pauseGame);
             
-            // 连接弹窗的“返回标题”信号
+            // 情况2：按下 Esc 键 -> QDialog 默认触发 rejected 信号
+            // 我们需要把它也连接到 pauseGame，以解除暂停状态
+            connect(&dialog, &QDialog::rejected, m_scene, &MainScene::pauseGame);
+
+            // 情况3：点击"返回标题"
             connect(&dialog, &PauseDialog::quitToTitle, this, [this](){
-                // 先恢复游戏状态（防止计时器状态错乱），然后结束
-                m_scene->pauseGame(); 
-                handleGameOver(false); // 复用游戏结束逻辑返回标题
+                m_scene->pauseGame(); // 先恢复逻辑状态
+                handleGameOver(false); 
             });
 
-            // 显示模态对话框
+            // 显示模态对话框 (阻塞直到关闭)
             dialog.exec();
         }
     });

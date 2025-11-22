@@ -376,7 +376,8 @@ CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject E:/fish/src/entities/Enemy.h \
- E:/fish/src/core/GameEngine.h \
+ E:/fish/src/core/GameEngine.h E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
