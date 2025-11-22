@@ -2,53 +2,22 @@
 #include <QPainter>
 
 Player::Player(QObject* parent) : Entity(parent) {
-    // 尝试加载图片
-    QPixmap pix(":/assets/images/fish1.jpg");
-    if (!pix.isNull()) {
-        setPixmap(pix);
-        setTransformOriginPoint(pix.width()/2, pix.height()/2); // 中心旋转
-        setOffset(-pix.width()/2, -pix.height()/2); // 中心对齐
-    } else {
-        // 如果没图片，设置一个虚拟的边界矩形，否则碰撞检测会失效
-        // 假设鱼的大小是 60x40
-    }
+    // 1. 加载原始大图
+    QPixmap originalPix(":/assets/images/fish1.jpg"); 
+    
+    // 2. 【核心修改】缩放图片到合适的大小
+
+    QPixmap finalPix = originalPix.scaledToWidth(80, Qt::SmoothTransformation); 
+
+    // 3. 设置缩放后的图片
+    setPixmap(finalPix);
+
+    setTransformOriginPoint(finalPix.width()/2, finalPix.height()/2);
+    setOffset(-finalPix.width()/2, -finalPix.height()/2);
     
     m_speed = 5.0; 
-    setSizeScale(1.0);
-}
-
-// 【美化】重写 paint，如果没图，手绘一条金鱼
-void Player::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
-    if (pixmap().isNull()) {
-        painter->save();
-        painter->setRenderHint(QPainter::Antialiasing);
-
-        // 画鱼身 (橙色)
-        painter->setBrush(QColor(255, 165, 0)); 
-        painter->setPen(Qt::NoPen);
-        painter->drawEllipse(QPoint(0,0), 30, 20);
-
-        // 画尾巴
-        QPolygonF tail;
-        tail << QPointF(-25, 0) << QPointF(-45, -15) << QPointF(-45, 15);
-        painter->drawPolygon(tail);
-
-        // 画眼睛
-        painter->setBrush(Qt::black);
-        painter->drawEllipse(QPoint(15, -5), 3, 3);
-
-        painter->restore();
-    } else {
-        QGraphicsPixmapItem::paint(painter, option, widget);
-    }
-}
-
-// 必须重写 boundingRect 否则没图时碰撞检测失效
-QRectF Player::boundingRect() const {
-    if (pixmap().isNull()) {
-        return QRectF(-45, -20, 80, 40); // 手绘鱼的大小
-    }
-    return QGraphicsPixmapItem::boundingRect();
+    setSizeScale(1.0); 
+    m_type = TYPE_PLAYER;
 }
 
 void Player::grow(qreal amount) {

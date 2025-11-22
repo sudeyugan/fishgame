@@ -39,30 +39,42 @@ namespace {
 struct qt_meta_stringdata_CLASSMainSceneENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSMainSceneENDCLASS = QtMocHelpers::stringData(
     "MainScene",
-    "updateGame",
+    "gamePaused",
     "",
+    "isPaused",
+    "pauseGame",
+    "updateGame",
     "spawnEnemy"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainSceneENDCLASS_t {
-    uint offsetsAndSizes[8];
+    uint offsetsAndSizes[14];
     char stringdata0[10];
     char stringdata1[11];
     char stringdata2[1];
-    char stringdata3[11];
+    char stringdata3[9];
+    char stringdata4[10];
+    char stringdata5[11];
+    char stringdata6[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainSceneENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSMainSceneENDCLASS_t qt_meta_stringdata_CLASSMainSceneENDCLASS = {
     {
         QT_MOC_LITERAL(0, 9),  // "MainScene"
-        QT_MOC_LITERAL(10, 10),  // "updateGame"
+        QT_MOC_LITERAL(10, 10),  // "gamePaused"
         QT_MOC_LITERAL(21, 0),  // ""
-        QT_MOC_LITERAL(22, 10)   // "spawnEnemy"
+        QT_MOC_LITERAL(22, 8),  // "isPaused"
+        QT_MOC_LITERAL(31, 9),  // "pauseGame"
+        QT_MOC_LITERAL(41, 10),  // "updateGame"
+        QT_MOC_LITERAL(52, 10)   // "spawnEnemy"
     },
     "MainScene",
-    "updateGame",
+    "gamePaused",
     "",
+    "isPaused",
+    "pauseGame",
+    "updateGame",
     "spawnEnemy"
 };
 #undef QT_MOC_LITERAL
@@ -75,18 +87,26 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainSceneENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   38,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x08,    1 /* Private */,
-       3,    0,   27,    2, 0x08,    2 /* Private */,
+       4,    0,   41,    2, 0x0a,    3 /* Public */,
+       5,    0,   42,    2, 0x08,    4 /* Private */,
+       6,    0,   43,    2, 0x08,    5 /* Private */,
+
+ // signals: parameters
+    QMetaType::Void, QMetaType::Bool,    3,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -102,6 +122,11 @@ Q_CONSTINIT const QMetaObject MainScene::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSMainSceneENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainScene, std::true_type>,
+        // method 'gamePaused'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'pauseGame'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'updateGame'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'spawnEnemy'
@@ -116,12 +141,22 @@ void MainScene::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         auto *_t = static_cast<MainScene *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->updateGame(); break;
-        case 1: _t->spawnEnemy(); break;
+        case 0: _t->gamePaused((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 1: _t->pauseGame(); break;
+        case 2: _t->updateGame(); break;
+        case 3: _t->spawnEnemy(); break;
         default: ;
         }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (MainScene::*)(bool );
+            if (_t _q_method = &MainScene::gamePaused; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 0;
+                return;
+            }
+        }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainScene::metaObject() const
@@ -143,14 +178,21 @@ int MainScene::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
+}
+
+// SIGNAL 0
+void MainScene::gamePaused(bool _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

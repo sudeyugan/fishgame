@@ -744,6 +744,7 @@ CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.obj: E:/fish/src/core/GameEngine
   E:/fish/src/core/GameEngine.h
 
 CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj: E:/fish/src/entities/Enemy.cpp \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QRandomGenerator \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QtMath \
@@ -1236,9 +1237,7 @@ CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj: E:/fish/src/entities/Entity
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -3776,6 +3775,7 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: E:/fish/src/ui/MainWindow.cpp
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
@@ -3787,6 +3787,7 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: E:/fish/src/ui/MainWindow.cpp
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h \
@@ -4019,6 +4020,7 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: E:/fish/src/ui/MainWindow.cpp
   E:/fish/src/utils/AudioManager.h \
   E:/fish/src/ui/GameHud.h \
   E:/fish/src/ui/MainWindow.h \
+  E:/fish/src/ui/PauseDialog.h \
   E:/fish/src/ui/StartScreen.h
 
 CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj: E:/fish/src/ui/PauseDialog.cpp \
@@ -4429,7 +4431,6 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj: E:/fish/src/ui/StartScreen.c
   E:/Qt/6.5.3/mingw_64/include/QtCore/qglobalstatic.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qhash.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qhashfunctions.h \
-  E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevicebase.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qiterable.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qiterator.h \
@@ -4494,13 +4495,11 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj: E:/fish/src/ui/StartScreen.c
   E:/Qt/6.5.3/mingw_64/include/QtCore/qtversionchecks.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qtypeinfo.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qtypes.h \
-  E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qutf8stringview.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qvariant.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qvarlengtharray.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qversiontagging.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/qxptype_traits.h \
-  E:/Qt/6.5.3/mingw_64/include/QtGui/QLinearGradient \
   E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qaction.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
@@ -4517,14 +4516,12 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj: E:/fish/src/ui/StartScreen.c
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpalette.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
-  E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpixmap.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qpolygon.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qregion.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qrgb.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qrgba64.h \
-  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtgui-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiexports.h \
@@ -4532,15 +4529,12 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj: E:/fish/src/ui/StartScreen.c
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
-  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
@@ -6575,8 +6569,6 @@ FishGame_autogen/PRMOGMWJPH/moc_GameEngine.cpp:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unique_ptr.h:
 
-E:/Qt/6.5.3/mingw_64/include/QtGui/QLinearGradient:
-
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake:
@@ -6604,6 +6596,10 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdio:
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_numeric_defs.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdlib:
+
+E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+
+E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime:
 
@@ -6914,10 +6910,6 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
-
-E:/Qt/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
-
-E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 

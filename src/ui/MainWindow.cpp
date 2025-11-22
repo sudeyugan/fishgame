@@ -47,9 +47,7 @@ void MainWindow::initUI() {
     m_gameView->setRenderHint(QPainter::Antialiasing); 
     m_gameView->setRenderHint(QPainter::SmoothPixmapTransform);
     m_gameView->setViewportUpdateMode(QGraphicsView::SmartViewportUpdate);
-    
-    // 删除导致报错的硬件加速代码
-    // m_gameView->setViewport(new QGLWidget(...)); 
+    m_gameView->scale(1.0, 1.0);
 
     m_stack->addWidget(m_gameView);
 
@@ -106,5 +104,4 @@ void MainWindow::handleGameOver(bool win) {
 void MainWindow::resizeEvent(QResizeEvent *event) {
     QMainWindow::resizeEvent(event);
     if (m_hud) m_hud->resize(width(), 100);
-    if (m_gameView) m_gameView->fitInView(m_scene->sceneRect(), Qt::KeepAspectRatioByExpanding); // 可选：自适应
 }

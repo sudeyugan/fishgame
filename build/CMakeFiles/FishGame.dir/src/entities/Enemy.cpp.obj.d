@@ -355,4 +355,6 @@ CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj: \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mmintrin.h \
  E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/random.tcc \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QVector2D \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qvectornd.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h

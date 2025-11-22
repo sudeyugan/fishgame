@@ -12,9 +12,9 @@
 
 MainScene::MainScene(QObject* parent)
     : QGraphicsScene(parent), m_player(nullptr), m_isPaused(false) {
-    
-    // 1. 设置超大地图 (3000x3000)
-    setSceneRect(0, 0, 3000, 3000);
+
+    // 1. 设置超大地图 (2400x1800)
+    setSceneRect(0, 0, 2400, 1800);
     
     m_gameTimer = new QTimer(this);
     connect(m_gameTimer, &QTimer::timeout, this, &MainScene::updateGame);
@@ -23,36 +23,14 @@ MainScene::MainScene(QObject* parent)
     connect(m_spawnTimer, &QTimer::timeout, this, &MainScene::spawnEnemy);
 }
 
-// 【美化】绘制背景 - 海底网格效果
 void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
-    // 【修改】这里加载 background.jpg
-    // 建议：为了性能，可以将 pixmap 设为成员变量，在构造函数中加载一次，不要在这里重复加载
     static QPixmap bg(":/assets/images/background.jpg");
 
-    if (!bg.isNull()) {
-        // 将背景图绘制在整个场景区域 (sceneRect) 上
-        // 注意：这里使用 sceneRect() 而不是 rect，确保背景固定在地图上，而不是跟随镜头移动
-        painter->drawPixmap(sceneRect(), bg, bg.rect());
-    } else {
-        // 备用：深海渐变
-        QLinearGradient gradient(sceneRect().topLeft(), sceneRect().bottomLeft());
-        gradient.setColorAt(0, QColor(0, 100, 200));
-        gradient.setColorAt(1, QColor(0, 0, 50));
-        painter->fillRect(rect, gradient);
+    if (bg.isNull()) {
+        qDebug() << "背景图片加载失败！请检查路径";
+        return;
     }
-
-    // 2. 绘制装饰性网格
-    painter->setPen(QColor(255, 255, 255, 20)); // 极淡的白色
-    int gridSize = 200;
-    
-    qreal left = int(rect.left()) - (int(rect.left()) % gridSize);
-    qreal top = int(rect.top()) - (int(rect.top()) % gridSize);
-
-    for (qreal x = left; x < rect.right(); x += gridSize)
-        painter->drawLine(x, rect.top(), x, rect.bottom());
-    
-    for (qreal y = top; y < rect.bottom(); y += gridSize)
-        painter->drawLine(rect.left(), y, rect.right(), y);
+    painter->drawPixmap(sceneRect(), bg, bg.rect());
 }
 
 void MainScene::startGame() {

@@ -373,7 +373,9 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h E:\fish\src\ui\PauseDialog.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
  E:/fish/src/scenes/MainScene.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
