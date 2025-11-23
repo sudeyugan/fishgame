@@ -22,7 +22,7 @@ MainScene::MainScene(QObject* parent)
 }
 
 void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
-    static QPixmap bg(":/assets/images/background.jpg");
+    static QPixmap bg(":/assets/images/background1.jpg");
 
     if (bg.isNull()) {
         painter->fillRect(rect, Qt::blue); // 图片加载失败时的兜底

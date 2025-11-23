@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/fish/build/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp" "CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj.d"
   "E:/fish/build/FishGame_autogen/mocs_compilation.cpp" "CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj.d"
   "E:/fish/src/core/GameEngine.cpp" "CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.obj.d"
+  "E:/fish/src/core/SaveManager.cpp" "CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.obj.d"
   "E:/fish/src/entities/Enemy.cpp" "CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj.d"
   "E:/fish/src/entities/Entity.cpp" "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj.d"
   "E:/fish/src/entities/Player.cpp" "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj.d"
@@ -24,6 +25,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/fish/src/ui/LevelInfoDialog.cpp" "CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj.d"
   "E:/fish/src/ui/MainWindow.cpp" "CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj.d"
   "E:/fish/src/ui/PauseDialog.cpp" "CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj.d"
+  "E:/fish/src/ui/SaveLoadDialog.cpp" "CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.obj.d"
   "E:/fish/src/ui/StartScreen.cpp" "CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj.d"
   "E:/fish/src/utils/AudioManager.cpp" "CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj.d"
   )

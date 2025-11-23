@@ -26,7 +26,9 @@ add_executable(FishGame
     src/core/GameEngine.cpp
     src/core/GameEngine.h
     src/core/Constants.h
-    
+    src/core/SaveManager.cpp
+    src/core/SaveManager.h
+
     # Entities
     src/entities/Entity.cpp
     src/entities/Entity.h
@@ -56,7 +58,9 @@ add_executable(FishGame
     src/ui/HelpScreen.h
     src/ui/GameOverDialog.cpp
     src/ui/GameOverDialog.h
-    
+    src/ui/SaveLoadDialog.cpp
+    src/ui/SaveLoadDialog.h
+
     # Utils
     src/utils/AudioManager.cpp
     src/utils/AudioManager.h

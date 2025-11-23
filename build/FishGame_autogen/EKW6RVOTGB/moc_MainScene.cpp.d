@@ -1,11 +1,13 @@
 E:/fish/build/FishGame_autogen/EKW6RVOTGB/moc_MainScene.cpp: E:/fish/src/scenes/MainScene.h \
   E:/fish/build/FishGame_autogen/moc_predefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QRect \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QSet \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QSize \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QSizeF \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer \
   E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
   E:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -352,4 +354,5 @@ E:/fish/build/FishGame_autogen/EKW6RVOTGB/moc_MainScene.cpp: E:/fish/src/scenes/
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h \
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
-  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
+  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+  E:/fish/src/scenes/LevelManager.h

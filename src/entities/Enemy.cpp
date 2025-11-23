@@ -1,5 +1,6 @@
 #include "Enemy.h"
-#include "Player.h" // 必须包含 Player 头文件
+#include "Player.h" 
+#include "../core/GameEngine.h"
 #include <QtMath>
 #include <QRandomGenerator>
 #include <QGraphicsScene>
@@ -54,10 +55,23 @@ Enemy::Enemy(Player* target, QObject* parent)
     // 应用初始大小
     setSizeScale(m_scale); 
 
-    // 3. 随机速度 (体积越大越慢)
-    m_speed = 4.0 / m_scale; 
-    if (m_speed > 4.0) m_speed = 4.0; // 最高速度
-    if (m_speed < 1.5) m_speed = 1.5; // 最低速度
+    // 速度计算
+    // 1. 获取当前等级
+    int currentLevel = GameEngine::instance().getCurrentLevel();
+
+    // 2. 计算等级加成系数：每级提升 10% (0.1)，最高提升到 3.0倍 (即20级封顶)
+    double levelFactor = 1.0 + (currentLevel - 1) * 0.1;
+    if (levelFactor > 3.0) levelFactor = 3.0; // 速度上限倍率
+
+    // 3. 基础速度 (体积越大越慢) * 等级系数
+    double baseSpeed = 2.0 / m_scale; 
+    m_speed = baseSpeed * levelFactor;
+
+    // 4. 再次限制绝对速度范围，防止游戏崩溃或不可玩
+    // 比如：最小速度随等级提升一点，最大速度也提升
+    double maxLimit = 4.9; // 绝对速度上限
+    if (m_speed > maxLimit) m_speed = maxLimit;
+    if (m_speed < 1.5) m_speed = 1.5; // 绝对保底速度
 }
 
 void Enemy::advance(int phase) {
@@ -88,22 +102,32 @@ void Enemy::performAI() {
     QLineF line(pos(), m_target->pos());
     qreal dist = line.length();
 
-    // --- AI 决策 ---
-    if (dist < 200) { // 感知范围
+    // --- [修改点] 动态计算感知范围 ---
+    
+    int currentLevel = GameEngine::instance().getCurrentLevel();
+
+    // 基础范围 200，每级增加 20 像素
+    qreal detectionRange = 200 + (currentLevel - 1) * 20;
+
+    // 设定感知范围上限（比如 400，大约是屏幕宽度的 1/3 到 1/2）
+    if (detectionRange > 400) detectionRange = 400;
+
+    // --------------------------------
+
+    // 使用计算出的 detectionRange 替代原来的 200
+    if (dist < detectionRange) { 
         qreal angle = -line.angle(); 
         qreal rad = qDegreesToRadians(angle);
 
-        // 比较大小：玩家比我大 -> 逃跑；玩家比我小 -> 追逐
         bool chase = (this->getSizeScale() > m_target->getSizeScale());
         int direction = chase ? 1 : -1;
 
         m_dx = std::cos(rad) * m_speed * direction;
         m_dy = std::sin(rad) * m_speed * direction;
     } else {
-        // 巡逻模式
+        // 巡逻模式 (保持不变)
         m_directionTimer++;
         if (m_directionTimer > 100) {
-            // 随机游动
             int angle = QRandomGenerator::global()->bounded(0, 360);
             qreal rad = qDegreesToRadians((double)angle);
             m_dx = std::cos(rad) * m_speed * 0.5;
@@ -112,14 +136,9 @@ void Enemy::performAI() {
         }
     }
 
-    // --- 翻转逻辑 ---
+    // (翻转逻辑保持不变)
     QTransform t;
-    if (m_dx < 0) {
-        // 向左：X轴反转，保持原有缩放比例
-        t.scale(-m_scale, m_scale); 
-    } else {
-        // 向右：正常
-        t.scale(m_scale, m_scale);
-    }
+    if (m_dx < 0) t.scale(-m_scale, m_scale); 
+    else t.scale(m_scale, m_scale);
     setTransform(t);
 }

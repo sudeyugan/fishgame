@@ -226,6 +226,30 @@ src/core/GameEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.s
 .PHONY : src/core/GameEngine.cpp.s
 
+src/core/SaveManager.obj: src/core/SaveManager.cpp.obj
+.PHONY : src/core/SaveManager.obj
+
+# target to build an object file
+src/core/SaveManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.obj
+.PHONY : src/core/SaveManager.cpp.obj
+
+src/core/SaveManager.i: src/core/SaveManager.cpp.i
+.PHONY : src/core/SaveManager.i
+
+# target to preprocess a source file
+src/core/SaveManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.i
+.PHONY : src/core/SaveManager.cpp.i
+
+src/core/SaveManager.s: src/core/SaveManager.cpp.s
+.PHONY : src/core/SaveManager.s
+
+# target to generate assembly for a file
+src/core/SaveManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.s
+.PHONY : src/core/SaveManager.cpp.s
+
 src/entities/Enemy.obj: src/entities/Enemy.cpp.obj
 .PHONY : src/entities/Enemy.obj
 
@@ -514,6 +538,30 @@ src/ui/PauseDialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.s
 .PHONY : src/ui/PauseDialog.cpp.s
 
+src/ui/SaveLoadDialog.obj: src/ui/SaveLoadDialog.cpp.obj
+.PHONY : src/ui/SaveLoadDialog.obj
+
+# target to build an object file
+src/ui/SaveLoadDialog.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.obj
+.PHONY : src/ui/SaveLoadDialog.cpp.obj
+
+src/ui/SaveLoadDialog.i: src/ui/SaveLoadDialog.cpp.i
+.PHONY : src/ui/SaveLoadDialog.i
+
+# target to preprocess a source file
+src/ui/SaveLoadDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.i
+.PHONY : src/ui/SaveLoadDialog.cpp.i
+
+src/ui/SaveLoadDialog.s: src/ui/SaveLoadDialog.cpp.s
+.PHONY : src/ui/SaveLoadDialog.s
+
+# target to generate assembly for a file
+src/ui/SaveLoadDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.s
+.PHONY : src/ui/SaveLoadDialog.cpp.s
+
 src/ui/StartScreen.obj: src/ui/StartScreen.cpp.obj
 .PHONY : src/ui/StartScreen.obj
 
@@ -582,6 +630,9 @@ help:
 	@echo ... src/core/GameEngine.obj
 	@echo ... src/core/GameEngine.i
 	@echo ... src/core/GameEngine.s
+	@echo ... src/core/SaveManager.obj
+	@echo ... src/core/SaveManager.i
+	@echo ... src/core/SaveManager.s
 	@echo ... src/entities/Enemy.obj
 	@echo ... src/entities/Enemy.i
 	@echo ... src/entities/Enemy.s
@@ -618,6 +669,9 @@ help:
 	@echo ... src/ui/PauseDialog.obj
 	@echo ... src/ui/PauseDialog.i
 	@echo ... src/ui/PauseDialog.s
+	@echo ... src/ui/SaveLoadDialog.obj
+	@echo ... src/ui/SaveLoadDialog.i
+	@echo ... src/ui/SaveLoadDialog.s
 	@echo ... src/ui/StartScreen.obj
 	@echo ... src/ui/StartScreen.i
 	@echo ... src/ui/StartScreen.s

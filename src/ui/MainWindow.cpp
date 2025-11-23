@@ -6,7 +6,9 @@
 #include "PauseDialog.h"
 #include "../scenes/MainScene.h"
 #include "../utils/AudioManager.h"
-#include "../core/GameEngine.h" // 确保包含 GameEngine
+#include "../core/GameEngine.h" 
+#include "SaveLoadDialog.h"
+#include "../core/SaveManager.h"
 #include <QVBoxLayout>
 #include <QStackedWidget>
 #include <QGraphicsView>
@@ -36,15 +38,40 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::initUI() {
-    // --- 界面1：开始菜单 ---
     m_startScreen = new StartScreen(this);
-    connect(m_startScreen, &StartScreen::startGameClicked, this, &MainWindow::startGame);
     m_stack->addWidget(m_startScreen);
 
+    // 1. 处理“进入游戏”按钮 (对应 loadGameClicked 信号)
+    connect(m_startScreen, &StartScreen::loadGameClicked, this, [this](){
+        // 弹出存档选择框
+        SaveLoadDialog dialog(SaveLoadDialog::LOAD, this);
+        
+        connect(&dialog, &SaveLoadDialog::slotSelected, this, [this](int slot, bool isNewGame){
+            if (isNewGame) {
+                // 新建存档逻辑
+                GameEngine::instance().startGame(); 
+                this->startGame(); 
+                SaveManager::saveGame(m_scene->getPlayer(), slot); 
+            } else {
+                // 读取存档逻辑
+                this->startGame(); 
+                SaveManager::loadGame(m_scene->getPlayer(), slot); 
+            }
+        });
+        
+        dialog.exec();
+    });
+
+    // 2. 处理帮助按钮
     m_helpScreen = new HelpScreen(this);
     m_stack->addWidget(m_helpScreen);
+
     connect(m_startScreen, &StartScreen::helpClicked, this, [this](){
-    m_stack->setCurrentWidget(m_helpScreen);
+        m_stack->setCurrentWidget(m_helpScreen);
+    });
+    
+    connect(m_helpScreen, &HelpScreen::backClicked, this, [this](){
+        m_stack->setCurrentWidget(m_startScreen);
     });
 
     // --- 界面2：游戏视图 ---
@@ -76,20 +103,37 @@ void MainWindow::initUI() {
         if (isPaused) {
             PauseDialog dialog(this);
             
-            // 情况1：点击"继续游戏"按钮 -> 触发 resumeGame -> 调用 pauseGame 解除暂停
+            // 1. 继续游戏
             connect(&dialog, &PauseDialog::resumeGame, m_scene, &MainScene::pauseGame);
             
-            // 情况2：按下 Esc 键 -> QDialog 默认触发 rejected 信号
-            // 我们需要把它也连接到 pauseGame，以解除暂停状态
+            connect(&dialog, &PauseDialog::saveGame, this, [this](){
+                // 点击暂停菜单的"保存" -> 弹出多存档选择窗口
+                SaveLoadDialog saveDialog(SaveLoadDialog::SAVE, this);
+                
+                connect(&saveDialog, &SaveLoadDialog::slotSelected, this, [this](int slot, bool){
+                    // 用户选定槽位后 -> 执行保存
+                    if (m_scene && m_scene->getPlayer()) {
+                        SaveManager::saveGame(m_scene->getPlayer(), slot);
+                    }
+                });
+                
+                saveDialog.exec();
+            });
+            // ------------------
+
+            // 3. 处理 ESC 关闭弹窗 (一定要加，否则按ESC卡死)
             connect(&dialog, &QDialog::rejected, m_scene, &MainScene::pauseGame);
 
-            // 情况3：点击"返回标题"
+            // 4. 返回标题
             connect(&dialog, &PauseDialog::quitToTitle, this, [this](){
-                m_scene->pauseGame(); // 先恢复逻辑状态
-                handleGameOver(false); 
+                m_scene->pauseGame(); 
+                m_hud->hide();
+                // 如果 StartScreen 有 checkSaveFile，可以调用一下刷新界面
+                if(m_startScreen) m_startScreen->checkSaveFile();
+                m_stack->setCurrentWidget(m_startScreen);
+                AudioManager::instance().playBGM("bgm");
             });
 
-            // 显示模态对话框 (阻塞直到关闭)
             dialog.exec();
         }
     });
@@ -118,6 +162,7 @@ void MainWindow::handleGameOver(bool win) {
     
     // 连接信号：重新开始
     connect(&dialog, &GameOverDialog::restartGame, this, [this](){
+        GameEngine::instance().startGame();
         // startGame() 会负责重置场景和 GameEngine 状态
         this->startGame(); 
     });

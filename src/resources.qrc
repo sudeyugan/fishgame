@@ -4,7 +4,9 @@
         <file>assets/sounds/eat.mp3</file>
         <file>assets/sounds/win.mp3</file>
         <file>assets/sounds/lose.wav</file>
-        <file>assets/images/background.jpg</file> 
+        <file>assets/images/background1.jpg</file>
+        <file>assets/images/background2.jpg</file>
+        <file>assets/images/background3.jpg</file>
         <file>assets/images/start.jpg</file>
         <file>assets/images/fish1.jpg</file>
         <file>assets/images/enemyfish1.png</file>

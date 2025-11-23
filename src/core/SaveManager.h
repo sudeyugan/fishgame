@@ -3,19 +3,31 @@
 
 #include <QString>
 #include <QJsonObject>
+#include <QList>
 
 class Player;
 
+struct SaveSlotInfo {
+    int slotIndex;      // 槽位编号 (0, 1, 2...)
+    bool isEmpty;       // 是否为空
+    int level;          // 关卡
+    int score;          // 分数
+    QString timestamp;  // 存档时间字符串
+};
+
 class SaveManager {
 public:
-    // 保存游戏：需要传入主角对象以获取位置和大小，同时从 GameEngine 获取分数等
-    static bool saveGame(const Player* player);
+    // 保存到指定槽位
+    static bool saveGame(const Player* player, int slotIndex);
     
-    // 读取游戏：读取文件并应用到主角和 GameEngine
-    static bool loadGame(Player* player);
+    // 从指定槽位读取
+    static bool loadGame(Player* player, int slotIndex);
     
-    // 检查是否存在存档文件
-    static bool hasSaveFile();
+    // 获取指定槽位的信息（用于UI显示）
+    static SaveSlotInfo getSlotInfo(int slotIndex);
+    
+    // 获取所有槽位信息
+    static QList<SaveSlotInfo> getAllSlots(int maxSlots = 3);
 };
 
 #endif // SAVEMANAGER_H

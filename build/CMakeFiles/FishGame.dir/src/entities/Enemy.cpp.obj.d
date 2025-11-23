@@ -342,7 +342,10 @@ CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
- E:\fish\src\entities\Player.h E:/Qt/6.5.3/mingw_64/include/QtCore/QtMath \
+ E:\fish\src\entities\Player.h E:/fish/src/core/GameEngine.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QtMath \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmath.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QRandomGenerator \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qrandom.h \

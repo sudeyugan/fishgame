@@ -13,6 +13,7 @@ protected:
 
 signals:
     void resumeGame();
+    void saveGame();
     void quitToTitle();
 };
 

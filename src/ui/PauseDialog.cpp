@@ -4,6 +4,7 @@
 #include <QLabel>
 #include <QPainter>
 #include <QGraphicsDropShadowEffect>
+#include <QMessageBox>
 
 PauseDialog::PauseDialog(QWidget *parent) : QDialog(parent) {
     // 1. 窗口属性设置
@@ -11,7 +12,7 @@ PauseDialog::PauseDialog(QWidget *parent) : QDialog(parent) {
     setWindowFlags(Qt::FramelessWindowHint | Qt::Dialog);
     setAttribute(Qt::WA_TranslucentBackground);
     setModal(true);
-    setFixedSize(320, 240); // 稍微调大一点
+    setFixedSize(360, 300); // 稍微调大一点
 
     // 2. 布局管理
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -48,21 +49,28 @@ PauseDialog::PauseDialog(QWidget *parent) : QDialog(parent) {
     QPushButton *btnResume = new QPushButton("继续游戏", this);
     btnResume->setCursor(Qt::PointingHandCursor);
     btnResume->setStyleSheet(btnStyle);
-    
     connect(btnResume, &QPushButton::clicked, [this](){
         emit resumeGame();
-        accept(); // 关闭弹窗 (QDialog::Accepted)
+        accept();
     });
 
+    // 保存按钮
+    QPushButton *btnSave = new QPushButton("保存进度", this);
+    btnSave->setCursor(Qt::PointingHandCursor);
+    btnSave->setStyleSheet(btnStyle);
+    connect(btnSave, &QPushButton::clicked, [this](){
+        emit saveGame(); // 发送信号给 MainScene/MainWindow 处理保存逻辑
+        // 可选：弹出简单的提示框，或者直接关闭
+        QMessageBox::information(this, "提示", "游戏保存成功！");
+    });
+    
     // 6. 退出按钮
     QPushButton *btnQuit = new QPushButton("返回标题", this);
     btnQuit->setCursor(Qt::PointingHandCursor);
-    // 退出按钮稍微换个颜色（偏红/橙）区分一下，或者保持一致
     btnQuit->setStyleSheet(btnStyle);
-
     connect(btnQuit, &QPushButton::clicked, [this](){
         emit quitToTitle();
-        accept(); // 关闭弹窗 (QDialog::Accepted)
+        accept();
     });
 
     // 添加到布局
@@ -70,6 +78,7 @@ PauseDialog::PauseDialog(QWidget *parent) : QDialog(parent) {
     layout->addStretch(); // 弹簧，把标题顶上去，按钮压下来
     layout->addWidget(btnResume);
     layout->addWidget(btnQuit);
+    layout->addWidget(btnSave);
 }
 
 // 自定义绘制背景

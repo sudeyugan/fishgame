@@ -54,7 +54,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 65,
+				"line" : 69,
 				"parent" : 0
 			},
 			{
@@ -393,7 +393,9 @@
 				26,
 				28,
 				30,
-				33
+				32,
+				34,
+				37
 			]
 		}
 	],
@@ -507,7 +509,9 @@
 				26,
 				28,
 				30,
-				33
+				32,
+				34,
+				37
 			]
 		},
 		{
@@ -515,7 +519,7 @@
 			"sourceIndexes" : 
 			[
 				2,
-				32
+				36
 			]
 		},
 		{
@@ -536,15 +540,17 @@
 				25,
 				27,
 				29,
-				31
+				31,
+				33,
+				35
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				34,
-				35
+				38,
+				39
 			]
 		}
 	],
@@ -582,6 +588,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/core/Constants.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/SaveManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/core/SaveManager.h",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -714,6 +731,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/ui/GameOverDialog.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ui/SaveLoadDialog.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/ui/SaveLoadDialog.h",
 			"sourceGroupIndex" : 2
 		},
 		{

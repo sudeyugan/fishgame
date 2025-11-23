@@ -5,58 +5,65 @@
 #include <QLabel>
 
 StartScreen::StartScreen(QWidget *parent) : QWidget(parent) {
-    // 1. 设置鼠标手型，暗示屏幕可点击
-    setCursor(Qt::PointingHandCursor);
-
-    // 2. 使用布局管理器将“帮助按钮”放置在右下角
+    // 1. 布局设置
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(30, 30, 30, 30); // 设置边距
-    mainLayout->addStretch(); // 顶部的弹簧，把东西往下推
+    mainLayout->setAlignment(Qt::AlignHCenter | Qt::AlignBottom); // 居中靠下
+    mainLayout->setContentsMargins(0, 0, 0, 100); // 距离底部留出一定空间
+    mainLayout->setSpacing(20); // 按钮之间的间距
 
-    // 创建底部水平布局
-    QHBoxLayout *bottomLayout = new QHBoxLayout();
-    bottomLayout->addStretch(); // 左侧弹簧，把按钮推到右边
-
-    // --- 帮助按钮 ---
-    QPushButton *btnHelp = new QPushButton("游戏指南", this);
-    btnHelp->setFixedSize(160, 50);
-    btnHelp->setCursor(Qt::PointingHandCursor); // 按钮上也显示手型
-    
-    // 按钮样式：半透明黑底+青色边框，看着比较高级
-    btnHelp->setStyleSheet(
+    // 2. 按钮通用样式 (样式表)
+    QString btnStyle = 
         "QPushButton {"
-        "    background-color: rgba(0, 0, 0, 180);"
-        "    color: #00ffff;"
-        "    border: 2px solid #00ffff;"
-        "    border-radius: 25px;"
+        "    background-color: rgba(0, 0, 0, 180);" // 半透明黑底
+        "    color: #00ffff;"                       // 青色文字
+        "    border: 2px solid #00ffff;"            // 青色边框
+        "    border-radius: 30px;"                  // 圆角
         "    font-family: 'Microsoft YaHei';"
-        "    font-size: 18px;"
+        "    font-size: 24px;"                      // 字体调大
         "    font-weight: bold;"
+        "    padding: 5px;"
         "}"
         "QPushButton:hover {"
-        "    background-color: rgba(0, 255, 255, 50);"
+        "    background-color: rgba(0, 255, 255, 50);" // 悬停变亮
         "    color: white;"
         "    border-color: white;"
         "}"
         "QPushButton:pressed {"
-        "    background-color: rgba(0, 255, 255, 100);"
-        "}"
-    );
+        "    background-color: rgba(0, 255, 255, 100);" // 按下高亮
+        "}";
 
-    // 点击按钮 -> 发送 helpClicked 信号
-    connect(btnHelp, &QPushButton::clicked, this, &StartScreen::helpClicked);
+    // 3. 主入口按钮 (整合了 新游戏 和 读取存档)
+    m_btnContinue = new QPushButton("进入游戏", this);
+    m_btnContinue->setFixedSize(240, 65);
+    m_btnContinue->setCursor(Qt::PointingHandCursor);
+    m_btnContinue->setStyleSheet(btnStyle);
 
-    bottomLayout->addWidget(btnHelp);
-    mainLayout->addLayout(bottomLayout);
+    // 连接信号：点击后发送 loadGameClicked
+    // 注意：MainWindow 收到这个信号后，会弹出 SaveLoadDialog 供玩家选择
+    connect(m_btnContinue, &QPushButton::clicked, this, &StartScreen::loadGameClicked);
+    
+    mainLayout->addWidget(m_btnContinue);
+
+    // 4. 游戏指南按钮
+    m_btnHelp = new QPushButton("游戏指南", this);
+    m_btnHelp->setFixedSize(240, 65);
+    m_btnHelp->setCursor(Qt::PointingHandCursor);
+    m_btnHelp->setStyleSheet(btnStyle);
+    connect(m_btnHelp, &QPushButton::clicked, this, &StartScreen::helpClicked);
+    
+    mainLayout->addWidget(m_btnHelp);
+
+    // 5. 确保按钮状态正确
+    checkSaveFile();
 }
 
-// 点击屏幕空白处 -> 开始游戏
-void StartScreen::mousePressEvent(QMouseEvent *event) {
-    if (event->button() == Qt::LeftButton) {
-        emit startGameClicked();
+void StartScreen::checkSaveFile() {
+    // 现在这个函数不再检查文件是否存在，而是始终启用按钮。
+    // 因为即使没有存档，玩家也需要点击它来打开弹窗并选择 "新建存档"。
+    if (m_btnContinue) {
+        m_btnContinue->setEnabled(true);
+        m_btnContinue->setToolTip("开始新的冒险或读取进度");
     }
-    // 调用基类处理（虽然这里不需要，但好习惯）
-    QWidget::mousePressEvent(event);
 }
 
 void StartScreen::paintEvent(QPaintEvent *event) {
@@ -64,14 +71,10 @@ void StartScreen::paintEvent(QPaintEvent *event) {
     QPixmap bg(":/assets/images/start.jpg");
 
     if (!bg.isNull()) {
+        // 绘制背景图并拉伸填满
         painter.drawPixmap(rect(), bg.scaled(size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     } else {
+        // 兜底颜色
         painter.fillRect(rect(), QColor(0, 20, 60));
     }
-
-    // 可选：在屏幕中间画一行提示文字
-    painter.setPen(QColor(255, 255, 255, 150)); // 半透明白色
-    painter.setFont(QFont("Arial", 16, QFont::Bold));
-    // 让文字在屏幕底部上方一点闪烁或静止
-    painter.drawText(rect().adjusted(0, 0, 0, -100), Qt::AlignCenter | Qt::AlignBottom, "- 点击屏幕任意位置开始 -");
 }

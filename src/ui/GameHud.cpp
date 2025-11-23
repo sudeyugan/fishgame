@@ -65,16 +65,17 @@ void GameHud::paintEvent(QPaintEvent *event) {
     // --- 5. 绘制 "SCORE" ---
     // 金黄色，突显奖励感
     // 把字体稍微加大一点
-    QFont scoreFont("Arial Black", 22, QFont::Bold);
+    QFont scoreFont("Arial Black", 20, QFont::Bold);
     painter.setFont(scoreFont);
     
-    QString scoreText = QString("SCORE: %1").arg(m_score);
+    // 显示格式：当前分数 / 目标分数
+    QString scoreText = QString("SCORE: %1 / %2").arg(m_score).arg(m_targetScore);
     
-    // 重新定义绘制逻辑因为字体变了 (或者直接手动画)
+    // 绘制
     QPainterPath scorePath;
     scorePath.addText(margin + 20, margin + 75, scoreFont, scoreText);
     
     painter.strokePath(scorePath, QPen(QColor(0, 20, 40), 5));
     painter.drawPath(scorePath);
-    painter.fillPath(scorePath, QBrush(QColor(255, 215, 0))); // 金色
+    painter.fillPath(scorePath, QBrush(QColor(255, 215, 0)));
 }

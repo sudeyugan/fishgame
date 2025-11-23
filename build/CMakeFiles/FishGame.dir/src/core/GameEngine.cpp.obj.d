@@ -303,4 +303,7 @@ CMakeFiles/FishGame.dir/src/core/GameEngine.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata_impl.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qshareddata_impl.h \
+ E:/fish/src/scenes/LevelManager.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h
