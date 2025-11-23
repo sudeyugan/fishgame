@@ -376,4 +376,19 @@ CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QPainter \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextoption.h \
- E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QLabel \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlabel.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h

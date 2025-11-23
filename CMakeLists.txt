@@ -52,6 +52,10 @@ add_executable(FishGame
     src/ui/PauseDialog.h
     src/ui/LevelInfoDialog.cpp
     src/ui/LevelInfoDialog.h
+    src/ui/HelpScreen.cpp
+    src/ui/HelpScreen.h
+    src/ui/GameOverDialog.cpp
+    src/ui/GameOverDialog.h
     
     # Utils
     src/utils/AudioManager.cpp

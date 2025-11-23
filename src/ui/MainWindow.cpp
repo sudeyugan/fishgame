@@ -1,5 +1,7 @@
 #include "MainWindow.h"
+#include "HelpScreen.h"
 #include "StartScreen.h"
+#include "GameOverDialog.h"
 #include "GameHud.h"
 #include "PauseDialog.h"
 #include "../scenes/MainScene.h"
@@ -8,7 +10,6 @@
 #include <QVBoxLayout>
 #include <QStackedWidget>
 #include <QGraphicsView>
-// #include <QGLWidget>  <-- 删除这行，它导致了报错
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent) {
@@ -40,6 +41,12 @@ void MainWindow::initUI() {
     connect(m_startScreen, &StartScreen::startGameClicked, this, &MainWindow::startGame);
     m_stack->addWidget(m_startScreen);
 
+    m_helpScreen = new HelpScreen(this);
+    m_stack->addWidget(m_helpScreen);
+    connect(m_startScreen, &StartScreen::helpClicked, this, [this](){
+    m_stack->setCurrentWidget(m_helpScreen);
+    });
+
     // --- 界面2：游戏视图 ---
     m_gameView = new QGraphicsView(this);
     m_gameView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -55,8 +62,6 @@ void MainWindow::initUI() {
     m_scene = new MainScene(this);
     m_gameView->setScene(m_scene);
 
-
-
     // --- HUD ---
     m_hud = new GameHud(m_gameView);
     m_hud->setGeometry(0, 0, width(), 100);
@@ -67,7 +72,7 @@ void MainWindow::initUI() {
     connect(&GameEngine::instance(), &GameEngine::levelChanged, m_hud, &GameHud::updateLevel); // 确保连接 Level
     connect(&GameEngine::instance(), &GameEngine::gameOver, this, &MainWindow::handleGameOver);
 
-connect(m_scene, &MainScene::gamePaused, this, [this](bool isPaused){
+    connect(m_scene, &MainScene::gamePaused, this, [this](bool isPaused){
         if (isPaused) {
             PauseDialog dialog(this);
             
@@ -100,10 +105,35 @@ void MainWindow::startGame() {
 }
 
 void MainWindow::handleGameOver(bool win) {
-    m_hud->hide();
-    m_stack->setCurrentWidget(m_startScreen);
-}
+    // 1. 播放对应的音效
+    if (win) {
+        AudioManager::instance().playWinSound();
+    } else {
+        AudioManager::instance().playLoseSound();
+    }
 
+    // 2. 创建并显示结算弹窗
+    // 传入当前的胜负状态和 GameEngine 中的分数
+    GameOverDialog dialog(win, GameEngine::instance().getScore(), this);
+    
+    // 连接信号：重新开始
+    connect(&dialog, &GameOverDialog::restartGame, this, [this](){
+        // startGame() 会负责重置场景和 GameEngine 状态
+        this->startGame(); 
+    });
+    
+    // 连接信号：返回标题
+    connect(&dialog, &GameOverDialog::quitToTitle, this, [this](){
+        m_hud->hide();
+        m_stack->setCurrentWidget(m_startScreen);
+        
+        // 重新播放 BGM (因为游戏结束可能会打断 BGM)
+        AudioManager::instance().playBGM("bgm"); 
+    });
+
+    // 3. 模态显示 (阻塞直到用户点击按钮)
+    dialog.exec();
+}
 void MainWindow::resizeEvent(QResizeEvent *event) {
     QMainWindow::resizeEvent(event);
     if (m_hud) m_hud->resize(width(), 100);

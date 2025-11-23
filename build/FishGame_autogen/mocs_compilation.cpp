@@ -5,6 +5,8 @@
 #include "IEUNVJTDNW/moc_Player.cpp"
 #include "EKW6RVOTGB/moc_MainScene.cpp"
 #include "YPKJ5OE7LN/moc_GameHud.cpp"
+#include "YPKJ5OE7LN/moc_GameOverDialog.cpp"
+#include "YPKJ5OE7LN/moc_HelpScreen.cpp"
 #include "YPKJ5OE7LN/moc_LevelInfoDialog.cpp"
 #include "YPKJ5OE7LN/moc_MainWindow.cpp"
 #include "YPKJ5OE7LN/moc_PauseDialog.cpp"

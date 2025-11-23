@@ -394,6 +394,54 @@ src/ui/GameHud.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.s
 .PHONY : src/ui/GameHud.cpp.s
 
+src/ui/GameOverDialog.obj: src/ui/GameOverDialog.cpp.obj
+.PHONY : src/ui/GameOverDialog.obj
+
+# target to build an object file
+src/ui/GameOverDialog.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj
+.PHONY : src/ui/GameOverDialog.cpp.obj
+
+src/ui/GameOverDialog.i: src/ui/GameOverDialog.cpp.i
+.PHONY : src/ui/GameOverDialog.i
+
+# target to preprocess a source file
+src/ui/GameOverDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.i
+.PHONY : src/ui/GameOverDialog.cpp.i
+
+src/ui/GameOverDialog.s: src/ui/GameOverDialog.cpp.s
+.PHONY : src/ui/GameOverDialog.s
+
+# target to generate assembly for a file
+src/ui/GameOverDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.s
+.PHONY : src/ui/GameOverDialog.cpp.s
+
+src/ui/HelpScreen.obj: src/ui/HelpScreen.cpp.obj
+.PHONY : src/ui/HelpScreen.obj
+
+# target to build an object file
+src/ui/HelpScreen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj
+.PHONY : src/ui/HelpScreen.cpp.obj
+
+src/ui/HelpScreen.i: src/ui/HelpScreen.cpp.i
+.PHONY : src/ui/HelpScreen.i
+
+# target to preprocess a source file
+src/ui/HelpScreen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.i
+.PHONY : src/ui/HelpScreen.cpp.i
+
+src/ui/HelpScreen.s: src/ui/HelpScreen.cpp.s
+.PHONY : src/ui/HelpScreen.s
+
+# target to generate assembly for a file
+src/ui/HelpScreen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.s
+.PHONY : src/ui/HelpScreen.cpp.s
+
 src/ui/LevelInfoDialog.obj: src/ui/LevelInfoDialog.cpp.obj
 .PHONY : src/ui/LevelInfoDialog.obj
 
@@ -555,6 +603,12 @@ help:
 	@echo ... src/ui/GameHud.obj
 	@echo ... src/ui/GameHud.i
 	@echo ... src/ui/GameHud.s
+	@echo ... src/ui/GameOverDialog.obj
+	@echo ... src/ui/GameOverDialog.i
+	@echo ... src/ui/GameOverDialog.s
+	@echo ... src/ui/HelpScreen.obj
+	@echo ... src/ui/HelpScreen.i
+	@echo ... src/ui/HelpScreen.s
 	@echo ... src/ui/LevelInfoDialog.obj
 	@echo ... src/ui/LevelInfoDialog.i
 	@echo ... src/ui/LevelInfoDialog.s

@@ -2,22 +2,27 @@
 #define STARTSCREEN_H
 
 #include <QWidget>
-#include <QMouseEvent> // 引入鼠标事件头文件
+#include <QMouseEvent>
+#include <QPushButton>
+
 
 class StartScreen : public QWidget {
     Q_OBJECT
 public:
     explicit StartScreen(QWidget *parent = nullptr);
+    void checkSaveFile();
 
 protected:
     void paintEvent(QPaintEvent *event) override;
-    
-    // [新增] 重写鼠标按下事件
     void mousePressEvent(QMouseEvent *event) override;
 
 signals:
     void startGameClicked();
-    void quitGameClicked();
+    void helpClicked(); // 新增帮助信号
+    void loadGameClicked();
+
+private:
+    QPushButton *m_btnContinue;
 };
 
 #endif // STARTSCREEN_H

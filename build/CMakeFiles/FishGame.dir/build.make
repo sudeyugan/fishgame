@@ -290,11 +290,41 @@ CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.s"
 	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\fish\src\ui\LevelInfoDialog.cpp -o CMakeFiles\FishGame.dir\src\ui\LevelInfoDialog.cpp.s
 
+CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj: CMakeFiles/FishGame.dir/flags.make
+CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj: CMakeFiles/FishGame.dir/includes_CXX.rsp
+CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj: E:/fish/src/ui/HelpScreen.cpp
+CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj: CMakeFiles/FishGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj"
+	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj -MF CMakeFiles\FishGame.dir\src\ui\HelpScreen.cpp.obj.d -o CMakeFiles\FishGame.dir\src\ui\HelpScreen.cpp.obj -c E:\fish\src\ui\HelpScreen.cpp
+
+CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.i"
+	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\fish\src\ui\HelpScreen.cpp > CMakeFiles\FishGame.dir\src\ui\HelpScreen.cpp.i
+
+CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.s"
+	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\fish\src\ui\HelpScreen.cpp -o CMakeFiles\FishGame.dir\src\ui\HelpScreen.cpp.s
+
+CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj: CMakeFiles/FishGame.dir/flags.make
+CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj: CMakeFiles/FishGame.dir/includes_CXX.rsp
+CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj: E:/fish/src/ui/GameOverDialog.cpp
+CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj: CMakeFiles/FishGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj"
+	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj -MF CMakeFiles\FishGame.dir\src\ui\GameOverDialog.cpp.obj.d -o CMakeFiles\FishGame.dir\src\ui\GameOverDialog.cpp.obj -c E:\fish\src\ui\GameOverDialog.cpp
+
+CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.i"
+	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\fish\src\ui\GameOverDialog.cpp > CMakeFiles\FishGame.dir\src\ui\GameOverDialog.cpp.i
+
+CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.s"
+	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\fish\src\ui\GameOverDialog.cpp -o CMakeFiles\FishGame.dir\src\ui\GameOverDialog.cpp.s
+
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: CMakeFiles/FishGame.dir/flags.make
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: CMakeFiles/FishGame.dir/includes_CXX.rsp
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: E:/fish/src/utils/AudioManager.cpp
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: CMakeFiles/FishGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj"
 	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj -MF CMakeFiles\FishGame.dir\src\utils\AudioManager.cpp.obj.d -o CMakeFiles\FishGame.dir\src\utils\AudioManager.cpp.obj -c E:\fish\src\utils\AudioManager.cpp
 
 CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.i: cmake_force
@@ -309,7 +339,7 @@ CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj: CMake
 CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj: CMakeFiles/FishGame.dir/includes_CXX.rsp
 CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj: FishGame_autogen/UVLADIE3JM/qrc_resources.cpp
 CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj: CMakeFiles/FishGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj"
 	E:\Qt\Tools\mingw1120_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj -MF CMakeFiles\FishGame.dir\FishGame_autogen\UVLADIE3JM\qrc_resources.cpp.obj.d -o CMakeFiles\FishGame.dir\FishGame_autogen\UVLADIE3JM\qrc_resources.cpp.obj -c E:\fish\build\FishGame_autogen\UVLADIE3JM\qrc_resources.cpp
 
 CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.i: cmake_force
@@ -335,6 +365,8 @@ FishGame_OBJECTS = \
 "CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj" \
 "CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj" \
 "CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj" \
+"CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj" \
+"CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj" \
 "CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj" \
 "CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj"
 
@@ -354,6 +386,8 @@ FishGame.exe: CMakeFiles/FishGame.dir/src/ui/StartScreen.cpp.obj
 FishGame.exe: CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj
 FishGame.exe: CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj
 FishGame.exe: CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj
+FishGame.exe: CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj
+FishGame.exe: CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj
 FishGame.exe: CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj
 FishGame.exe: CMakeFiles/FishGame.dir/FishGame_autogen/UVLADIE3JM/qrc_resources.cpp.obj
 FishGame.exe: CMakeFiles/FishGame.dir/build.make
@@ -365,7 +399,7 @@ FishGame.exe: E:/Qt/6.5.3/mingw_64/lib/libQt6Core.a
 FishGame.exe: CMakeFiles/FishGame.dir/linkLibs.rsp
 FishGame.exe: CMakeFiles/FishGame.dir/objects1.rsp
 FishGame.exe: CMakeFiles/FishGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable FishGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\fish\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable FishGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FishGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

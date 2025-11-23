@@ -399,11 +399,15 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
- E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_LevelInfoDialog.cpp \
- E:/fish/src/ui/LevelInfoDialog.h \
+ E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_GameOverDialog.cpp \
+ E:/fish/src/ui/GameOverDialog.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
+ E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_HelpScreen.cpp \
+ E:/fish/src/ui/HelpScreen.h \
+ E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_LevelInfoDialog.cpp \
+ E:/fish/src/ui/LevelInfoDialog.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_MainWindow.cpp \
  E:/fish/src/ui/MainWindow.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \

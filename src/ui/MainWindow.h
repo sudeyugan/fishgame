@@ -9,6 +9,7 @@
 class MainScene;
 class GameHud;
 class StartScreen;
+class HelpScreen;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -30,6 +31,7 @@ private:
     QStackedWidget *m_stack;  // 用于在 菜单/游戏 之间切换
 
     StartScreen *m_startScreen;
+    HelpScreen *m_helpScreen;
     QGraphicsView *m_gameView;
     MainScene *m_scene;
     GameHud *m_hud;

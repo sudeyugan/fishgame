@@ -41,7 +41,7 @@ static constexpr auto qt_meta_stringdata_CLASSStartScreenENDCLASS = QtMocHelpers
     "StartScreen",
     "startGameClicked",
     "",
-    "quitGameClicked"
+    "helpClicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSStartScreenENDCLASS_t {
@@ -49,7 +49,7 @@ struct qt_meta_stringdata_CLASSStartScreenENDCLASS_t {
     char stringdata0[12];
     char stringdata1[17];
     char stringdata2[1];
-    char stringdata3[16];
+    char stringdata3[12];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSStartScreenENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -58,12 +58,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSStartScreenENDCLASS_t qt_meta_s
         QT_MOC_LITERAL(0, 11),  // "StartScreen"
         QT_MOC_LITERAL(12, 16),  // "startGameClicked"
         QT_MOC_LITERAL(29, 0),  // ""
-        QT_MOC_LITERAL(30, 15)   // "quitGameClicked"
+        QT_MOC_LITERAL(30, 11)   // "helpClicked"
     },
     "StartScreen",
     "startGameClicked",
     "",
-    "quitGameClicked"
+    "helpClicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -104,7 +104,7 @@ Q_CONSTINIT const QMetaObject StartScreen::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<StartScreen, std::true_type>,
         // method 'startGameClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'quitGameClicked'
+        // method 'helpClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -117,7 +117,7 @@ void StartScreen::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         (void)_t;
         switch (_id) {
         case 0: _t->startGameClicked(); break;
-        case 1: _t->quitGameClicked(); break;
+        case 1: _t->helpClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -131,7 +131,7 @@ void StartScreen::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         }
         {
             using _t = void (StartScreen::*)();
-            if (_t _q_method = &StartScreen::quitGameClicked; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &StartScreen::helpClicked; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
@@ -177,7 +177,7 @@ void StartScreen::startGameClicked()
 }
 
 // SIGNAL 1
-void StartScreen::quitGameClicked()
+void StartScreen::helpClicked()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }

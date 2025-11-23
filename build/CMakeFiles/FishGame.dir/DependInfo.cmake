@@ -19,6 +19,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/fish/src/scenes/LevelManager.cpp" "CMakeFiles/FishGame.dir/src/scenes/LevelManager.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/scenes/LevelManager.cpp.obj.d"
   "E:/fish/src/scenes/MainScene.cpp" "CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj.d"
   "E:/fish/src/ui/GameHud.cpp" "CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj.d"
+  "E:/fish/src/ui/GameOverDialog.cpp" "CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj.d"
+  "E:/fish/src/ui/HelpScreen.cpp" "CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/HelpScreen.cpp.obj.d"
   "E:/fish/src/ui/LevelInfoDialog.cpp" "CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/LevelInfoDialog.cpp.obj.d"
   "E:/fish/src/ui/MainWindow.cpp" "CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj.d"
   "E:/fish/src/ui/PauseDialog.cpp" "CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/ui/PauseDialog.cpp.obj.d"

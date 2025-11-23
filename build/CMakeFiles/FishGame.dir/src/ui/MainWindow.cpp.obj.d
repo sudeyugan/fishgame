@@ -362,9 +362,10 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qscrollarea.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
- E:\fish\src\ui\StartScreen.h \
+ E:\fish\src\ui\HelpScreen.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
+ E:\fish\src\ui\StartScreen.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QMouseEvent \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qevent.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcoreevent.h \
@@ -389,9 +390,10 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/QTransform \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qnativeinterface.h \
- E:\fish\src\ui\GameHud.h E:\fish\src\ui\PauseDialog.h \
+ E:\fish\src\ui\GameOverDialog.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
+ E:\fish\src\ui\GameHud.h E:\fish\src\ui\PauseDialog.h \
  E:/fish/src/scenes/MainScene.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
