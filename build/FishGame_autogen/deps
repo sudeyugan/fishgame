@@ -629,6 +629,8 @@ FishGame_autogen/timestamp: \
 	E:/fish/src/entities/Enemy.h \
 	E:/fish/src/entities/Entity.cpp \
 	E:/fish/src/entities/Entity.h \
+	E:/fish/src/entities/Item.cpp \
+	E:/fish/src/entities/Item.h \
 	E:/fish/src/entities/Player.cpp \
 	E:/fish/src/entities/Player.h \
 	E:/fish/src/main.cpp \

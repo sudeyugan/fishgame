@@ -166,10 +166,12 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
@@ -630,6 +632,8 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/fish/src/entities/Enemy.h \
   E:/fish/src/entities/Entity.cpp \
   E:/fish/src/entities/Entity.h \
+  E:/fish/src/entities/Item.cpp \
+  E:/fish/src/entities/Item.h \
   E:/fish/src/entities/Player.cpp \
   E:/fish/src/entities/Player.h \
   E:/fish/src/main.cpp \
@@ -1002,6 +1006,8 @@ E:/Qt/6.5.3/mingw_64/include/QtCore/qstringlist.h:
 
 E:/Qt/6.5.3/mingw_64/include/QtCore/qstringmatcher.h:
 
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h:
+
 E:/Qt/6.5.3/mingw_64/include/QtCore/qstringtokenizer.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h:
@@ -1201,6 +1207,8 @@ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput:
 E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
+
+E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect:
 
 E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h:
 
@@ -1939,6 +1947,10 @@ E:/fish/src/core/SaveManager.h:
 E:/fish/src/entities/Enemy.h:
 
 E:/fish/src/entities/Entity.h:
+
+E:/fish/src/entities/Item.cpp:
+
+E:/fish/src/entities/Item.h:
 
 E:/fish/src/entities/Player.cpp:
 

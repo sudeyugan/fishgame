@@ -167,10 +167,12 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h
@@ -631,6 +633,8 @@ E:/fish/build/FishGame_autogen/timestamp
  E:/fish/src/entities/Enemy.h
  E:/fish/src/entities/Entity.cpp
  E:/fish/src/entities/Entity.h
+ E:/fish/src/entities/Item.cpp
+ E:/fish/src/entities/Item.h
  E:/fish/src/entities/Player.cpp
  E:/fish/src/entities/Player.h
  E:/fish/src/main.cpp

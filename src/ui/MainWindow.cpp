@@ -184,6 +184,8 @@ void MainWindow::handleLevelChange(int level) {
     // 如果正在读档（连续升级中），直接忽略，等读档完了手动调一次
     if (m_isLoadingGame) return;
 
+    GameEngine::instance().setScore(0);
+
     //标记开始切关卡，抑制 PauseDialog
     m_isSwitchingLevel = true; 
 

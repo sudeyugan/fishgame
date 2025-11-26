@@ -47,7 +47,7 @@ Enemy::Enemy(Player* target, QObject* parent)
     setPixmap(p);
     
     // 设置变换中心
-    setTransformOriginPoint(p.width()/2, p.height()/2);
+    setTransformOriginPoint(0, 0);
     setOffset(-p.width()/2, -p.height()/2);
 
     // 应用初始大小
@@ -99,8 +99,6 @@ void Enemy::performAI() {
 
     QLineF line(pos(), m_target->pos());
     qreal dist = line.length();
-
-    // --- [修改点] 动态计算感知范围 ---
     
     int currentLevel = GameEngine::instance().getCurrentLevel();
 
@@ -137,9 +135,9 @@ void Enemy::performAI() {
     // (翻转逻辑保持不变)
     QTransform t;
     if (m_dx < 0) {
-        t.scale(-1, 1); // 只要水平翻转
+        t.scale(1, 1); // 只要水平翻转
     } else {
-        t.scale(1, 1);  // 恢复正常
+        t.scale(-1, 1);  // 恢复正常
     }
     setTransform(t);
 }

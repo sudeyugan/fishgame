@@ -298,6 +298,30 @@ src/entities/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/Entity.cpp.s
 .PHONY : src/entities/Entity.cpp.s
 
+src/entities/Item.obj: src/entities/Item.cpp.obj
+.PHONY : src/entities/Item.obj
+
+# target to build an object file
+src/entities/Item.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/Item.cpp.obj
+.PHONY : src/entities/Item.cpp.obj
+
+src/entities/Item.i: src/entities/Item.cpp.i
+.PHONY : src/entities/Item.i
+
+# target to preprocess a source file
+src/entities/Item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/Item.cpp.i
+.PHONY : src/entities/Item.cpp.i
+
+src/entities/Item.s: src/entities/Item.cpp.s
+.PHONY : src/entities/Item.s
+
+# target to generate assembly for a file
+src/entities/Item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/Item.cpp.s
+.PHONY : src/entities/Item.cpp.s
+
 src/entities/Player.obj: src/entities/Player.cpp.obj
 .PHONY : src/entities/Player.obj
 
@@ -663,6 +687,9 @@ help:
 	@echo ... src/entities/Entity.obj
 	@echo ... src/entities/Entity.i
 	@echo ... src/entities/Entity.s
+	@echo ... src/entities/Item.obj
+	@echo ... src/entities/Item.i
+	@echo ... src/entities/Item.s
 	@echo ... src/entities/Player.obj
 	@echo ... src/entities/Player.i
 	@echo ... src/entities/Player.s

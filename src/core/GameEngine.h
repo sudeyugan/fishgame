@@ -23,6 +23,8 @@ public:
     int getBackgroundIndex() const { return m_bgIndex; }
 
     QMap<int, bool>& keys() { return m_keys; }
+
+    void setScore(int score);
 signals:
     void scoreChanged(int newScore);
     void levelChanged(int newLevel);

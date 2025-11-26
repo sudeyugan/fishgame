@@ -350,6 +350,8 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Entity.cpp \
  E:/fish/src/entities/Entity.h \
+ E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Item.cpp \
+ E:/fish/src/entities/Item.h \
  E:\fish\build\FishGame_autogen\IEUNVJTDNW/moc_Player.cpp \
  E:/fish/src/entities/Player.h \
  E:\fish\build\FishGame_autogen\EKW6RVOTGB/moc_MainScene.cpp \

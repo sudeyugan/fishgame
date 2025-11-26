@@ -39,11 +39,13 @@ protected:
 private slots:
     void updateGame();
     void spawnEnemy();
+    void spawnItem();
 
 private:
     Player* m_player;
     QTimer* m_gameTimer;
     QTimer* m_spawnTimer;
+    QTimer* m_itemTimer;
 
     bool m_isPaused;
     QPixmap m_bgPixmap; 

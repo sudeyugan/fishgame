@@ -342,7 +342,8 @@ CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpixelformat.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qobject.h \
- E:/fish/src/core/GameEngine.h E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:\fish\src\entities\Item.h E:/fish/src/core/GameEngine.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \

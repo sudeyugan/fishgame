@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj.d"
   "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj"
   "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj.d"
+  "CMakeFiles/FishGame.dir/src/entities/Item.cpp.obj"
+  "CMakeFiles/FishGame.dir/src/entities/Item.cpp.obj.d"
   "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj"
   "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj.d"
   "CMakeFiles/FishGame.dir/src/main.cpp.obj"

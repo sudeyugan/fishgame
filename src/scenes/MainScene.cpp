@@ -1,4 +1,5 @@
 #include "MainScene.h"
+#include "../entities/Item.h"
 #include "../entities/Player.h"
 #include "../entities/Enemy.h"
 #include "../core/GameEngine.h"
@@ -20,6 +21,9 @@ MainScene::MainScene(QObject* parent)
 
     m_spawnTimer = new QTimer(this);
     connect(m_spawnTimer, &QTimer::timeout, this, &MainScene::spawnEnemy);
+    
+    m_itemTimer = new QTimer(this);
+    connect(m_itemTimer, &QTimer::timeout, this, &MainScene::spawnItem);
 }
 
 // 绘制背景改用成员变量 m_bgPixmap
@@ -35,6 +39,8 @@ void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
 void MainScene::loadLevel(const LevelData& data) {
     // 1. 设置参数
     m_currentSpawnRate = data.enemySpawnRate;
+
+    GameEngine::instance().keys().clear();
     
     // 2. 加载背景图
     if (!data.bgImage.isEmpty()) {
@@ -76,6 +82,7 @@ void MainScene::startGame() {
     m_isPaused = false;     
     m_gameTimer->start(16); 
     m_spawnTimer->start(m_currentSpawnRate); // 使用当前关卡的速度
+    m_itemTimer->start(5000);
 }
 
 void MainScene::initLevel() {
@@ -121,35 +128,77 @@ void MainScene::checkCollisions() {
     auto items = m_player->collidingItems();
     
     for (auto item : items) {
+        // 将碰撞物体转换为 Entity 基类
         Entity* entity = dynamic_cast<Entity*>(item);
-        if (entity && entity->getEntityType() == Entity::TYPE_ENEMY) {
+        if (!entity) continue;
+
+        // 情况 A: 碰到敌人 (Enemy)
+        if (entity->getEntityType() == Entity::TYPE_ENEMY) {
             Enemy* enemy = static_cast<Enemy*>(entity);
             
-            if (m_player->getSizeScale() > enemy->getSizeScale()) {
-                // --- 玩家吃掉鱼 ---
-                
+            // 1. 无敌状态判断
+            // 如果处于无敌状态（吃了蓝色气泡），可以直接撞死任何敌人（类似马里奥的星星）
+            if (m_player->isInvincible()) {
                 AudioManager::instance().playSound("eat");
                 
-                // 1. 先变大
+                m_player->grow(0.05);                // 依然可以获得成长
+                GameEngine::instance().addScore(10); // 依然加分
+                
+                removeItem(enemy);
+                delete enemy;
+                
+                return; // 处理完一次碰撞后立即返回，防止逻辑冲突
+            }
+
+            // 2. 正常状态：比较大小
+            if (m_player->getSizeScale() > enemy->getSizeScale()) {
+                // --- 玩家吃掉鱼 ---
+                AudioManager::instance().playSound("eat");
+                
+                // 变大
                 m_player->grow(0.05);
 
-                // 2. 从场景移除并删除对象
-                // 确保即便后面触发了 loadLevel，这个 enemy 也已经不在场景列表中了，不会被重复删除
+                // 移除并删除敌人
                 removeItem(enemy);
                 delete enemy; 
 
-                // 3. 加分 (可能会触发 nextLevel -> loadLevel)
-                // 此时就算 loadLevel 清空场景，也不会影响已经删除的 enemy
+                // 加分 (可能会触发升级逻辑)
                 GameEngine::instance().addScore(10);
                 
-                // 4. 立即返回
                 return; 
 
             } else {
-                // 被大鱼吃掉
+                // --- 被大鱼吃掉 (游戏结束) ---
                 gameOver();
                 return;
             }
+        }
+        
+        // 情况 B: 碰到道具 (Item)
+        else if (entity->getEntityType() == Entity::TYPE_ITEM) {
+            Item* gameItem = static_cast<Item*>(entity);
+            
+            // 播放音效
+            AudioManager::instance().playSound("eat");
+
+            // 获取道具类型
+            Item::ItemType type = gameItem->getItemType();
+
+            // 根据类型分发逻辑
+            if (type == Item::ITEM_GOLD) {
+                // 金色气泡：直接加分 (50分)
+                GameEngine::instance().addScore(50); 
+            } else {
+                // 其他气泡：红色(变大)、绿色(加速)、蓝色(无敌)
+                // 调用 Player 的 applyEffect 进行处理
+                m_player->applyEffect(type);
+            }
+
+            // 从场景移除并销毁道具
+            removeItem(gameItem);
+            delete gameItem;
+            
+            return; // 吃到道具后也立即返回
         }
     }
 }
@@ -189,4 +238,25 @@ void MainScene::setPaused(bool paused) {
         m_spawnTimer->start(m_currentSpawnRate);
     }
     emit gamePaused(m_isPaused);
+}
+
+void MainScene::spawnItem() {
+    if (!m_player) return;
+    // 限制场上道具数量，防止太多
+    int itemCount = 0;
+    for(auto item : items()) {
+        if(dynamic_cast<Item*>(item)) itemCount++;
+    }
+    if (itemCount > 5) return;
+
+    Item* item = new Item();
+    
+    // 随机位置
+    int w = static_cast<int>(sceneRect().width());
+    int h = static_cast<int>(sceneRect().height());
+    int x = QRandomGenerator::global()->bounded(0, w);
+    int y = QRandomGenerator::global()->bounded(0, h);
+    
+    item->setPos(x, y);
+    addItem(item);
 }

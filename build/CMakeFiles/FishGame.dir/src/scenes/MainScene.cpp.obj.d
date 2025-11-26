@@ -375,12 +375,13 @@ CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h E:/fish/src/entities/Player.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h E:/fish/src/entities/Item.h \
  E:/fish/src/entities/Entity.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QObject E:/fish/src/entities/Enemy.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
+ E:/fish/src/entities/Player.h E:/fish/src/entities/Enemy.h \
  E:/fish/src/core/GameEngine.h E:/fish/src/utils/AudioManager.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \

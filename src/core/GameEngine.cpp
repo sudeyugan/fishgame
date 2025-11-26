@@ -46,3 +46,9 @@ void GameEngine::resetGame() {
     // Ensure the paused state is updated if it was paused
     emit gamePaused(m_isPaused); 
 }
+
+void GameEngine::setScore(int score) {
+    m_score = score;
+    emit scoreChanged(m_score); // 确保通知 HUD 更新
+}
+

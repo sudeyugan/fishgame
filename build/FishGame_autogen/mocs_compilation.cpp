@@ -2,6 +2,7 @@
 #include "PRMOGMWJPH/moc_GameEngine.cpp"
 #include "IEUNVJTDNW/moc_Enemy.cpp"
 #include "IEUNVJTDNW/moc_Entity.cpp"
+#include "IEUNVJTDNW/moc_Item.cpp"
 #include "IEUNVJTDNW/moc_Player.cpp"
 #include "EKW6RVOTGB/moc_MainScene.cpp"
 #include "YPKJ5OE7LN/moc_BackgroundSelectDialog.cpp"
