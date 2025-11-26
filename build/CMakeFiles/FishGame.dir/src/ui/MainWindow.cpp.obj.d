@@ -373,7 +373,7 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
  E:\fish\src\ui\GameHud.h E:\fish\src\ui\PauseDialog.h \
- E:/fish/src/scenes/MainScene.h \
+ E:\fish\src\ui\LevelInfoDialog.h E:/fish/src/scenes/MainScene.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsScene \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer \
@@ -422,7 +422,14 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
- E:/fish/src/core/GameEngine.h E:\fish\src\ui\SaveLoadDialog.h \
+ E:/fish/src/core/GameEngine.h E:\fish\src\ui\BackgroundSelectDialog.h \
+ E:\fish\src\ui\SaveLoadDialog.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
  E:/fish/src/core/SaveManager.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
@@ -434,10 +441,4 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/quuid.h \
- E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QList

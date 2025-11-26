@@ -21,27 +21,60 @@ MainScene::MainScene(QObject* parent)
     connect(m_spawnTimer, &QTimer::timeout, this, &MainScene::spawnEnemy);
 }
 
+// 绘制背景改用成员变量 m_bgPixmap
 void MainScene::drawBackground(QPainter *painter, const QRectF &rect) {
-    static QPixmap bg(":/assets/images/background1.jpg");
-
-    if (bg.isNull()) {
-        painter->fillRect(rect, Qt::blue); // 图片加载失败时的兜底
+    if (m_bgPixmap.isNull()) {
+        painter->fillRect(rect, QColor(0, 20, 40)); // 默认深海色
         return;
     }
-    // 优化：只绘制当前视野区域的背景，提高性能（可选）
-    painter->drawPixmap(sceneRect(), bg, bg.rect());
+    // 简单绘制：平铺或者拉伸，这里使用平铺覆盖可视区域
+    painter->drawPixmap(sceneRect(), m_bgPixmap, m_bgPixmap.rect());
+}
+
+void MainScene::loadLevel(const LevelData& data) {
+    // 1. 设置参数
+    m_currentSpawnRate = data.enemySpawnRate;
+    
+    // 2. 加载背景图
+    if (!data.bgImage.isEmpty()) {
+        m_bgPixmap.load(data.bgImage);
+    }
+    update(); // 触发重绘背景
+
+    // 3. 清理场景中的所有“敌人” (保留主角)
+    QList<QGraphicsItem*> allItems = items();
+    for (auto item : allItems) {
+        // 假设 Enemy 继承自 Entity，且 type 是 ENEMY
+        // 这里做一个简单的 dynamic_cast 检查
+        Enemy* enemy = dynamic_cast<Enemy*>(item);
+        if (enemy) {
+            removeItem(enemy);
+            delete enemy;
+        }
+    }
+
+    // 4. 重置主角位置到中心 (可选)
+    if (!m_player) {
+        initLevel(); // 如果没有主角则创建
+    } else {
+        m_player->setPos(sceneRect().width()/2, sceneRect().height()/2);
+    }
+    
+    // 5. 确保定时器更新
+    if (m_spawnTimer->isActive()) {
+        m_spawnTimer->start(m_currentSpawnRate);
+    }
 }
 
 void MainScene::startGame() {
-    clear(); 
-    // 清除 GameEngine 中的旧按键状态
+    if (!m_player) initLevel();
+
+    // 清除按键状态
     GameEngine::instance().keys().clear();
-    
-    initLevel();
     
     m_isPaused = false;     
     m_gameTimer->start(16); 
-    m_spawnTimer->start(1500); 
+    m_spawnTimer->start(m_currentSpawnRate); // 使用当前关卡的速度
 }
 
 void MainScene::initLevel() {
@@ -51,11 +84,9 @@ void MainScene::initLevel() {
     setFocusItem(m_player);
 }
 
+
 void MainScene::updateGame() {
     if (m_isPaused || !m_player) return;
-
-    // 注意：这里不需要调用 handleInput() 了，
-    // 因为 Player::advance() 内部会直接读取 GameEngine::keys()
     
     advance(); // 触发所有物体的移动逻辑 (包括 Player 和 Enemy)
     checkCollisions();
@@ -68,7 +99,7 @@ void MainScene::updateGame() {
 
 void MainScene::spawnEnemy() {
     if (!m_player) return;
-    if (items().size() > 50) return;
+    if (items().size() > 30) return;
 
     Enemy* enemy = new Enemy(m_player);
     
@@ -82,25 +113,37 @@ void MainScene::spawnEnemy() {
     addItem(enemy);
 }
 
-void MainScene::handleInput() {
-    // 此函数已废弃，逻辑移至 Player::advance
-}
-
 void MainScene::checkCollisions() {
     if (!m_player) return;
     
+    // 获取当前碰撞的所有物体
     auto items = m_player->collidingItems();
+    
     for (auto item : items) {
         Entity* entity = dynamic_cast<Entity*>(item);
         if (entity && entity->getEntityType() == Entity::TYPE_ENEMY) {
             Enemy* enemy = static_cast<Enemy*>(entity);
             
             if (m_player->getSizeScale() > enemy->getSizeScale()) {
+                // --- 玩家吃掉鱼 ---
+                
+                // 1. 先变大
                 m_player->grow(0.05);
-                GameEngine::instance().addScore(10);
+
+                // 2. 从场景移除并删除对象
+                // 确保即便后面触发了 loadLevel，这个 enemy 也已经不在场景列表中了，不会被重复删除
                 removeItem(enemy);
-                delete enemy;
+                delete enemy; 
+
+                // 3. 加分 (可能会触发 nextLevel -> loadLevel)
+                // 此时就算 loadLevel 清空场景，也不会影响已经删除的 enemy
+                GameEngine::instance().addScore(10);
+                
+                // 4. 立即返回
+                return; 
+
             } else {
+                // 被大鱼吃掉
                 gameOver();
                 return;
             }
@@ -108,7 +151,7 @@ void MainScene::checkCollisions() {
     }
 }
 
-// 【关键修改】将按键事件同步到 GameEngine
+// 将按键事件同步到 GameEngine
 void MainScene::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Escape) {
         pauseGame();
@@ -130,13 +173,17 @@ void MainScene::gameOver() {
 }
 
 void MainScene::pauseGame() {
-    m_isPaused = !m_isPaused;
+    setPaused(!m_isPaused);
+}
+
+void MainScene::setPaused(bool paused) {
+    m_isPaused = paused;
     if (m_isPaused) {
         m_gameTimer->stop();
         m_spawnTimer->stop();
     } else {
-        m_gameTimer->start();
-        m_spawnTimer->start();
+        m_gameTimer->start(16);
+        m_spawnTimer->start(m_currentSpawnRate);
     }
     emit gamePaused(m_isPaused);
 }

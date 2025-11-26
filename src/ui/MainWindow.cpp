@@ -4,9 +4,11 @@
 #include "GameOverDialog.h"
 #include "GameHud.h"
 #include "PauseDialog.h"
+#include "LevelInfoDialog.h"
 #include "../scenes/MainScene.h"
 #include "../utils/AudioManager.h"
 #include "../core/GameEngine.h" 
+#include "BackgroundSelectDialog.h"
 #include "SaveLoadDialog.h"
 #include "../core/SaveManager.h"
 #include <QVBoxLayout>
@@ -35,6 +37,9 @@ MainWindow::MainWindow(QWidget *parent)
     
     // 播放背景音乐 (确保你有 assets/sounds/bgm.mp3)
     AudioManager::instance().playBGM("bgm");
+
+    m_isSwitchingLevel = false;
+    m_isLoadingGame = false;
 }
 
 void MainWindow::initUI() {
@@ -47,15 +52,37 @@ void MainWindow::initUI() {
         SaveLoadDialog dialog(SaveLoadDialog::LOAD, this);
         
         connect(&dialog, &SaveLoadDialog::slotSelected, this, [this](int slot, bool isNewGame){
+            this->startGame();
             if (isNewGame) {
-                // 新建存档逻辑
-                GameEngine::instance().startGame(); 
-                this->startGame(); 
-                SaveManager::saveGame(m_scene->getPlayer(), slot); 
+                // --- 新建存档流程 ---
+                
+                // 1. 弹出背景选择窗口
+                BackgroundSelectDialog bgDlg(this);
+                if (bgDlg.exec() == QDialog::Accepted) {
+                    // 2. 将用户选择存入 GameEngine
+                    GameEngine::instance().setBackgroundIndex(bgDlg.getSelectedIndex());
+                    
+                    // 3. 开始游戏初始化 (这会触发 LevelManager 读取刚才存的背景)
+                    GameEngine::instance().startGame(); 
+                    
+                    // 4. 立即保存初始存档 (包含背景信息)
+                    if (m_scene && m_scene->getPlayer()) {
+                        SaveManager::saveGame(m_scene->getPlayer(), slot); 
+                    }
+                } else {
+                    // 如果用户关掉了背景选择窗，可以选择返回或者默认开始
+                    // 这里我们默认直接开始(默认为背景1)
+                    GameEngine::instance().setBackgroundIndex(1);
+                    GameEngine::instance().startGame();
+                    SaveManager::saveGame(m_scene->getPlayer(), slot);
+                }
+
             } else {
-                // 读取存档逻辑
-                this->startGame(); 
+                // --- 读取存档流程 (保持不变) ---
+                m_isLoadingGame = true; 
                 SaveManager::loadGame(m_scene->getPlayer(), slot); 
+                m_isLoadingGame = false; 
+                handleLevelChange(GameEngine::instance().getCurrentLevel());
             }
         });
         
@@ -95,41 +122,55 @@ void MainWindow::initUI() {
     m_hud->hide(); 
 
     // 连接信号
-    connect(&GameEngine::instance(), &GameEngine::scoreChanged, m_hud, &GameHud::updateScore);
-    connect(&GameEngine::instance(), &GameEngine::levelChanged, m_hud, &GameHud::updateLevel); // 确保连接 Level
-    connect(&GameEngine::instance(), &GameEngine::gameOver, this, &MainWindow::handleGameOver);
+    connect(&GameEngine::instance(), &GameEngine::levelChanged, this, &MainWindow::handleLevelChange, Qt::QueuedConnection);
 
+    // 连接分数变化 (HUD 还是直接更新)
+    connect(&GameEngine::instance(), &GameEngine::scoreChanged, m_hud, &GameHud::updateScore);
+    
+    // 连接游戏结束
+    connect(&GameEngine::instance(), &GameEngine::gameOver, this, &MainWindow::handleGameOver);
     connect(m_scene, &MainScene::gamePaused, this, [this](bool isPaused){
-        if (isPaused) {
+        if (isPaused && !m_isSwitchingLevel) {
             PauseDialog dialog(this);
             
             // 1. 继续游戏
             connect(&dialog, &PauseDialog::resumeGame, m_scene, &MainScene::pauseGame);
             
+            // 2. 保存游戏 
             connect(&dialog, &PauseDialog::saveGame, this, [this](){
-                // 点击暂停菜单的"保存" -> 弹出多存档选择窗口
+                // 创建存档选择窗口
                 SaveLoadDialog saveDialog(SaveLoadDialog::SAVE, this);
                 
+                // 监听用户选择的槽位
                 connect(&saveDialog, &SaveLoadDialog::slotSelected, this, [this](int slot, bool){
-                    // 用户选定槽位后 -> 执行保存
+                    
+                    bool success = false;
+                    // 执行保存
                     if (m_scene && m_scene->getPlayer()) {
-                        SaveManager::saveGame(m_scene->getPlayer(), slot);
+                         success = SaveManager::saveGame(m_scene->getPlayer(), slot);
+                    }
+
+                    // [关键] 根据保存结果，弹出美化后的提示框
+                    if (success) {
+                        SaveLoadDialog::showMessageBox(this, "系统提示", "游戏进度已成功保存！");
+                    } else {
+                        SaveLoadDialog::showMessageBox(this, "保存失败", "写入存档时发生错误，请重试。");
                     }
                 });
                 
+                // 显示存档窗口
                 saveDialog.exec();
             });
-            // ------------------
 
-            // 3. 处理 ESC 关闭弹窗 (一定要加，否则按ESC卡死)
+            // 3. 处理 ESC 关闭 (保持不变)
             connect(&dialog, &QDialog::rejected, m_scene, &MainScene::pauseGame);
 
-            // 4. 返回标题
+            // 4. 返回标题 (保持不变)
             connect(&dialog, &PauseDialog::quitToTitle, this, [this](){
+                // ... 原有逻辑 ...
                 m_scene->pauseGame(); 
                 m_hud->hide();
-                // 如果 StartScreen 有 checkSaveFile，可以调用一下刷新界面
-                if(m_startScreen) m_startScreen->checkSaveFile();
+                if(m_startScreen) m_startScreen->checkSaveFile(); // 记得刷新标题画面的存档检测
                 m_stack->setCurrentWidget(m_startScreen);
                 AudioManager::instance().playBGM("bgm");
             });
@@ -139,13 +180,55 @@ void MainWindow::initUI() {
     });
 }
 
+void MainWindow::handleLevelChange(int level) {
+    // 如果正在读档（连续升级中），直接忽略，等读档完了手动调一次
+    if (m_isLoadingGame) return;
+
+    //标记开始切关卡，抑制 PauseDialog
+    m_isSwitchingLevel = true; 
+
+    // 1. 暂停游戏逻辑
+    if (m_scene) {
+        m_scene->setPaused(true); 
+    }
+
+    // 2. 获取数据 & 更新 HUD
+    LevelData data = LevelManager::getLevelData(level);
+    m_hud->updateLevel(level);
+    m_hud->updateTarget(data.targetScore);
+    m_hud->updateScore(GameEngine::instance().getScore());
+
+    // 3. 弹出关卡说明窗口
+    LevelInfoDialog dialog(level, data.description, this);
+    dialog.exec(); // 阻塞等待用户点击
+
+    // 4. 加载关卡 & 恢复游戏
+    if (m_scene) {
+        m_scene->loadLevel(data);
+        
+        if (m_stack->currentWidget() != m_gameView) {
+            m_stack->setCurrentWidget(m_gameView);
+            m_hud->show();
+        }
+        
+        m_scene->setPaused(false); // 恢复定时器
+        m_gameView->setFocus();
+    }
+    
+    // 切关卡结束，恢复正常状态
+    m_isSwitchingLevel = false; 
+}
+
 void MainWindow::startGame() {
+    // 1. 切换到游戏画面
     m_stack->setCurrentWidget(m_gameView);
+    
+    // 2. 显示并重置 HUD 尺寸
     m_hud->show();
     m_hud->resize(width(), 100);
     
-    m_scene->startGame();
-    m_gameView->setFocus(); 
+    // 3. 让视图获取焦点（以便键盘控制）
+    m_gameView->setFocus();
 }
 
 void MainWindow::handleGameOver(bool win) {

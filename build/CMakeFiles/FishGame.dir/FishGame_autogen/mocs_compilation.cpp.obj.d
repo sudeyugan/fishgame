@@ -391,8 +391,10 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/fish/src/scenes/LevelManager.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
- E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_GameHud.cpp \
- E:/fish/src/ui/GameHud.h E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
+ E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_BackgroundSelectDialog.cpp \
+ E:/fish/src/ui/BackgroundSelectDialog.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qaction.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qicon.h \
@@ -402,11 +404,11 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
+ E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_GameHud.cpp \
+ E:/fish/src/ui/GameHud.h E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_GameOverDialog.cpp \
  E:/fish/src/ui/GameOverDialog.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QDialog \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_HelpScreen.cpp \
  E:/fish/src/ui/HelpScreen.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_LevelInfoDialog.cpp \
@@ -430,6 +432,12 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/fish/src/ui/PauseDialog.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_SaveLoadDialog.cpp \
  E:/fish/src/ui/SaveLoadDialog.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
  E:\fish\build\FishGame_autogen\YPKJ5OE7LN/moc_StartScreen.cpp \
  E:/fish/src/ui/StartScreen.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \

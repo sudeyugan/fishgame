@@ -16,10 +16,14 @@ public:
     explicit MainScene(QObject* parent = nullptr);
     
     void startGame();
+
+    void loadLevel(const LevelData& data);
     
     Player* getPlayer() const { return m_player; }
 
     void setLevelData(const LevelData& data);
+
+    void setPaused(bool paused);
 
 public slots:
     void pauseGame();
@@ -42,10 +46,10 @@ private:
     QTimer* m_spawnTimer;
 
     bool m_isPaused;
-    QPixmap m_bgPixmap; // 之前增加的
+    QPixmap m_bgPixmap; 
+    int m_currentSpawnRate;
 
     void initLevel();
-    void handleInput();
     void checkCollisions();
     void updateCamera(); 
     void gameOver();

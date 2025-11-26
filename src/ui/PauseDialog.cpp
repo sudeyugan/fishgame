@@ -59,11 +59,9 @@ PauseDialog::PauseDialog(QWidget *parent) : QDialog(parent) {
     btnSave->setCursor(Qt::PointingHandCursor);
     btnSave->setStyleSheet(btnStyle);
     connect(btnSave, &QPushButton::clicked, [this](){
-        emit saveGame(); // 发送信号给 MainScene/MainWindow 处理保存逻辑
-        // 可选：弹出简单的提示框，或者直接关闭
-        QMessageBox::information(this, "提示", "游戏保存成功！");
+        emit saveGame(); 
+        // accept(); // 如果想点击保存后自动关闭暂停菜单，可以取消注释这行
     });
-    
     // 6. 退出按钮
     QPushButton *btnQuit = new QPushButton("返回标题", this);
     btnQuit->setCursor(Qt::PointingHandCursor);

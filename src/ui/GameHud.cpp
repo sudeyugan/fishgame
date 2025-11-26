@@ -28,8 +28,8 @@ void GameHud::paintEvent(QPaintEvent *event) {
     painter.setRenderHint(QPainter::Antialiasing); // 抗锯齿，文字更平滑
 
     // --- 1. 绘制半透明背景底板 ---
-    int bgWidth = 220;
-    int bgHeight = 90;
+    int bgWidth = 250;
+    int bgHeight = 120;
     int margin = 20;
     QRect bgRect(margin, margin, bgWidth, bgHeight);
     
@@ -78,4 +78,9 @@ void GameHud::paintEvent(QPaintEvent *event) {
     painter.strokePath(scorePath, QPen(QColor(0, 20, 40), 5));
     painter.drawPath(scorePath);
     painter.fillPath(scorePath, QBrush(QColor(255, 215, 0)));
+}
+
+void GameHud::updateTarget(int target) {
+    m_targetScore = target;
+    update(); 
 }

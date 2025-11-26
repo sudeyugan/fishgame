@@ -2,6 +2,7 @@
 #define SAVELOADDIALOG_H
 
 #include <QDialog>
+#include <QVBoxLayout>
 
 class SaveLoadDialog : public QDialog {
     Q_OBJECT
@@ -10,16 +11,16 @@ public:
     enum Mode { LOAD, SAVE };
     
     explicit SaveLoadDialog(Mode mode, QWidget *parent = nullptr);
-
+    static void showMessageBox(QWidget *parent, const QString &title, const QString &content);
 signals:
-    // 信号：用户选择了一个槽位进行操作
-    // slotIndex: 槽位号
-    // isNewGame: 是否是点击了“新建存档” (仅 Load 模式有效)
     void slotSelected(int slotIndex, bool isNewGame);
 
 private:
     Mode m_mode;
+    QVBoxLayout *m_slotsLayout; 
+
     void initUI();
+    void refreshList();
 };
 
 #endif // SAVELOADDIALOG_H

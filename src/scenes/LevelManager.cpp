@@ -1,8 +1,16 @@
 #include "LevelManager.h"
+#include "../core/GameEngine.h"
 
 LevelData LevelManager::getLevelData(int level) {
     LevelData data;
     
+    // 获取当前选定的背景ID
+    int bgIndex = GameEngine::instance().getBackgroundIndex();
+    // 简单的容错
+    if (bgIndex < 1 || bgIndex > 3) bgIndex = 1;
+
+    // 动态拼接路径
+    data.bgImage = QString(":/assets/images/background%1.jpg").arg(bgIndex);    
     data.bgImage = ":/assets/images/background1.jpg"; 
 
     // 根据等级动态计算参数，而不是写死 if-else

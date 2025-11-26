@@ -394,6 +394,30 @@ src/scenes/MainScene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.s
 .PHONY : src/scenes/MainScene.cpp.s
 
+src/ui/BackgroundSelectDialog.obj: src/ui/BackgroundSelectDialog.cpp.obj
+.PHONY : src/ui/BackgroundSelectDialog.obj
+
+# target to build an object file
+src/ui/BackgroundSelectDialog.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/BackgroundSelectDialog.cpp.obj
+.PHONY : src/ui/BackgroundSelectDialog.cpp.obj
+
+src/ui/BackgroundSelectDialog.i: src/ui/BackgroundSelectDialog.cpp.i
+.PHONY : src/ui/BackgroundSelectDialog.i
+
+# target to preprocess a source file
+src/ui/BackgroundSelectDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/BackgroundSelectDialog.cpp.i
+.PHONY : src/ui/BackgroundSelectDialog.cpp.i
+
+src/ui/BackgroundSelectDialog.s: src/ui/BackgroundSelectDialog.cpp.s
+.PHONY : src/ui/BackgroundSelectDialog.s
+
+# target to generate assembly for a file
+src/ui/BackgroundSelectDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/ui/BackgroundSelectDialog.cpp.s
+.PHONY : src/ui/BackgroundSelectDialog.cpp.s
+
 src/ui/GameHud.obj: src/ui/GameHud.cpp.obj
 .PHONY : src/ui/GameHud.obj
 
@@ -651,6 +675,9 @@ help:
 	@echo ... src/scenes/MainScene.obj
 	@echo ... src/scenes/MainScene.i
 	@echo ... src/scenes/MainScene.s
+	@echo ... src/ui/BackgroundSelectDialog.obj
+	@echo ... src/ui/BackgroundSelectDialog.i
+	@echo ... src/ui/BackgroundSelectDialog.s
 	@echo ... src/ui/GameHud.obj
 	@echo ... src/ui/GameHud.i
 	@echo ... src/ui/GameHud.s

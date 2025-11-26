@@ -178,14 +178,19 @@ FishGame_autogen/timestamp: \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/QStackedWidget \
+	E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h \
+	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
+	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
 	E:/Qt/6.5.3/mingw_64/include/QtWidgets/qscrollarea.h \
@@ -630,6 +635,8 @@ FishGame_autogen/timestamp: \
 	E:/fish/src/scenes/LevelManager.h \
 	E:/fish/src/scenes/MainScene.cpp \
 	E:/fish/src/scenes/MainScene.h \
+	E:/fish/src/ui/BackgroundSelectDialog.cpp \
+	E:/fish/src/ui/BackgroundSelectDialog.h \
 	E:/fish/src/ui/GameHud.cpp \
 	E:/fish/src/ui/GameHud.h \
 	E:/fish/src/ui/GameOverDialog.cpp \

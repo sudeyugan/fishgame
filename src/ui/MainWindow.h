@@ -23,6 +23,7 @@ protected:
 private slots:
     void startGame();         // 切换到游戏界面
     void handleGameOver(bool win); // 处理游戏结束
+    void handleLevelChange(int level);
 
 private:
     void initUI();
@@ -35,6 +36,9 @@ private:
     QGraphicsView *m_gameView;
     MainScene *m_scene;
     GameHud *m_hud;
+
+    bool m_isSwitchingLevel; // 是否正在切换关卡
+    bool m_isLoadingGame;    // 是否正在读取存档
 };
 
 #endif // MAINWINDOW_H

@@ -17,17 +17,22 @@ struct SaveSlotInfo {
 
 class SaveManager {
 public:
+    static const int MAX_SLOTS = 5; 
+
     // 保存到指定槽位
     static bool saveGame(const Player* player, int slotIndex);
     
     // 从指定槽位读取
     static bool loadGame(Player* player, int slotIndex);
     
-    // 获取指定槽位的信息（用于UI显示）
+    // 删除指定槽位的存档
+    static bool deleteSave(int slotIndex);
+
+    // 获取指定槽位的信息
     static SaveSlotInfo getSlotInfo(int slotIndex);
     
     // 获取所有槽位信息
-    static QList<SaveSlotInfo> getAllSlots(int maxSlots = 3);
+    static QList<SaveSlotInfo> getAllSlots(int maxSlots = MAX_SLOTS);
 };
 
 #endif // SAVEMANAGER_H

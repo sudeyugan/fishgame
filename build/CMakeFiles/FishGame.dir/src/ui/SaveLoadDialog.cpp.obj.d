@@ -350,6 +350,12 @@ CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
  E:/fish/src/core/SaveManager.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qstring.h \
@@ -366,12 +372,6 @@ CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/quuid.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QHBoxLayout \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
@@ -383,4 +383,10 @@ CMakeFiles/FishGame.dir/src/ui/SaveLoadDialog.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGroupBox \
- E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgroupbox.h
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgroupbox.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QScrollArea \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qscrollarea.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QTimer \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qtimer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qbasictimer.h

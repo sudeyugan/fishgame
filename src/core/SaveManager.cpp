@@ -18,6 +18,7 @@ bool SaveManager::saveGame(const Player* player, int slotIndex) {
     // 游戏状态
     json["score"] = GameEngine::instance().getScore();
     json["level"] = GameEngine::instance().getCurrentLevel();
+    json["bgIndex"] = GameEngine::instance().getBackgroundIndex();
     // 玩家状态
     json["playerX"] = player->x();
     json["playerY"] = player->y();
@@ -42,6 +43,13 @@ bool SaveManager::loadGame(Player* player, int slotIndex) {
 
     // 恢复数据
     GameEngine::instance().startGame(); // 重置基础状态
+
+    if (json.contains("bgIndex")) {
+        GameEngine::instance().setBackgroundIndex(json["bgIndex"].toInt());
+    } else {
+        GameEngine::instance().setBackgroundIndex(1);
+    }
+    
     GameEngine::instance().addScore(json["score"].toInt());
     
     // 恢复等级
@@ -74,6 +82,15 @@ SaveSlotInfo SaveManager::getSlotInfo(int slotIndex) {
         }
     }
     return info;
+}
+
+bool SaveManager::deleteSave(int slotIndex) {
+    QString path = getFilePath(slotIndex);
+    QFile file(path);
+    if (file.exists()) {
+        return file.remove();
+    }
+    return false;
 }
 
 QList<SaveSlotInfo> SaveManager::getAllSlots(int maxSlots) {

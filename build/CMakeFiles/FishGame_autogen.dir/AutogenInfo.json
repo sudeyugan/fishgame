@@ -333,6 +333,12 @@
 			"EKW6RVOTGB/moc_MainScene.cpp",
 			null
 		],
+		[
+			"E:/fish/src/ui/BackgroundSelectDialog.h",
+			"MU",
+			"YPKJ5OE7LN/moc_BackgroundSelectDialog.cpp",
+			null
+		],
 		[ "E:/fish/src/ui/GameHud.h", "MU", "YPKJ5OE7LN/moc_GameHud.cpp", null ],
 		[
 			"E:/fish/src/ui/GameOverDialog.h",
@@ -470,6 +476,7 @@
 		[ "E:/fish/src/main.cpp", "MU", null ],
 		[ "E:/fish/src/scenes/LevelManager.cpp", "MU", null ],
 		[ "E:/fish/src/scenes/MainScene.cpp", "MU", null ],
+		[ "E:/fish/src/ui/BackgroundSelectDialog.cpp", "MU", null ],
 		[ "E:/fish/src/ui/GameHud.cpp", "MU", null ],
 		[ "E:/fish/src/ui/GameOverDialog.cpp", "MU", null ],
 		[ "E:/fish/src/ui/HelpScreen.cpp", "MU", null ],

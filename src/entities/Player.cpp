@@ -3,7 +3,7 @@
 #include <QGraphicsScene> // 必须包含，用于获取地图边界
 #include <QDebug>
 
-// 【关键】构造函数实现：参数不能带默认值
+// 构造函数实现：参数不能带默认值
 Player::Player(QObject* parent) : Entity(parent) {
     // 1. 加载并缩放图片
     QPixmap originalPix(":/assets/images/fish1.jpg"); 

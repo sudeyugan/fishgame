@@ -19,6 +19,9 @@ public:
     int getCurrentLevel() const { return m_currentLevel; }
     void nextLevel();
 
+    void setBackgroundIndex(int index) { m_bgIndex = index; }
+    int getBackgroundIndex() const { return m_bgIndex; }
+
     QMap<int, bool>& keys() { return m_keys; }
 signals:
     void scoreChanged(int newScore);
@@ -32,6 +35,7 @@ private:
     int m_currentLevel;
     bool m_isPaused;
     QMap<int, bool> m_keys;
+    int m_bgIndex = 1;
 };
 
 #endif

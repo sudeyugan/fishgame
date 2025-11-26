@@ -4,6 +4,7 @@
 #include "IEUNVJTDNW/moc_Entity.cpp"
 #include "IEUNVJTDNW/moc_Player.cpp"
 #include "EKW6RVOTGB/moc_MainScene.cpp"
+#include "YPKJ5OE7LN/moc_BackgroundSelectDialog.cpp"
 #include "YPKJ5OE7LN/moc_GameHud.cpp"
 #include "YPKJ5OE7LN/moc_GameOverDialog.cpp"
 #include "YPKJ5OE7LN/moc_HelpScreen.cpp"

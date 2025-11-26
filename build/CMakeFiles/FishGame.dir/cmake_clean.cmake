@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FishGame.dir/src/scenes/LevelManager.cpp.obj.d"
   "CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj"
   "CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj.d"
+  "CMakeFiles/FishGame.dir/src/ui/BackgroundSelectDialog.cpp.obj"
+  "CMakeFiles/FishGame.dir/src/ui/BackgroundSelectDialog.cpp.obj.d"
   "CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj"
   "CMakeFiles/FishGame.dir/src/ui/GameHud.cpp.obj.d"
   "CMakeFiles/FishGame.dir/src/ui/GameOverDialog.cpp.obj"
