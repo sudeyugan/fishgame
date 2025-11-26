@@ -38,7 +38,9 @@ add_executable(FishGame
     src/entities/Enemy.h
     src/entities/Item.cpp
     src/entities/Item.h
-    
+    src/entities/FloatingText.cpp
+    src/entities/FloatingText.h
+
     # Scenes
     src/scenes/MainScene.cpp
     src/scenes/MainScene.h

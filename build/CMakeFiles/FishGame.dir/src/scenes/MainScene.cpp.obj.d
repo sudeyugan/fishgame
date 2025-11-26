@@ -395,6 +395,14 @@ CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
+ E:/fish/src/entities/FloatingText.h \
+ E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsSimpleTextItem \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QBrush \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qbrush.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QFont \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/QPen \
+ E:/Qt/6.5.3/mingw_64/include/QtGui/qpen.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \

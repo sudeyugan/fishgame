@@ -19,7 +19,7 @@ Item::Item(QObject* parent) : Entity(parent), m_lifeTime(0), m_moveTimer(0) {
 
     QPixmap p(imgPath);
     // 道具统一设置较小的尺寸，例如 40-50像素
-    qreal ratio = 50.0 / p.width();
+    qreal ratio = 100.0 / p.width();
     setBaseRatio(ratio);
     setPixmap(p);
 

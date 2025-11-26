@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/fish/src/core/SaveManager.cpp" "CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/core/SaveManager.cpp.obj.d"
   "E:/fish/src/entities/Enemy.cpp" "CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Enemy.cpp.obj.d"
   "E:/fish/src/entities/Entity.cpp" "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Entity.cpp.obj.d"
+  "E:/fish/src/entities/FloatingText.cpp" "CMakeFiles/FishGame.dir/src/entities/FloatingText.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/FloatingText.cpp.obj.d"
   "E:/fish/src/entities/Item.cpp" "CMakeFiles/FishGame.dir/src/entities/Item.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Item.cpp.obj.d"
   "E:/fish/src/entities/Player.cpp" "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/entities/Player.cpp.obj.d"
   "E:/fish/src/main.cpp" "CMakeFiles/FishGame.dir/src/main.cpp.obj" "gcc" "CMakeFiles/FishGame.dir/src/main.cpp.obj.d"

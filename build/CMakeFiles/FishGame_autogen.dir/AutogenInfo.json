@@ -315,6 +315,12 @@
 			"IEUNVJTDNW/moc_Entity.cpp",
 			null
 		],
+		[
+			"E:/fish/src/entities/FloatingText.h",
+			"MU",
+			"IEUNVJTDNW/moc_FloatingText.cpp",
+			null
+		],
 		[ "E:/fish/src/entities/Item.h", "MU", "IEUNVJTDNW/moc_Item.cpp", null ],
 		[
 			"E:/fish/src/entities/Player.h",
@@ -473,6 +479,7 @@
 		[ "E:/fish/src/core/SaveManager.cpp", "MU", null ],
 		[ "E:/fish/src/entities/Enemy.cpp", "MU", null ],
 		[ "E:/fish/src/entities/Entity.cpp", "MU", null ],
+		[ "E:/fish/src/entities/FloatingText.cpp", "MU", null ],
 		[ "E:/fish/src/entities/Item.cpp", "MU", null ],
 		[ "E:/fish/src/entities/Player.cpp", "MU", null ],
 		[ "E:/fish/src/main.cpp", "MU", null ],

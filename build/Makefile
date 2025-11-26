@@ -298,6 +298,30 @@ src/entities/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/Entity.cpp.s
 .PHONY : src/entities/Entity.cpp.s
 
+src/entities/FloatingText.obj: src/entities/FloatingText.cpp.obj
+.PHONY : src/entities/FloatingText.obj
+
+# target to build an object file
+src/entities/FloatingText.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/FloatingText.cpp.obj
+.PHONY : src/entities/FloatingText.cpp.obj
+
+src/entities/FloatingText.i: src/entities/FloatingText.cpp.i
+.PHONY : src/entities/FloatingText.i
+
+# target to preprocess a source file
+src/entities/FloatingText.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/FloatingText.cpp.i
+.PHONY : src/entities/FloatingText.cpp.i
+
+src/entities/FloatingText.s: src/entities/FloatingText.cpp.s
+.PHONY : src/entities/FloatingText.s
+
+# target to generate assembly for a file
+src/entities/FloatingText.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FishGame.dir\build.make CMakeFiles/FishGame.dir/src/entities/FloatingText.cpp.s
+.PHONY : src/entities/FloatingText.cpp.s
+
 src/entities/Item.obj: src/entities/Item.cpp.obj
 .PHONY : src/entities/Item.obj
 
@@ -687,6 +711,9 @@ help:
 	@echo ... src/entities/Entity.obj
 	@echo ... src/entities/Entity.i
 	@echo ... src/entities/Entity.s
+	@echo ... src/entities/FloatingText.obj
+	@echo ... src/entities/FloatingText.i
+	@echo ... src/entities/FloatingText.s
 	@echo ... src/entities/Item.obj
 	@echo ... src/entities/Item.i
 	@echo ... src/entities/Item.s

@@ -8088,6 +8088,8 @@ FishGame_autogen/timestamp: E:/Qt/6.5.3/mingw_64/include/QtCore/QList \
   E:/fish/src/entities/Enemy.h \
   E:/fish/src/entities/Entity.cpp \
   E:/fish/src/entities/Entity.h \
+  E:/fish/src/entities/FloatingText.cpp \
+  E:/fish/src/entities/FloatingText.h \
   E:/fish/src/entities/Item.cpp \
   E:/fish/src/entities/Item.h \
   E:/fish/src/entities/Player.cpp \
@@ -8912,6 +8914,8 @@ E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets.cma
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable.h:
 
+E:/fish/src/entities/FloatingText.h:
+
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h:
 
 E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ios_base.h:
@@ -9175,6 +9179,8 @@ E:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w6
 E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/pthread.h:
 
 E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/stddef.h:
+
+E:/fish/src/entities/FloatingText.cpp:
 
 E:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
 

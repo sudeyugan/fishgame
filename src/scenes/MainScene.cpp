@@ -4,6 +4,7 @@
 #include "../entities/Enemy.h"
 #include "../core/GameEngine.h"
 #include "../utils/AudioManager.h"
+#include "../entities/FloatingText.h"
 #include <QGraphicsView>
 #include <QPainter>
 #include <QRandomGenerator>
@@ -184,15 +185,44 @@ void MainScene::checkCollisions() {
             // 获取道具类型
             Item::ItemType type = gameItem->getItemType();
 
+
+            QString floatStr;
+            QColor floatColor;
+
             // 根据类型分发逻辑
             if (type == Item::ITEM_GOLD) {
                 // 金色气泡：直接加分 (50分)
                 GameEngine::instance().addScore(50); 
+
+                // [设置] 金色气泡文字
+                floatStr = "+50 Score";
+                floatColor = QColor(255, 215, 0);
             } else {
                 // 其他气泡：红色(变大)、绿色(加速)、蓝色(无敌)
                 // 调用 Player 的 applyEffect 进行处理
                 m_player->applyEffect(type);
+                switch(type) {
+                case Item::ITEM_RED:
+                    floatStr = "GROW UP!";
+                    floatColor = Qt::red;
+                    break;
+                case Item::ITEM_GREEN:
+                    floatStr = "SPEED UP!";
+                    floatColor = Qt::green;
+                    break;
+                case Item::ITEM_BLUE:
+                    floatStr = "INVINCIBLE!";
+                    floatColor = QColor(0, 191, 255); // 深天蓝
+                    break;
+                default:
+                    floatStr = "Effect!";
+                    floatColor = Qt::white;
+                    break;
             }
+            }
+
+            FloatingText* textEffect = new FloatingText(floatStr, floatColor, m_player->pos());
+            addItem(textEffect);
 
             // 从场景移除并销毁道具
             removeItem(gameItem);
@@ -221,6 +251,7 @@ void MainScene::keyReleaseEvent(QKeyEvent *event) {
 void MainScene::gameOver() {
     m_gameTimer->stop();
     m_spawnTimer->stop();
+    m_itemTimer->stop();
     emit GameEngine::instance().gameOver(false);
 }
 
@@ -233,9 +264,11 @@ void MainScene::setPaused(bool paused) {
     if (m_isPaused) {
         m_gameTimer->stop();
         m_spawnTimer->stop();
+        m_itemTimer->stop();
     } else {
         m_gameTimer->start(16);
         m_spawnTimer->start(m_currentSpawnRate);
+        m_itemTimer->start(5000);
     }
     emit gamePaused(m_isPaused);
 }
