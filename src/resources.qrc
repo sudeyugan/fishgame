@@ -1,16 +1,21 @@
+<!DOCTYPE RCC>
 <RCC>
-    <qresource prefix="/">
-        <file>assets/sounds/bgm.mp3</file>
-        <file>assets/sounds/eat.mp3</file>
-        <file>assets/sounds/win.mp3</file>
-        <file>assets/sounds/lose.wav</file>
-        <file>assets/images/background1.jpg</file>
-        <file>assets/images/background2.jpg</file>
-        <file>assets/images/background3.jpg</file>
-        <file>assets/images/start.jpg</file>
-        <file>assets/images/fish1.jpg</file>
-        <file>assets/images/enemyfish1.png</file>
-        <file>assets/images/enemyfish2.png</file>
-        <file>assets/images/enemyfish3.png</file>
-    </qresource>
+  <qresource prefix="/">
+    <file>assets/sounds/bgm.mp3</file>
+    <file>assets/sounds/eat.mp3</file>
+    <file>assets/sounds/win.mp3</file>
+    <file>assets/sounds/lose.wav</file>
+    <file>assets/images/background1.jpg</file>
+    <file>assets/images/background2.jpg</file>
+    <file>assets/images/background3.jpg</file>
+    <file>assets/images/start.jpg</file>
+    <file>assets/images/enemyfish1.png</file>
+    <file>assets/images/enemyfish2.png</file>
+    <file>assets/images/enemyfish3.png</file>
+    <file>assets/images/fish1.png</file>
+    <file>assets/images/bluebubble.png</file>
+    <file>assets/images/redbubble.png</file>
+    <file>assets/images/greenbubble.png</file>
+    <file>assets/images/goldbubble.png</file>
+  </qresource>
 </RCC>

@@ -29,6 +29,8 @@ public:
     // 核心逻辑更新
     virtual void advance(int phase) override;
 
+    void setBaseRatio(qreal ratio);
+
 protected:
     qreal m_speed;
     qreal m_scale;
@@ -36,6 +38,8 @@ protected:
     qreal m_dy;
 
     EntityType m_type; 
+
+    qreal m_baseRatio;
 };
 
 #endif // ENTITY_H

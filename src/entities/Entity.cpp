@@ -13,9 +13,15 @@ qreal Entity::getSpeed() const {
     return m_speed;
 }
 
+void Entity::setBaseRatio(qreal ratio) {
+    m_baseRatio = ratio;
+    // 更新当前的缩放
+    setScale(m_scale * m_baseRatio); 
+}
+
 void Entity::setSizeScale(qreal scale) {
     m_scale = scale;
-    setScale(m_scale); // QGraphicsItem 的内置缩放
+    setScale(m_scale * m_baseRatio); 
 }
 
 qreal Entity::getSizeScale() const {

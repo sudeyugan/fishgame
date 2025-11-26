@@ -454,4 +454,6 @@ CMakeFiles/FishGame.dir/FishGame_autogen/mocs_compilation.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
- E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h

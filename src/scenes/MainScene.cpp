@@ -2,6 +2,7 @@
 #include "../entities/Player.h"
 #include "../entities/Enemy.h"
 #include "../core/GameEngine.h"
+#include "../utils/AudioManager.h"
 #include <QGraphicsView>
 #include <QPainter>
 #include <QRandomGenerator>
@@ -126,6 +127,8 @@ void MainScene::checkCollisions() {
             
             if (m_player->getSizeScale() > enemy->getSizeScale()) {
                 // --- 玩家吃掉鱼 ---
+                
+                AudioManager::instance().playSound("eat");
                 
                 // 1. 先变大
                 m_player->grow(0.05);

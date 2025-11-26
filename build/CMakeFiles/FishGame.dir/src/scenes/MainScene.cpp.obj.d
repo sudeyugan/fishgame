@@ -381,7 +381,19 @@ CMakeFiles/FishGame.dir/src/scenes/MainScene.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsitem.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainterpath.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QObject E:/fish/src/entities/Enemy.h \
- E:/fish/src/core/GameEngine.h \
+ E:/fish/src/core/GameEngine.h E:/fish/src/utils/AudioManager.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmetaobject.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGraphicsView \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgraphicsview.h \
  E:/Qt/6.5.3/mingw_64/include/QtGui/qpainter.h \

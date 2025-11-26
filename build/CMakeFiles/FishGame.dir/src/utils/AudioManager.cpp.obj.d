@@ -331,5 +331,11 @@ CMakeFiles/FishGame.dir/src/utils/AudioManager.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
  E:/Qt/6.5.3/mingw_64/include/QtCore/QUrl \
- E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/QDebug \
+ E:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h

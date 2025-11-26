@@ -6,17 +6,22 @@
 // 构造函数实现：参数不能带默认值
 Player::Player(QObject* parent) : Entity(parent) {
     // 1. 加载并缩放图片
-    QPixmap originalPix(":/assets/images/fish1.jpg"); 
-    QPixmap finalPix = originalPix.scaledToWidth(80, Qt::SmoothTransformation); 
-
-    setPixmap(finalPix);
-
-    // 2. 设置中心点，防止翻转时位置跳跃
-    setTransformOriginPoint(finalPix.width()/2, finalPix.height()/2);
-    setOffset(-finalPix.width()/2, -finalPix.height()/2);
+QPixmap originalPix(":/assets/images/fish1.png"); 
     
-    m_speed = 5.0; // 调整为适中的速度
-    setSizeScale(1.0); 
+    // 目标是让它在 scale=1.0 时显示为 80 像素宽
+    // 如果原图是 400px，ratio 就是 0.2
+    qreal ratio = 80.0 / originalPix.width();
+    setBaseRatio(ratio);
+
+    // 3. 设置完整图片
+    setPixmap(originalPix);
+
+    // 4. 设置中心点 (用原图的尺寸)
+    setTransformOriginPoint(originalPix.width()/2, originalPix.height()/2);
+    setOffset(-originalPix.width()/2, -originalPix.height()/2);
+    
+    m_speed = 5.0; 
+    setSizeScale(1.0); // 逻辑大小设为 1.0 (视觉上会自动应用 ratio 变成 80px)
     m_type = TYPE_PLAYER;
 }
 

@@ -422,6 +422,8 @@ CMakeFiles/FishGame.dir/src/ui/MainWindow.cpp.obj: \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
+ E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
  E:/fish/src/core/GameEngine.h E:\fish\src\ui\BackgroundSelectDialog.h \
  E:\fish\src\ui\SaveLoadDialog.h \
  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QVBoxLayout \

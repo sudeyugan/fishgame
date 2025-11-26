@@ -41,11 +41,9 @@ Enemy::Enemy(Player* target, QObject* parent)
     if (p.isNull()) {
         p = QPixmap(40, 40);
         p.fill(Qt::red); // 兜底红色方块
-    } else {
-        // 统一基准宽度，方便后续缩放
-        p = p.scaledToWidth(80, Qt::SmoothTransformation);
-    }
-
+    } 
+    qreal ratio = 80.0 / p.width();
+    setBaseRatio(ratio);
     setPixmap(p);
     
     // 设置变换中心
@@ -138,7 +136,10 @@ void Enemy::performAI() {
 
     // (翻转逻辑保持不变)
     QTransform t;
-    if (m_dx < 0) t.scale(-m_scale, m_scale); 
-    else t.scale(m_scale, m_scale);
+    if (m_dx < 0) {
+        t.scale(-1, 1); // 只要水平翻转
+    } else {
+        t.scale(1, 1);  // 恢复正常
+    }
     setTransform(t);
 }

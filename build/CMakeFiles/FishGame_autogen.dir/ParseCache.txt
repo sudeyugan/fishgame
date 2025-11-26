@@ -3723,6 +3723,7 @@ E:/fish/src/ui/PauseDialog.h
  mdp:E:/fish/src/ui/PauseDialog.h
 E:/fish/src/utils/AudioManager.h
  mmc:Q_OBJECT
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtCore/QMap
  mdp:E:/Qt/6.5.3/mingw_64/include/QtCore/QObject
  mdp:E:/Qt/6.5.3/mingw_64/include/QtCore/QString
  mdp:E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h
@@ -3835,10 +3836,12 @@ E:/fish/src/utils/AudioManager.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h

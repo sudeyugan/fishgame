@@ -5,6 +5,8 @@
 #include <QString>
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include <QSoundEffect>
+#include <QMap>
 
 class AudioManager : public QObject {
     Q_OBJECT
@@ -14,7 +16,7 @@ public:
 
     // 2. 成员函数 (注意：playBGM 接收参数以匹配 MainWindow 的调用)
     void playBGM(const QString& name);
-    void playEatSound();
+    void playSound(const QString& name);
     void playWinSound();
     void playLoseSound();
 
@@ -23,9 +25,8 @@ private:
     explicit AudioManager(QObject *parent = nullptr);
     ~AudioManager();
     
-    // 禁止拷贝
-    AudioManager(const AudioManager&) = delete;
-    AudioManager& operator=(const AudioManager&) = delete;
+    QMap<QString, QSoundEffect*> m_effects;
+    void loadEffect(const QString& name, const QString& path);
 
     QMediaPlayer* m_bgmPlayer;
     QAudioOutput* m_bgmOutput;

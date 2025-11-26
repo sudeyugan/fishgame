@@ -11,7 +11,6 @@ LevelData LevelManager::getLevelData(int level) {
 
     // 动态拼接路径
     data.bgImage = QString(":/assets/images/background%1.jpg").arg(bgIndex);    
-    data.bgImage = ":/assets/images/background1.jpg"; 
 
     // 根据等级动态计算参数，而不是写死 if-else
     // 1. 目标分数：第一关50，每升一级增加 50 分 (50, 100, 150...)

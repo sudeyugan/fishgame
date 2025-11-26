@@ -80,11 +80,15 @@ FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: CMakeFiles/FishGame_autogen.dir/A
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/enemyfish2.png
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/background1.jpg
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/background2.jpg
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/goldbubble.png
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/start.jpg
-FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/fish1.jpg
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/redbubble.png
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/enemyfish1.png
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/enemyfish3.png
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/background3.jpg
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/bluebubble.png
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/fish1.png
+FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/images/greenbubble.png
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/sounds/win.mp3
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/sounds/eat.mp3
 FishGame_autogen/UVLADIE3JM/qrc_resources.cpp: E:/fish/src/assets/sounds/lose.wav

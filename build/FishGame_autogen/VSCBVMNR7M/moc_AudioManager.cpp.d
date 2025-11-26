@@ -1,5 +1,6 @@
 E:/fish/build/FishGame_autogen/VSCBVMNR7M/moc_AudioManager.cpp: E:/fish/src/utils/AudioManager.h \
   E:/fish/build/FishGame_autogen/moc_predefs.h \
+  E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
   E:/Qt/6.5.3/mingw_64/include/QtCore/QString \
   E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
@@ -112,10 +113,12 @@ E:/fish/build/FishGame_autogen/VSCBVMNR7M/moc_AudioManager.cpp: E:/fish/src/util
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QAudioOutput \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/QSoundEffect \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudio.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+  E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qsoundeffect.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
   E:/Qt/6.5.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
