@@ -18,14 +18,12 @@ AudioManager::AudioManager(QObject* parent) : QObject(parent) {
     m_bgmPlayer->setLoops(QMediaPlayer::Infinite); // 无限循环
 
     // 2. 预加载所有短音效 (防止第一次播放卡顿)
-    // 注意：QSoundEffect 对 WAV 支持最好。MP3 在某些平台可能有延迟或不支持。
-    loadEffect("eat",  ":/assets/sounds/eat.mp3");
-    loadEffect("win",  ":/assets/sounds/win.mp3");
+    loadEffect("eat",  ":/assets/sounds/eat.wav");
+    loadEffect("win",  ":/assets/sounds/win.wav");
     loadEffect("lose", ":/assets/sounds/lose.wav");
 }
 
 AudioManager::~AudioManager() {
-    // 清理指针，虽然 QObject 会自动清理子对象，但好习惯要有
 }
 
 void AudioManager::loadEffect(const QString& name, const QString& path) {
@@ -43,8 +41,8 @@ void AudioManager::loadEffect(const QString& name, const QString& path) {
 
 void AudioManager::playBGM(const QString& name) {
     // 假设 BGM 路径是固定的
-    QString path = QString(":/assets/sounds/%1.mp3").arg(name);
-    
+    QString path = QString(":/assets/sounds/%1.wav").arg(name);
+
     // 如果已经在播放这首，就不重置
     if (m_bgmPlayer->source().toString() == path && m_bgmPlayer->playbackState() == QMediaPlayer::PlayingState) {
         return;

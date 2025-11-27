@@ -66,6 +66,8 @@ add_executable(FishGame
     src/ui/SaveLoadDialog.h
     src/ui/BackgroundSelectDialog.cpp
     src/ui/BackgroundSelectDialog.h
+    src/ui/CharacterSelectDialog.cpp
+    src/ui/CharacterSelectDialog.h
 
     # Utils
     src/utils/AudioManager.cpp

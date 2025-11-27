@@ -19,11 +19,11 @@ Item::Item(QObject* parent) : Entity(parent), m_lifeTime(0), m_moveTimer(0) {
 
     QPixmap p(imgPath);
     // 道具统一设置较小的尺寸，例如 40-50像素
-    qreal ratio = 100.0 / p.width();
+    qreal ratio = 120.0 / p.width();
     setBaseRatio(ratio);
     setPixmap(p);
 
-    // 修正坐标中心 (参考之前修复 Enemy 的逻辑)
+    // 修正坐标中心
     setTransformOriginPoint(0, 0);
     setOffset(-p.width()/2, -p.height()/2);
 

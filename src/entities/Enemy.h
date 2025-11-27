@@ -14,6 +14,7 @@ public:
     EntityType getEntityType() const override { return TYPE_ENEMY; }
 
     void advance(int phase) override;
+    int getScoreValue() const;
 
 private:
     Player* m_target;

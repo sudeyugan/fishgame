@@ -23,9 +23,9 @@ Enemy::Enemy(Player* target, QObject* parent)
         minScale = 1.0;
         maxScale = 1.8;
     } else {
-        // 10% 概率生成大鱼 (1.8 - 2.5)
+        // 10% 概率生成大鱼 (1.8 - 4.0)
         minScale = 1.8;
-        maxScale = 2.5;
+        maxScale = 4.0;
     }
 
     // 使用基类 Entity 的 m_scale 成员
@@ -71,6 +71,13 @@ Enemy::Enemy(Player* target, QObject* parent)
     if (m_speed > maxLimit) m_speed = maxLimit;
     if (m_speed < 1.5) m_speed = 1.5; // 绝对保底速度
 }
+
+int Enemy::getScoreValue() const {
+    // 逻辑大小 m_scale 范围通常是 0.5 到 4
+    // 比如: 0.5(小鱼) -> 1分, 1.0(中鱼) -> 2分, 4(大鱼) -> 8分
+    return static_cast<int>(getSizeScale() * getSizeScale() * 4);
+}
+
 
 void Enemy::advance(int phase) {
     if (!phase) return;

@@ -61,11 +61,39 @@ void MainScene::loadLevel(const LevelData& data) {
         }
     }
 
-    // 4. 重置主角位置到中心 (可选)
+    CharacterType targetType = GameEngine::instance().getSelectedCharacter();
+    int currentLevel = GameEngine::instance().getCurrentLevel();
+
+    bool needRecreate = false;
+
     if (!m_player) {
-        initLevel(); // 如果没有主角则创建
+        // 情况A: 还没有主角，必须创建
+        needRecreate = true;
     } else {
+        // 情况B: 主角存在，但类型不对 (比如上次用的Fish1，这次选了Fish2)
+        if (m_player->getType() != targetType) {
+            needRecreate = true;
+        }
+        // 情况C: 新游戏开始 (第1关)，强制重建以重置体型、速度等属性
+        // 如果不加这个，虽然角色没变，但你上一把吃得很大的体型会带到新游戏里
+        if (currentLevel == 1) {
+            needRecreate = true;
+        }
+    }
+
+    if (needRecreate) {
+        // 如果有旧的，先删掉
+        if (m_player) {
+            removeItem(m_player);
+            delete m_player;
+            m_player = nullptr;
+        }
+        // 创建新的
+        initLevel(); 
+    } else {
+        // 如果不需要重建（比如只是从第1关升到第2关），只重置位置
         m_player->setPos(sceneRect().width()/2, sceneRect().height()/2);
+        m_player->resetState();
     }
     
     // 5. 确保定时器更新
@@ -87,7 +115,8 @@ void MainScene::startGame() {
 }
 
 void MainScene::initLevel() {
-    m_player = new Player();
+    CharacterType type = GameEngine::instance().getSelectedCharacter();
+    m_player = new Player(type);
     m_player->setPos(sceneRect().width()/2, sceneRect().height()/2);
     addItem(m_player);
     setFocusItem(m_player);
@@ -136,6 +165,9 @@ void MainScene::checkCollisions() {
         // 情况 A: 碰到敌人 (Enemy)
         if (entity->getEntityType() == Entity::TYPE_ENEMY) {
             Enemy* enemy = static_cast<Enemy*>(entity);
+
+            qreal playerSize = m_player->getSizeScale();
+            qreal enemySize = enemy->getSizeScale();
             
             // 1. 无敌状态判断
             // 如果处于无敌状态（吃了蓝色气泡），可以直接撞死任何敌人（类似马里奥的星星）
@@ -143,7 +175,7 @@ void MainScene::checkCollisions() {
                 AudioManager::instance().playSound("eat");
                 
                 m_player->grow(0.05);                // 依然可以获得成长
-                GameEngine::instance().addScore(10); // 依然加分
+                GameEngine::instance().addScore(enemy->getScoreValue()); // 依然加分
                 
                 removeItem(enemy);
                 delete enemy;
@@ -157,16 +189,14 @@ void MainScene::checkCollisions() {
                 AudioManager::instance().playSound("eat");
                 
                 // 变大
-                m_player->grow(0.05);
+                m_player->grow(enemySize * 0.05);
 
-                // 移除并删除敌人
+                int score = enemy->getScoreValue();
+                GameEngine::instance().addScore(score);
+
                 removeItem(enemy);
                 delete enemy; 
-
-                // 加分 (可能会触发升级逻辑)
-                GameEngine::instance().addScore(10);
-                
-                return; 
+                return;     
 
             } else {
                 // --- 被大鱼吃掉 (游戏结束) ---
@@ -235,6 +265,11 @@ void MainScene::checkCollisions() {
 
 // 将按键事件同步到 GameEngine
 void MainScene::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Space) {
+        if (m_player) {
+            m_player->activateSkill();
+    }
+    }
     if (event->key() == Qt::Key_Escape) {
         pauseGame();
     } else {

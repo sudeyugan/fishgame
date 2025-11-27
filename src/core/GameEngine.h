@@ -1,3 +1,5 @@
+#include "Constants.h"
+
 #ifndef GAMEENGINE_H
 #define GAMEENGINE_H
 
@@ -8,6 +10,9 @@ class GameEngine : public QObject {
     Q_OBJECT
 public:
     static GameEngine& instance(); // 单例获取
+
+    void setSelectedCharacter(CharacterType type) { m_selectedCharacter = type; }
+    CharacterType getSelectedCharacter() const { return m_selectedCharacter; }
 
     void startGame();
     void pauseGame();
@@ -32,6 +37,7 @@ signals:
     void gameOver(bool win);
 
 private:
+    CharacterType m_selectedCharacter = CharacterType::Normal;
     GameEngine() : m_score(0), m_currentLevel(1), m_isPaused(false) {}
     int m_score;
     int m_currentLevel;

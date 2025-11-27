@@ -11,6 +11,7 @@
 #include "BackgroundSelectDialog.h"
 #include "SaveLoadDialog.h"
 #include "../core/SaveManager.h"
+#include "CharacterSelectDialog.h"
 #include <QVBoxLayout>
 #include <QStackedWidget>
 #include <QGraphicsView>
@@ -52,13 +53,19 @@ void MainWindow::initUI() {
         SaveLoadDialog dialog(SaveLoadDialog::LOAD, this);
         
         connect(&dialog, &SaveLoadDialog::slotSelected, this, [this](int slot, bool isNewGame){
-            this->startGame();
             if (isNewGame) {
                 // --- 新建存档流程 ---
                 
+                CharacterSelectDialog charDlg(this);
+                if (charDlg.exec() != QDialog::Accepted) {
+                    return; // 如果用户取消角色选择，直接中断
+                }
+                CharacterType selectedChar = charDlg.getSelectedCharacter();
                 // 1. 弹出背景选择窗口
                 BackgroundSelectDialog bgDlg(this);
                 if (bgDlg.exec() == QDialog::Accepted) {
+
+                    GameEngine::instance().setSelectedCharacter(selectedChar);
                     // 2. 将用户选择存入 GameEngine
                     GameEngine::instance().setBackgroundIndex(bgDlg.getSelectedIndex());
                     
