@@ -20,6 +20,9 @@ public:
     void playWinSound();
     void playLoseSound();
 
+    void setBGMVolume(float volume);
+    void setSFXVolume(float volume);
+
 private:
     // 3. 私有构造函数
     explicit AudioManager(QObject *parent = nullptr);

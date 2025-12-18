@@ -210,7 +210,7 @@ void MainScene::checkCollisions() {
             Item* gameItem = static_cast<Item*>(entity);
             
             // 播放音效
-            AudioManager::instance().playSound("eat");
+            AudioManager::instance().playSound("bubble");
 
             // 获取道具类型
             Item::ItemType type = gameItem->getItemType();

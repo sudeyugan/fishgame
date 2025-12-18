@@ -1,5 +1,6 @@
 #include "GameEngine.h"
 #include "../scenes/LevelManager.h"
+#include "../utils/AudioManager.h"
 
 GameEngine& GameEngine::instance() {
     static GameEngine instance;
@@ -24,9 +25,10 @@ void GameEngine::addScore(int value) {
     emit scoreChanged(m_score);
     LevelData currentData = LevelManager::getLevelData(m_currentLevel);
     
-    // 只有当目标分数不是无限模式(如9999)时才检查
     if (m_score >= currentData.targetScore) {
-        nextLevel(); // 触发升级
+        AudioManager::instance().playSound("win");
+        // 达到分数，先不升级，而是发送完成信号
+        emit levelCompleted(); 
     }
 }
 
@@ -45,6 +47,9 @@ void GameEngine::resetGame() {
     emit levelChanged(m_currentLevel);
     // Ensure the paused state is updated if it was paused
     emit gamePaused(m_isPaused); 
+
+    m_globalSpeedBonus = 0.0;
+    m_globalSizeBonus = 0.0;
 }
 
 void GameEngine::setScore(int score) {

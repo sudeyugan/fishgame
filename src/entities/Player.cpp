@@ -97,7 +97,7 @@ void Player::applyEffect(int type) {
     // 这里 type 对应 Item::ItemType
     switch (type) {
         case Item::ITEM_GOLD:
-             // 加分逻辑在 Scene 里处理，这里不做事
+             // 加分逻辑在 Scene 里处理
             break;
         case Item::ITEM_RED:
             grow(0.1); // 额外成长
@@ -114,7 +114,8 @@ void Player::applyEffect(int type) {
 }
 
 void Player::grow(qreal amount) {
-    m_scale += amount;
+    qreal rate = GameEngine::instance().getGlobalGrowthRate();
+    m_scale += amount * rate; // 应用倍率
     if (m_scale > 5.0) m_scale = 5.0;
     setSizeScale(m_scale);
 }
@@ -197,16 +198,19 @@ void Player::advance(int phase) {
 }
 
 void Player::resetState() {
-    // 1. 根据角色类型重置初始大小
-    if (m_type == CharacterType::Agile) {
-        m_scale = 0.8;
-    } else {
-        m_scale = 1.0;
-    }
-    setSizeScale(m_scale); // 应用大小
+    qreal speedBonus = GameEngine::instance().getGlobalSpeedBonus(); // 比如 0.1
+    qreal sizeBonus = GameEngine::instance().getGlobalSizeBonus(); // 比如 0.2
 
-    // 2. 清除所有临时 Buff 状态
-    m_speed = m_originalSpeed;
+    if (m_type == CharacterType::Agile) {
+        m_scale = 0.8 + sizeBonus;
+    } else {
+        m_scale = 1.0 + sizeBonus;
+    }
+    setSizeScale(m_scale);
+
+    m_speed = m_originalSpeed * (1.0 + speedBonus);
+
+
     m_speedBoostTimer = 0;
     m_invincibleTimer = 0;
     setOpacity(1.0); // 恢复不透明

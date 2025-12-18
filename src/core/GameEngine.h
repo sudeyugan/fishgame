@@ -30,11 +30,21 @@ public:
     QMap<int, bool>& keys() { return m_keys; }
 
     void setScore(int score);
+
+    qreal getGlobalSpeedBonus() const { return m_globalSpeedBonus; }
+    void addGlobalSpeedBonus(qreal value) { m_globalSpeedBonus += value; }
+
+    qreal getGlobalSizeBonus() const { return m_globalSizeBonus; }
+    void addGlobalSizeBonus(qreal value) { m_globalSizeBonus += value; }
+    
+    qreal getGlobalGrowthRate() const { return m_globalGrowthRate; }
+    void addGlobalGrowthRate(qreal value) { m_globalGrowthRate += value; }
 signals:
     void scoreChanged(int newScore);
     void levelChanged(int newLevel);
     void gamePaused(bool paused);
     void gameOver(bool win);
+    void levelCompleted();
 
 private:
     CharacterType m_selectedCharacter = CharacterType::Normal;
@@ -44,6 +54,9 @@ private:
     bool m_isPaused;
     QMap<int, bool> m_keys;
     int m_bgIndex = 1;
+    qreal m_globalGrowthRate = 1.0;
+    qreal m_globalSpeedBonus = 0.0; // 速度加成 (例如 1.0 代表 +100%)
+    qreal m_globalSizeBonus = 0.0;  // 初始体型加成
 };
 
 #endif

@@ -24,6 +24,7 @@ private slots:
     void startGame();         // 切换到游戏界面
     void handleGameOver(bool win); // 处理游戏结束
     void handleLevelChange(int level);
+    void onLevelCompleted();
 
 private:
     void initUI();

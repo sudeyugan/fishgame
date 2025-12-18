@@ -12,6 +12,7 @@
 #include "SaveLoadDialog.h"
 #include "../core/SaveManager.h"
 #include "CharacterSelectDialog.h"
+#include "RewardDialog.h"
 #include <QVBoxLayout>
 #include <QStackedWidget>
 #include <QGraphicsView>
@@ -36,11 +37,46 @@ MainWindow::MainWindow(QWidget *parent)
     // 3. 初始化各个模块
     initUI();
     
-    // 播放背景音乐 (确保你有 assets/sounds/bgm.mp3)
+    // 播放背景音乐 (确保你有 assets/sounds/bgm.wav)
     AudioManager::instance().playBGM("bgm");
 
     m_isSwitchingLevel = false;
     m_isLoadingGame = false;
+
+    connect(&GameEngine::instance(), &GameEngine::levelCompleted, this, &MainWindow::onLevelCompleted);
+}
+
+void MainWindow::onLevelCompleted() {
+    m_isSwitchingLevel = true;
+    // 1. 暂停游戏
+    if (m_scene) {
+        m_scene->setPaused(true); 
+    }
+
+    // 2. 弹出奖励窗口
+    RewardDialog dlg(this);
+    
+    // 连接选择信号
+    connect(&dlg, &RewardDialog::rewardSelected, this, [](int type){
+        // 根据选择应用 Buff
+        switch(type) {
+            case 0: // 速度
+                GameEngine::instance().addGlobalSpeedBonus(0.1); 
+                break;
+            case 1: // 体型
+                GameEngine::instance().addGlobalSizeBonus(0.2);
+                break;
+            case 2: // 增加成长效率
+            GameEngine::instance().addGlobalGrowthRate(0.2); 
+            break;
+        }
+    });
+
+    // 3. 等待窗口关闭
+    dlg.exec(); // 模态运行，阻塞直到用户选择
+
+    // 4. 进入下一关
+    GameEngine::instance().nextLevel();
 }
 
 void MainWindow::initUI() {
@@ -78,7 +114,6 @@ void MainWindow::initUI() {
                     }
                 } else {
                     // 如果用户关掉了背景选择窗，可以选择返回或者默认开始
-                    // 这里我们默认直接开始(默认为背景1)
                     GameEngine::instance().setBackgroundIndex(1);
                     GameEngine::instance().startGame();
                     SaveManager::saveGame(m_scene->getPlayer(), slot);
@@ -157,7 +192,7 @@ void MainWindow::initUI() {
                          success = SaveManager::saveGame(m_scene->getPlayer(), slot);
                     }
 
-                    // [关键] 根据保存结果，弹出美化后的提示框
+                    // 根据保存结果，弹出美化后的提示框
                     if (success) {
                         SaveLoadDialog::showMessageBox(this, "系统提示", "游戏进度已成功保存！");
                     } else {
@@ -254,6 +289,7 @@ void MainWindow::handleGameOver(bool win) {
     
     // 连接信号：重新开始
     connect(&dialog, &GameOverDialog::restartGame, this, [this](){
+        AudioManager::instance().playBGM("bgm");
         GameEngine::instance().startGame();
         // startGame() 会负责重置场景和 GameEngine 状态
         this->startGame(); 
